@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="pago_orders" method="upgrade">
+	<name>PLG_PAGO_ORDERS_TWILIO</name>
+	<version>1.0.0.0</version>
+	<creationDate>2016</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>support@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_ORDERS_TWILIO_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="pago_twilio">pago_twilio.php</filename>
+		<filename>index.html</filename>
+		<folder>vendor</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_orders_pago_twilio.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_orders_pago_twilio.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="twilio_account_sid"
+				   	   type="text"
+				   	   default=""
+					   label="PLG_PAGO_ORDERS_TWILIO_ACCOUNT_SID"
+					   description="PLG_PAGO_ORDERS_TWILIO_ACCOUNT_SID_DESC" required="true"/>
+				<field name="twilio_auth_token"
+				   	   type="text"
+				   	   default=""
+					   label="PLG_PAGO_ORDERS_TWILIO_AUTH_TOKEN"
+					   description="PLG_PAGO_ORDERS_TWILIO_AUTH_TOKEN_DESC" required="true"/>
+				<field name="twilio_from"
+				   	   type="text"
+				   	   default=""
+					   label="PLG_PAGO_ORDERS_TWILIO_FROM_NUMBER"
+					   placeholder="+13215554422"
+					   description="PLG_PAGO_ORDERS_TWILIO_FROM_NUMBER_DESC" required="true"/>
+				<field name="twilio_to"
+				   	   type="text"
+				   	   default=""
+					   label="PLG_PAGO_ORDERS_TWILIO_TO_NUMBER"
+					   placeholder="+13215554422"
+					   description="PLG_PAGO_ORDERS_TWILIO_TO_NUMBER_DESC" required="true"/>
+				<field name="twilio_send_on"
+				   	   type="list"
+				   	   default="all"
+					   label="PLG_PAGO_ORDERS_TWILIO_SEND_ON"
+					   description="PLG_PAGO_ORDERS_TWILIO_SEND_ON_DESC" required="true">
+					<option value="none">PLG_PAGO_ORDERS_TWILIO_SEND_ON_NONE</option>
+					<option value="all">PLG_PAGO_ORDERS_TWILIO_SEND_ON_ALL</option>
+					<option value="order">PLG_PAGO_ORDERS_TWILIO_SEND_ON_ORDER</option>
+					<option value="subscription">PLG_PAGO_ORDERS_TWILIO_SEND_ON_SUBSCRIPTION</option>
+				</field>
+				<field name="twilio_order_message"
+				   	   type="text"
+				   	   default="PLG_PAGO_ORDERS_TWILIO_DEFAULT_ORDER_MESSAGE"
+					   label="PLG_PAGO_ORDERS_TWILIO_DEFAULT_ORDER_MESSAGE_LABEL"
+					   maxlength="250"
+					   description="PLG_PAGO_ORDERS_TWILIO_MESSAGE_DESC" required="true"/>
+				<field name="twilio_subscription_message"
+				   	   type="text"
+				   	   default="PLG_PAGO_ORDERS_TWILIO_DEFAULT_SUBSCRIPTION_MESSAGE"
+					   label="PLG_PAGO_ORDERS_TWILIO_DEFAULT_SUBSCRIPTION_MESSAGE_LABEL"
+					   maxlength="250"
+					   description="PLG_PAGO_ORDERS_TWILIO_MESSAGE_DESC" required="true"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

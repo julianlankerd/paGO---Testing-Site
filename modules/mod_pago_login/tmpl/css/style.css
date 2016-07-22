@@ -1,0 +1,445 @@
+.pg-login *,
+.pg-login *:after,
+.pg-login *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pg-login{
+	background: #f3f3f3;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	-moz-box-shadow:    0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	box-shadow:         0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	padding: 15px 20px;
+  	line-height: 1;
+  	position: relative;
+}
+
+.pg-login input[type='text'],
+.pg-login input[type='password']{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 6px 10px;
+	border: 1px solid #a3a19c;
+	outline: none;
+}
+
+.pg-login input[type='text']:focus,
+.pg-login input[type='password']:focus{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1) !important;
+  	-moz-box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1) !important;
+	box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1) !important;
+}
+
+.pg-login input[type='submit']{
+	color: #fff !important;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #494646;
+	padding: 8px 20px;
+	margin-top: 5px;
+	margin-bottom: 35px;
+	background: #494646;
+	outline: none;
+	cursor: pointer;
+}
+
+.pg-login input[type='submit']:hover{
+	background: transparent;
+	color: #494646 !important;
+}
+
+.pg-login input[type="checkbox"] {
+    display:none;
+}
+
+.pg-login input[type="checkbox"] + label  {
+    display:inline-block;
+    position: relative;
+    padding-left: 22px;
+	margin: 0;
+    vertical-align:middle;
+    cursor:pointer;
+    font-size: 11px;
+	color: #646262;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.pg-login input[type="checkbox"] + label:before{
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #a3a19c;
+	left: 0;
+	top: -2px;
+}
+
+.pg-login input[type="checkbox"]:checked + label:after{
+	content: "\f00c";
+	position: absolute;
+	font-family: 'FontAwesome';
+	font-size: 10px;
+	left: 2px;
+	top: 0;
+}
+
+.pg-login .pg-login-form{
+	display: block;
+	width: 100%;
+	margin: 0 !important;
+	text-align: center;
+}
+
+.pg-login .pg-login-form-username,
+.pg-login .pg-login-form-password,
+.pg-login .pg-login-form-remember{
+	margin: 0 0 15px !important;
+}
+
+.pg-login .pg-login-create-account a{
+	display: block;
+	border: 1px solid #218634;
+	background: transparent;
+	color: #218634;
+	padding: 10px 20px !important;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+.pg-login .pg-login-create-account a:hover{
+	background: #218634 !important;
+	color: #fff !important;
+}
+
+.pg-login .pg-login-form .pg-login-forgot-password a{
+	display: block;
+	color: #646262 !important;
+	background: none !important;
+	text-decoration: none;
+	text-transform: none !important;
+	padding: 0 !important;
+	margin-bottom: 15px !important;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+}
+
+.pg_logedin .pg-login-greeting,
+.pg-login .pg-login-greeting{
+	font-size: 18px;
+	display: block;
+	float: left;
+	line-height: 30px;
+	/*padding: 0 20px;*/
+	text-transform: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*.pg-login button.pg-logout{	
+	line-height: 28px;
+	padding: 0 15px;
+	background: #494646;
+	box-shadow: none;
+	border: 0;
+	color: #fff;
+	font-size: 12px;
+	float: right;
+	outline: none;
+	cursor: pointer;
+}*/
+.pg-login .pg-login-notice{
+	margin-bottom: 5px;
+	display: none;
+}
+.pg_logoutBox{
+	display:none;
+	position:absolute;
+	z-index:20;
+	background:#fff;
+	border: 1px solid #d0d0d0;
+	line-height: 1;
+	/*box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1);*/
+	/*background:#f3f3f3;*/
+}
+.pg_logoutBox .pg-logout-dropdown{
+	padding: 1px 0;
+}
+.pg_logoutBox .pg-logout-dropdown p{
+	margin: 0;
+}
+.pg_logoutBox a{
+	color: #494646;
+	display: block;
+	padding: 0 20px;
+	text-decoration: none;
+	font-size: 14px;
+	border: 1px solid transparent;
+	line-height: 30px;
+	font-family: Arial;
+	font-weight: bold;	
+}
+.pg_logoutBox a:hover{
+	color: #494646;
+	text-decoration: none;
+	border: 1px solid #717171;
+	background-color: #fff;
+	box-shadow: 1px 1px 5px #717171;
+	
+}
+.pg_logoutBox button.pg-logout{
+	float: none;
+	display: block;
+	background: #494646;
+	border: 1px solid #494646;
+	color: #fff;
+	line-height: 30px;
+	font-size: 12px;
+	padding: 0 15px;
+	width:101%;
+	font-weight: bold;
+	margin: -1px;
+	text-transform: uppercase;
+}
+.pg_logoutBox button.pg-logout:focus{
+	outline: none;
+}
+.pg_logoutBox button.pg-logout:hover{
+	background: transparent;
+	color: #494646;
+}
+.pg_user_image{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	display: block;
+	margin-right: 8px;
+	border: 1px solid #b0b0b0;
+}
+.pg_user_image img{
+	width: 100%;
+	height: 100%;
+}
+.pg-login-form{
+	margin: 0px;
+}
+.pg_logoutBox{
+	left: 0px;
+	right: 0px;
+	top: 100%;
+	z-index: 101;
+}
+.pg_dropdown{
+	display:none;
+	position:absolute;
+	z-index:101;
+	line-height: 1;
+	top: 100%;	
+	width: 100%;
+	/*background:#f3f3f3;*/
+}
+.pg_dropdown_login{
+	position: relative;
+}
+.pg_logoutBtn,
+.pg_loginBtn{
+	position: relative;
+	border: 1px solid #717171;	
+	color: #494646;
+	width: 100%;	
+	display: block;
+	text-transform: uppercase;
+	padding: 7px 35px;
+}
+.pg_logoutBtn{
+	font-size: 18px;
+	font-weight: normal;
+	padding-right: 35px;
+	padding-left: 8px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.pg_logedin{
+	position: relative;
+	padding: 0;
+}
+.pg_logedin .pg-logoutBox-toggle{
+	content: "\f078";
+	border-left: 1px solid #717171;
+	font-family: 'FontAwesome', sans-serif;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding-left: 7px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.pg_loginBtn{
+	text-align: center;
+}
+.pg_active{
+	display: block;
+}
+
+.pg_dropdown:before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: #f3f3f3;
+	display: block;
+	box-shadow: -2px -2px 5px -1px rgba(135, 135, 135, 0.7);
+	position: relative;
+	top: 12px;
+	left: 46%;
+	z-index: 1;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.pg_logedin{
+	padding: 0;
+}
+.pg-login-module .pg-login-notice{
+  text-align: left;
+  margin-bottom: 5px;
+}
+.pg-login-module .pg-notification-message{
+  color: #494646;
+  border: 1px solid #a3a19c;
+  line-height: 33px;
+  font-family: 'Myriad Pro', sans-serif;
+  box-shadow: 0px 0px 10px 2px #ddd;
+  position: relative;
+  background: #fff;
+}
+.pg-login-module .pg-notification-message.pg-error,
+.pg-login-module .pg-notification-message.pg-error-left{
+  /*display: inline-block;*/
+  padding: 5px 13px 0 17px;  
+  border-right: transparent;  
+}
+.pg-login-module .pg-notification-message.pg-error{
+  padding-left: 30px;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+.pg-login-module .pg-notification-message.pg-error-left{ 
+  border-left: none;
+  margin-left: 25px;
+  font-size: 16px;  
+}
+.pg-login-module .pg-notification-message.pg-error:after,
+.pg-login-module .pg-notification-message.pg-error-left:after{
+  content: "";
+  border: transparent;
+  border-right: 7px solid #9b0000;
+  top: -1px;
+  bottom: -1px;
+  position: absolute;
+  right: 0;
+}
+.pg-login-module .pg-notification-message.pg-error:before{ 
+  content: "";
+  display: block;
+  border: 5px solid #9e0309;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 42%;
+
+}
+.pg-login-module .pg-notification-message.pg-error-left:before{
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-right: 1px solid #a3a19c;
+  border-bottom: 1px solid #a3a19c;
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  left: -14px;
+  top: 5px;
+  background: #fff;
+
+}
+.pg-login-module .pg-notification-message.pg-notification{
+  display: none;
+  border-bottom: transparent;
+  line-height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px; 
+  padding-bottom: 6px;
+}
+.pg-login-module .pg-notification-message.pg-notification:after{
+  content: "";
+  border: transparent;
+  border-bottom: 7px solid #017625;
+  height: 44px;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  right: -1px;
+}
+
+@media screen and (max-width: 992px) {  
+	.pg_dropdown_login{
+		text-align: center;
+	}
+	.pg_dropdown_login .pg_loginBtn{
+		border: 1px solid #494646;
+		padding: 0px;
+		color: #494646;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+		text-indent: -9999999999999999999px;
+	}
+	.pg_dropdown_login .pg_loginBtn:after{
+		content: "\f007";
+		font-family: 'FontAwesome';
+		display: block;
+		font-size: 21px;
+		position: absolute;
+		width: 30px;
+		text-indent: 0px;
+		height: 30px;
+		top: 0px;
+		left: -1px;
+	}	
+	.pg_logedin .pg_logoutBtn{
+		border: none;
+		padding: 0px 15px;
+		display: inline-block;
+		width: auto;
+	}
+	.pg_logedin .pg_logoutBtn .pg_user_image{
+		margin: 0px;
+
+	}
+	.pg_logedin .pg_logoutBtn .pg-login-greeting,
+	.pg_logedin .pg_logoutBtn .pg-logoutBox-toggle{
+		display: none;
+	}
+}
+.pg-login .clearfix:after,
+.pg-login .container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="params">
+		<field name="country_id" type="hidden" width_class="pg-col2" />
+		<field name="zone_id" type="hidden" label="PAGO_ZONE_ID" description="" default="1" width_class="pg-col2" />
+		<field name="country_name" default="" type="text" label="PAGO_LOCATIONS_COUNTRY_NAME" description="" required="true" width_class="pg-col2" />
+		<field name="country_3_code" type="text" label="PAGO_COUNTRY_CODE_3" description="" required="true" width_class="pg-col2" />
+		<field name="country_2_code" type="text" label="PAGO_COUNTRY_CODE_2" description="" required="true" width_class="pg-col2" />
+		<field name="publish" type="list" default="1" label="PAGO_PUBLISHED" description="" class="no-margin" width_class="pg-col2">
+			<option value="1">PAGO_YES</option>
+			<option value="0">PAGO_NO</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="custom">
+		<field name="test" type="text" label="test" description="" />
+		<field name="test2" type="text" label="test2" description="" />
+	</fieldset>
+
+</form>

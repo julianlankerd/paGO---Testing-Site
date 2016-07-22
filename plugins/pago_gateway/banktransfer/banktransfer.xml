@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_gateway" method="upgrade">
+	<name>PLG_PAGO_GATEWAY_BANKTRANSFER</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_GATEWAY_BANKTRANSFER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="banktransfer">banktransfer.php</filename>
+		<filename plugin="banktransfer">banktransfer.png</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_gateway_banktransfer.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_gateway_banktransfer.sys.ini</language>
+	</languages>
+ 	<config>
+		<fields name="params">
+			<fieldset name="basic">
+					<field name="payment_gateway_name"
+				   	   type="text"
+				   	   default="Bank Transfer"
+					   label="PLG_PAGO_GATEWAY_BANKTRANSFER_PAYMENT_GATEWAY_NAME_LABEL"
+					   description="PLG_PAGO_GATEWAY_BANKTRANSFE_PAYMENT_GATEWAY_NAME_DESC"/>
+		
+					<field name="txtextra_info"  type="textarea" default="Please enter your Extra Info" label="PLG_PAGO_GATEWAY_BANKTRANSFER_EXTRA_INFO" description="PLG_PAGO_GATEWAY_BANKTRANSFER_EXTRA_INFO_DESC." filter="raw" />
+			</fieldset>
+			<fieldset  name="advanced">
+				<field name="creditcard" type="hidden" default="0" value="0" />
+			</fieldset>
+			
+		</fields>
+    </config>
+</extension>
+

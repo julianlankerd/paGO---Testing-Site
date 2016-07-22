@@ -1,0 +1,608 @@
+@import "wingman/fonts/stylesheet.css";
+
+
+#pago-wingman-app {
+	font-family: "Aaux ProLight", "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	background-color: #fff;
+}
+
+
+#pago-wingman-app h1 {
+	font-family: Verlag, "Arial Black", sans-serif;
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#pago-wingman-app h2 {
+	font-family: Verlag, "Arial Black", sans-serif;
+	font-size: 1.5em;
+	color: #0244af;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#pago-wingman-app h3 {
+	font-size: 1.1875em;
+	color: #fff;
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pago-wingman-app h4 {
+	font-family: Verlag, "Arial Black", sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a,
+#pago-wingman-app .wingman-btn {
+	font-family: Verlag, "Arial Black", sans-serif;
+	font-size: 1.25em;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #0244af;
+	display: inline-block;
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a,
+#pago-wingman-app .wingman-btn-act {
+	background-color: #ddd;
+	color: #2a2a2a;
+	padding: 9px 13px;
+}
+
+#pago-wingman-app .wingman-btn-alt {
+	background-color: rgba(255, 255, 255, .5);
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a,
+#pago-wingman-app .wingman-btn-small {
+	font-size: .9em;
+	padding: 9px 13px;
+}
+
+#pago-wingman-app .wingman-btn-small-x {
+	font-size: .6em;
+	padding: 4px 10px;
+}
+
+#pago-wingman-app .wingman-btn-warning {
+	background-color: #FFCBCB;
+	color: #B93434;
+	border: 1px solid #B93434;
+}
+
+
+#pago-wingman-app header {
+	background-image: url("wingman/img/bg-section01.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 50px 0 150px;
+}
+
+
+#pago-wingman-app #the-process {
+	padding: 50px 150px;
+	text-align: center;
+	background-color: #fff;
+}
+
+#pago-wingman-app #the-process p {
+	margin-top: 15px;
+}
+
+#pago-wingman-app #the-process .bullet {
+	background-image: url("wingman/img/bullet.png");
+	-webkit-background-size: cover;
+	background-size: cover;
+	font-family: Verlag, "Arial Black", sans-serif;
+	font-size: 2em;
+	color: #fff;
+	width: 50px;
+	margin: 30px auto 15px;
+	padding: 15px 15px 35px;
+}
+
+
+#pago-wingman-app #pricing {
+	margin-top: 150px;
+	margin-bottom: 150px;
+	padding: 50px;
+	background-color: #ddd;
+	position: relative;
+}
+
+#pago-wingman-app #pricing > h2 {
+	margin-bottom: 30px;
+}
+
+#pago-wingman-app #pricing:before,
+#pago-wingman-app #pricing:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	height: 150px;
+	-webkit-transform: skewY(-7deg);
+	-moz-transform: skewY(-7deg);
+	-ms-transform: skewY(-7deg);
+	-o-transform: skewY(-7deg);
+	transform: skewY(-7deg);
+	-webkit-transform-origin: bottom right;
+	-moz-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	-o-transform-origin: bottom right;
+	transform-origin: bottom right;
+	background-color: #ddd;
+	z-index: 0;
+}
+
+#pago-wingman-app #pricing:after {
+	bottom: auto;
+	top: 100%;
+	-webkit-transform: skewY(7deg);
+	-moz-transform: skewY(7deg);
+	-ms-transform: skewY(7deg);
+	-o-transform: skewY(7deg);
+	transform: skewY(7deg);
+}
+
+#pago-wingman-app #pricing > * {
+	position: relative;
+	z-index: 1;
+}
+
+
+#pago-wingman-app footer {
+	text-align: center;
+	margin-top: -150px;
+	padding: 200px 150px 50px;
+	background-color: #0244af;
+}
+
+#pago-wingman-app footer a {
+	margin-top: 15px;
+}
+
+
+#pago-wingman-app .pg-wingman-plan-wrapper {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+#pago-wingman-app wingman-plan,
+#pago-wingman-app .wingman-plan {
+	width: calc(25% + 1px);
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	
+	background-color: #fff;
+	border: 1px solid #bbb;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 30px;
+	text-align: center;
+	margin-right: -1px;
+}
+
+#pago-wingman-app .wingman-plan-single {
+	width: 100%;
+	margin-top: 0;
+}
+
+#pago-wingman-app wingman-plan.pg-wingman-plan-featured,
+#pago-wingman-app .wingman-plan.pg-wingman-plan-featured {
+	margin-top: 0;
+	background-color: #f8fcff;
+}
+
+#pago-wingman-app wingman-plan h1,
+#pago-wingman-app .wingman-plan h1 {
+	color: #2a2a2a;
+}
+
+#pago-wingman-app wingman-plan small,
+#pago-wingman-app .wingman-plan small {
+	display: block;
+	font-size: .4062em;
+	margin-top: 10px;
+}
+
+#pago-wingman-app wingman-plan h2,
+#pago-wingman-app .wingman-plan h2 {
+	font-size: .8125em;
+	margin-top: 0;
+}
+
+#pago-wingman-app wingman-plan li,
+#pago-wingman-app .wingman-plan li {
+	margin: 10px 0;
+}
+
+#pago-wingman-app wingman-plan .wingman-btn,
+#pago-wingman-app .wingman-plan .wingman-btn {
+	margin-top: auto;
+}
+
+#pago-wingman-app wingman-plan .pg-wingman-plan-flag-current,
+#pago-wingman-app .wingman-plan .pg-wingman-plan-flag-current {
+	display: none;
+}
+
+#pago-wingman-app wingman-plan.pg-wingman-plan-current .pg-wingman-plan-flag-current,
+#pago-wingman-app .wingman-plan.pg-wingman-plan-current .pg-wingman-plan-flag-current {
+	display: block;
+}
+
+#pago-wingman-app wingman-plan.pg-wingman-plan-current .wingman-btn,
+#pago-wingman-app .wingman-plan.pg-wingman-plan-current .wingman-btn {
+	display: none;
+}
+
+
+#pago-wingman-app label {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#pago-wingman-app input,
+#pago-wingman-app textarea {
+	font-family: inherit;
+}
+
+#pago-wingman-app textarea {
+	height: auto;
+}
+
+#pago-wingman-app input:focus,
+#pago-wingman-app textarea:focus {
+	outline: none;
+	border-color: #0244af;
+	background-color: #fff  !important;
+}
+
+#pago-wingman-app input[disabled],
+#pago-wingman-app textarea[disabled] {
+	background-color: #e9e9e9 !important;
+}
+
+
+#pago-wingman-app .chosen-container {
+	width: 100% !important;
+	font-weight: bold;
+}
+
+#pago-wingman-app .ng-submitted input.ng-invalid,
+#pago-wingman-app .ng-submitted select.ng-invalid + .chosen-container > a,
+#pago-wingman-app .ng-submitted input[type="checkbox"].ng-invalid + label,
+#pago-wingman-app .ng-submitted input[type="radio"].ng-invalid + label,
+#pago-wingman-app input.ng-invalid.ng-touched,
+#pago-wingman-app select.ng-invalid.ng-touched + .chosen-container > a,
+#pago-wingman-app input[type="checkbox"].ng-invalid.ng-touched + label,
+#pago-wingman-app input[type="radio"].ng-invalid.ng-touched + label {
+	border-color: #cb2929;
+	background-color: #FFFDFD;
+}
+
+#pago-wingman-app .pg-radio label,
+#pago-wingman-app .pg-checkbox label {
+	display: inline-block !important;
+	vertical-align: top;
+}
+
+#pago-wingman-app [ng-message],
+#pago-wingman-app [data-ng-message] {
+	color: #cb2929;
+	font-size: .8em;
+	font-weight: bold;
+	margin-top: -15px;
+	margin-bottom: 15px;
+}
+
+
+#pago-wingman-app #tabs > .pg-tabs.pg-tabs {
+	border: 0;
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a {
+	border: 0;
+	margin-right: 10px;
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li.ui-state-active a, 
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a:hover {
+	border: 0;
+	background-color: #0244af;
+	color: #fff;
+}
+
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li.ui-state-active a:before, 
+#pago-wingman-app .pg-tabs.pg-tabs ul.ui-tabs-nav li a:hover:before {
+	display: none;
+}
+
+#pago-wingman-app #tabs > .tabs-content {
+	padding-top: 1px;
+}
+
+
+#pago-wingman-app .pg-border {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+#pago-wingman-app .messages {
+	max-height: 300px;
+	overflow: auto;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#pago-wingman-app .messages > div {
+	display: table;
+	clear: both;
+}
+
+#pago-wingman-app .messages .me {
+	float: right;
+}
+
+#pago-wingman-app .messages > div:not(:first-child) {
+	padding-top: 10px;
+}
+
+#pago-wingman-app .messages > div > * {
+	display: table-cell;
+}
+
+
+#pago-wingman-app .messages .message {
+	padding: 10px;
+	position: relative;
+	border: 1px solid #eee;
+	background-color: #fafafa;
+	-webkit-border-radius: 5px 5px 5px 0;
+	-moz-border-radius: 5px 5px 5px 0;
+	border-radius: 5px 5px 5px 0;
+}
+
+#pago-wingman-app .messages .me .message {
+	background-color: #fff;
+	-webkit-border-radius: 5px 5px 0 5px;
+	-moz-border-radius: 5px 5px 0 5px;
+	border-radius: 5px 5px 0 5px;
+}
+
+#pago-wingman-app .messages .message:before,
+#pago-wingman-app .messages .message:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	bottom: 0;
+	
+	right: 100%;
+	left: auto;
+	border-width: 0 0 7px 7px;
+	border-color: transparent transparent #fafafa transparent;
+}
+
+#pago-wingman-app .messages .me .message:before,
+#pago-wingman-app .messages .me .message:after {
+	right: auto;
+	left: 100%;
+	border-width: 7px 0 0 7px;
+	border-color: transparent transparent transparent #fff;
+}
+
+#pago-wingman-app .messages .message:after {
+	z-index: 0;
+	margin-left: -1px;
+    bottom: -1px;
+    border-width: 0 0 9px 9px;
+    border-color: transparent transparent #eee transparent;
+}
+
+#pago-wingman-app .messages .me .message:after {
+	z-index: 0;
+	margin-left: 0;
+    border-width: 9px 0 0 9px;
+    border-color: transparent transparent transparent #eee;
+}
+
+#pago-wingman-app .messages .author {
+	vertical-align: bottom;
+	line-height: 1;
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+#pago-wingman-app .messages .me .author {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+
+#pago-wingman-app .files {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#pago-wingman-app .files a {
+	vertical-align: middle;
+}
+
+#pago-wingman-app .files > div:not(:first-child) {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+#pago-wingman-app .files sup {
+	color: #0244af;
+	border: 1px solid #0244af;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 2px 4px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+
+#pago-wingman-app .wingman-keyword {
+	display: block;
+	position: relative;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #0244af;
+	border-radius: 3px;
+	background-color: #F5F9FF;
+	color: #0244af;
+	font-weight: bold;
+}
+
+#pago-wingman-app.wingman-keyword button {
+	line-height: .6;
+}
+
+/*
+
+
+#pago .messages {
+	max-height: 300px;
+	overflow: auto;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#pago .messages > div {
+	display: table;
+	clear: both;
+}
+
+#pago .messages .me {
+	float: right;
+}
+
+#pago .messages > div:not(:first-child) {
+	padding-top: 10px;
+}
+
+#pago .messages > div > * {
+	display: table-cell;
+}
+
+
+#pago .messages .message {
+	padding: 10px;
+	position: relative;
+	border: 1px solid #eee;
+	background-color: #fafafa;
+}
+
+#pago .messages .me .message {
+	background-color: #fff;
+}
+
+#pago .messages .message:before,
+#pago .messages .message:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	bottom: 0;
+	
+	right: 100%;
+	left: auto;
+	border-width: 0 0 7px 7px;
+	border-color: transparent transparent #fafafa transparent;
+}
+
+#pago .messages .me .message:before,
+#pago .messages .me .message:after {
+	right: auto;
+	left: 100%;
+	border-width: 7px 0 0 7px;
+	border-color: transparent transparent transparent #fff;
+}
+
+#pago .messages .message:after {
+	z-index: 0;
+	margin-left: -1px;
+    bottom: -1px;
+    border-width: 0 0 9px 9px;
+    border-color: transparent transparent #eee transparent;
+}
+
+#pago .messages .me .message:after {
+	z-index: 0;
+	margin-left: 0;
+    border-width: 9px 0 0 9px;
+    border-color: transparent transparent transparent #eee;
+}
+
+#pago .messages .author {
+	vertical-align: bottom;
+	line-height: 1;
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+#pago .messages .me .author {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+
+#pago .files {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#pago .files > div:not(:first-child) {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+#pago .files .pg-btn {
+	margin-left: 10px;
+}
+
+#pago .files sup {
+	color: #8da639;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+#pago #chart {
+	background-image: url(wingman/chart.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 180px;
+}
+*/

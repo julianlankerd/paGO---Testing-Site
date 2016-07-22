@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base">
+		<field name="id" type="hidden" />
+		<field
+			name="name"
+			size="50"
+			type="text"
+			label="PAGO_CATEGORIES_CATEGORY_TITLE"
+			description="PAGO_CATEGORIES_CATEGORY_TITLE_DESC"
+			class="pg-category-title"
+			column="begin"
+			width_class="pg-col-6"
+		/>
+
+		<field
+			name="access"
+			type="list"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_ACCESS"
+			description="PAGO_CATEGORIES_CATEGORY_ACCESS_DESC"
+			column="end"
+			width_class="pg-col-6">
+			<option value="1">PAGO_CATEGORIES_CATEGORY_ACCESS_PUBLIC</option>
+			<option value="2">PAGO_CATEGORIES_CATEGORY_ACCESS_REGISTRED</option>
+			<option value="3">PAGO_CATEGORIES_CATEGORY_ACCESS_SPECIAL</option>
+		</field>
+
+		<field
+			name="alias"
+			size="50"
+			type="text"
+			label="PAGO_CATEGORIES_CATEGORY_ALIAS"
+			description="PAGO_CATEGORIES_CATEGORY_ALIAS_DESC"
+			column="begin"
+			width_class="pg-col-6"
+		/>
+
+		<field
+			name="parent_id"
+			type="categorylist"
+			multiple="false"
+			label="PAGO_CATEGORIES_CATEGORY_PRIMARY_CAT"
+			description="PAGO_CATEGORIES_CATEGORY_PRIMARY_CAT_DESC"
+			column="end"
+			width_class="pg-col-6"
+		/>
+
+		<field
+			name="published"
+			type="list"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_PUBLISH"
+			description="PAGO_CATEGORIES_CATEGORY_PUBLISH_DESC"
+			column="begin"
+			width_class="pg-col-6"
+			class="no-margin">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+
+		<field
+			name="inherit_parameters_from"
+			type="categorylistnotinherited"
+			multiple="false"
+			label="PAGO_CATEGORIES_CATEGORY_INHERIT_PARAMETERS_FROM"
+			description="PAGO_CATEGORIES_CATEGORY_INHERIT_PARAMETERS_FROM_DESC"
+			column="end"
+			width_class="pg-col-6"
+			class="no-margin"
+		/>
+
+		<!--<field
+			name="featured"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_CATEGORY_FEATURED"
+			description="PAGO_CATEGORIES_CATEGORY_FEATURED_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>-->
+
+		<!-- <field
+			name="truncate_desc"
+			type="text"
+			label="PAGO_CATEGORIES_CATEGORY_TRUCATE"
+			description="PAGO_CATEGORIES_CATEGORY_TRUCATE_DESC"
+			class="pg-category-truncate"
+			column_class="pg-col2"
+			column="end"
+		/> -->
+	</fieldset>
+
+	<fieldset name="description">
+		<field
+			name="description"
+			type="htmlarea"
+			label="PAGO_CATEGORIES_CATEGORY_DESC"
+			description="PAGO_CATEGORIES_CATEGORY_DESC_DESC"
+			class="pg-category-description"
+		/>
+	</fieldset>
+
+	<fieldset name="images">
+		<field
+			name="images"
+			type="medialist"
+			callback="category"
+			size="30"
+			default=""
+			label=""
+			description="full_width"
+		/>
+	</fieldset>
+
+	<!-- <fieldset name="images">
+		<field
+			name="images"
+			type="media"
+			callback="category"
+			size="30"
+			default=""
+			label=""
+			description="full_width"
+		/>
+	</fieldset>-->
+
+	<fieldset name="meta" addpath="/administrator/components/com_pago/elements">
+		<field name="item_metadata"
+			type="metadata"
+			label="PAGO_ITEM_META"
+			description="PAGO_ITEM_META"
+			meta="category"
+		/>
+	</fieldset>
+
+	<fieldset name="category_settings">
+		<field
+			name="category_custom_layout"
+			type="categorylayoutlist"
+			label="PAGO_CATEGORIES_CATEGORY_CUSTOM_LAYOUT"
+			description="PAGO_CATEGORIES_CATEGORY_CUSTOM_LAYOUT_DESC"
+			column_class="pg-col4"
+		/>
+		<field
+			name="category_settings_category_title"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_TITLE"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_TITLE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="category_settings_category_title"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_TITLE"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_TITLE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="category_settings_product_counter"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_PRODUCT_COUNTER"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_PRODUCT_COUNTER_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="category_settings_category_description"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_CATEGORY_DESCRIPTION"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_CATEGORY_DESCRIPTION_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="category_settings_category_image"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_CATEGORY_IMAGE"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_SHOW_CATEGORY_IMAGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="category_settings_image_settings">
+		<field
+			name="category_settings_image_settings"
+			type="tumblayout"
+			default='{"padding_left":"0","border_left":"1","margin_left":"0","margin_top":"0","border_top":"1","padding_top":"0","image_size":"2","padding_bottom":"0","padding_right":"0","border_right":"1","margin_right":"30","border_bottom":"1","margin_bottom":"20"}'
+			label="PAGO_CATEGORIES_CATEGORY_SETTINGS_IMAGE_SETTINGS"
+			description="PAGO_CATEGORIES_CATEGORY_SETTINGS_IMAGE_SETTINGS_DESC">
+		</field>
+	</fieldset>
+
+	<fieldset name="product_settings">
+		<field
+			name="product_settings_product_title"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_TITLE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_TITLE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_product_title_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRODUCT_TITLE_LIMIT"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRODUCT_TITLE_LIMIT_DESC">
+		</field>
+		<field
+			name="product_settings_link_to_product"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_TO_PRODUCT"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_TO_PRODUCT_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_product_image"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_IMAGE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_IMAGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_product_per_page"
+			type="text"
+			default="6"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PER_PAGE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PER_PAGE_DESC">
+		</field>
+		<field
+			name="product_settings_link_on_product_image"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_ON_IMAGE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_ON_IMAGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_featured_badge"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FEATURED_BADGE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FEATURED_BADGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_quantity_in_stock"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_QUANTITY_IN_STOCK"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_QUANTITY_IN_STOCK_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_short_desc"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_short_desc_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_LIMIT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_LIMIT_DESC_DESC"
+			class="pg-category-short-desc-limit pg-col4">
+		</field>
+		<field
+			name="product_settings_desc"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_desc_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_LIMIT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_LIMIT_DESC_DESC"
+			class="pg-category-desc-limit pg-col4">
+		</field>
+		<field
+			name="product_settings_sku"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SKU"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SKU_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_price"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRICE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRICE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_discounted_price"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DISCOUNTED_PRICE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_DISCOUNTED_PRICE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_attribute"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_ATTRIBUTE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_ATTRIBUTE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_media"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_MEDIA"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_MEDIA_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_downloads"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DOWNLOADS"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_DOWNLOADS_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_rating"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_RATING"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_RATING_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_category"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_CATEGORY"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_CATEGORY_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_read_more"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_READ_MORE"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_READ_MORE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_add_to_cart"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART"
+			description="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_settings_add_to_cart_qty"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_QTY"
+			description="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_QTY_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+	</fieldset>
+	<fieldset name="product_settings_sharings">
+		<field
+			name="product_settings_fb"
+			type="pgcheckbox"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FB"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FB_DESC">
+		</field>
+		<field
+			name="product_settings_tw"
+			type="pgcheckbox"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_TW"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_TW_DESC">
+		</field>
+		<field
+			name="product_settings_pinterest"
+			type="pgcheckbox"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PINTEREST"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PINTEREST_DESC">
+		</field>
+		<field
+			name="product_settings_google_plus"
+			type="pgcheckbox"
+			label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_GOOGLE_PLUS"
+			description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_GOOGLE_PLUS_DESC">
+
+		</field>
+	</fieldset>
+
+	<fieldset name="product_grid">
+		<field
+			name="product_grid_large"
+			type="radio"
+			default="2"
+			label="PAGO_CATEGORIES_PRODUCT_GRID_LARGE"
+			description="PAGO_CATEGORIES_PRODUCT_GRID_LARGE_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</field>
+		<field
+			name="product_grid_medium"
+			type="radio"
+			default="2"
+			label="PAGO_CATEGORIES_PRODUCT_GRID_MEDIUM"
+			description="PAGO_CATEGORIES_PRODUCT_GRID_MEDIUM_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</field>
+		<field
+			name="product_grid_small"
+			type="radio"
+			default="2"
+			label="PAGO_CATEGORIES_PRODUCT_GRID_SMALL"
+			description="PAGO_CATEGORIES_PRODUCT_GRID_SMALL_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</field>
+		<field
+			name="product_grid_extra_small"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_GRID_EXTRA_SMALL"
+			description="PAGO_CATEGORIES_PRODUCT_GRID_EXTRA_SMALL_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="category_settings_product_image_settings">
+		<field
+			name="category_settings_product_image_settings"
+			type="tumblayout"
+			default='{"padding_left":"0","border_left":"0","margin_left":"0","margin_top":"0","border_top":"0","padding_top":"0","image_size":"2","padding_bottom":"0","padding_right":"0","border_right":"0","margin_right":"0","border_bottom":"0","margin_bottom":"0"}'
+			label="PAGO_CATEGORIES_PRODUCT_IMAGE_SETTINGS"
+			description="PAGO_CATEGORIES_PRODUCT_IMAGE_SETTINGS_DESC">
+		</field>
+	</fieldset>
+
+	<fieldset name="product_view_settings">
+		<field 
+				name="category_view_display_items" 
+				type="list" 
+				default="0" 
+				label="PAGO_MENU_CATEGORY_DISPLAY_ITEMS" 
+				description="PAGO_MENU_CATEGORY_DISPLAY_ITEMS_DESC">
+					<option value="0">COM_PAGO_SELECT</option>
+					<option value="1">COM_PAGO_ONLY_FEATURED</option>
+					<option value="2">COM_PAGO_ON_SALE</option>	
+			</field>
+	
+		<field
+			name="item_custom_layout"
+			type="itemlayoutlist"
+			label="PAGO_CATEGORIES_ITEM_CUSTOM_LAYOUT"
+			description="PAGO_CATEGORIES_ITEM_CUSTOM_LAYOUT_DESC"
+		/>
+		<field
+			name="product_view_settings_product_title"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_TITLE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_TITLE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_product_title_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRODUCT_TITLE_LIMIT"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRODUCT_TITLE_LIMIT_DESC"
+			class="pg-col4">
+		</field>
+		<field
+			name="product_view_settings_product_image"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_IMAGE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_IMAGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_product_image_zoom"
+			type="list"
+			default="1"
+			width_class="pg-col2"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRODUCT_IMAGE_ZOOM"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRODUCT_IMAGE_ZOOM_DESC">
+			<option value="1">PAGO_INSIDE</option>
+			<option value="2">PAGO_OUTSIDE</option>
+			<option value="3">PAGO_OFF</option>
+		</field>
+		<field
+			name="product_view_settings_featured_badge"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_FEATURED_BADGE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_FEATURED_BADGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_quantity_in_stock"
+			type="radio"
+			default="0"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_QUANTITY_IN_STOCK"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_QUANTITY_IN_STOCK_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_short_desc"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHORT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHORT_DESC_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_short_desc_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHORT_LIMIT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHORT_LIMIT_DESC_DESC"
+			class="pg-category-product-view-short-desc-limit pg-col4">
+		</field>
+		<field
+			name="product_view_settings_desc"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHORT_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_desc_limit"
+			type="text"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_LIMIT_DESC"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_LIMIT_DESC_DESC"
+			class="pg-category-product-view-desc-limit pg-col4">
+		</field>
+		<field
+			name="product_view_settings_sku"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SKU"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SKU_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_price"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRICE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_PRICE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_discounted_price"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_DISCOUNTED_PRICE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_DISCOUNTED_PRICE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_attribute"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_ATTRIBUTE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_ATTRIBUTE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_media"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_MEDIA"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_MEDIA_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_downloads"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_DOWNLOADS"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_DOWNLOADS_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_rating"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_RATING"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_RATING_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_category"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_CATEGORY"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_CATEGORY_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_add_to_cart"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_ADD_TO_CART"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_ADD_TO_CART_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_add_to_cart_qty"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_ADD_TO_CART_QTY"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_ADD_TO_CART_QTY_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_product_review"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_PRODUCT_REVIEW"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_PRODUCT_REVIEW_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_related_products"
+			type="radio"
+			default="5"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_PRODUCTS"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_PRODUCTS_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_related_num_of_products"
+			type="text"
+			default="1"
+			class="related_products_sub pg-col4"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_NUM_OF_PRODUCTS"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_NUM_OF_PRODUCTS_DESC">
+		</field>
+		<!-- <field
+			name="product_view_settings_related_title"
+			type="radio"
+			default="1"
+			class="related_products_sub"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_TITLE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_TITLE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_related_category"
+			type="radio"
+			default="1"
+			class="related_products_sub"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_CATEGORY"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_CATEGORY_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_related_image"
+			type="radio"
+			default="1"
+			class="related_products_sub"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_IMAGE"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_IMAGE_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_related_short_text"
+			type="radio"
+			default="1"
+			class="related_products_sub"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_SHORT_TEXT"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_RELATED_SHORT_TEXT_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field> -->
+		<field
+			name="product_view_settings_image_settings"
+			type="tumblayout"
+			default='{"padding_left":"0","border_left":"0","margin_left":"0","margin_top":"0","border_top":"0","padding_top":"0","image_size":"3","padding_bottom":"0","padding_right":"0","border_right":"0","margin_right":"0","border_bottom":"0","margin_bottom":"0"}'
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_IMAGE_SETTINGS"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_IMAGE_SETTINGS_DESC">
+		</field>
+	</fieldset>
+	<fieldset name="product_view_settings_sharings">
+		<field
+			name="product_view_settings_fb"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_FB"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_FB_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_tw"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_TW"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_TW_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_pinterest"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PINTEREST"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_PINTEREST_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="product_view_settings_google_plus"
+			type="radio"
+			default="1"
+			label="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_GOOGLE_PLUS"
+			description="PAGO_CATEGORIES_PRODUCT_VIEW_SETTINGS_SHOW_GOOGLE_PLUS_DESC">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+	</fieldset>
+</form>

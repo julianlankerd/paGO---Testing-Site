@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>	
+
+	<fieldset name="base">		
+		<field
+			name="id"
+			type="hidden"/>
+
+		<field
+			name="name"
+			type="text"
+			column="begin"
+			width_class="pg-col-6"
+			required="true"
+			label="PAGO_COUPON_NAME"
+			description="PAGO_COUPON_NAME_DESC"/>
+
+		<field
+			name="code"
+			type="text"
+			column="end"
+			width_class="pg-col-6"
+			label="PAGO_COUPON_CODE"
+			required="true"
+			description="PAGO_COUPON_CODE_DESC"/>
+
+		<field
+			name="start"
+			type="pgcalendar" 
+			default="NOW" 
+			column="begin"
+			width_class="pg-col-6"
+			format="yy-mm-dd" 
+			filter="user_utc"
+			label="PAGO_COUPON_START_DATE"
+			description="PAGO_COUPON_START_DATE_DESC" />
+
+		<field
+			name="end"
+			type="pgcalendar" 
+			default="NOW" 
+			column="end"
+			width_class="pg-col-6"
+			format="yy-mm-dd" 
+			filter="user_utc"
+			label="PAGO_COUPON_END_DATE"
+			description="PAGO_COUPON_END_DATE_DESC"/>
+
+		<field
+			name="unlimited"
+			type="list"
+			column="begin"
+			default="0"
+			label="COM_PAGO_UNLIMITED_COUPONS"
+			width_class="pg-col-6"
+			description="COM_PAGO_UNLIMITED_COUPONS_DESC"> 
+		  <option value="0">No</option> 
+		  <option value="1">Yes</option> 
+		</field> 
+
+		<field
+			name="quantity"
+			type="text"
+			column="end"
+			width_class="pg-col-6"
+			label="PAGO_COUPON_QUANTITY"
+			description="PAGO_COUPON_QUANTITY_DESC"/>
+
+		<field
+			name="per_user"
+			type="text"
+			column="begin"
+			width_class="pg-col-6"
+			label="PAGO_COUPON_PER_USER"
+			description="PAGO_COUPON_PER_USER_DESC"
+			class="no-margin"/>	
+
+		<field
+			name="published"
+			type="radio"
+			column="end"
+			default="1"
+			label="PAGO_PUBLISH"
+			width_class="pg-col-6"
+			description="PAGO_COUPON_PUBLISH_DESC"> 
+		  <option value="0">No</option> 
+		  <option value="1">Yes</option> 
+		</field> 
+		
+	</fieldset>
+
+	<fieldset name="rules">
+		<field 
+			name="rules"
+			type="couponrules"
+			label="PAGO_COUPON_RULES"/>
+	</fieldset>
+
+	<fieldset name="events">
+		<field 
+			name="events"
+			type="couponevents"
+			label="PAGO_COUPON_EVENTS"
+			description="PAGO_COUPON_EVENTS_DESC"/>
+	</fieldset>
+
+	<fieldset name="assign">
+		<field 
+			name="assign"
+			type="couponassign"
+			label="PAGO_COUPON_ASSIGN"
+			description="PAGO_COUPON_ASSIGN_DESC"/>
+	</fieldset>
+
+</form>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>	
+	
+	<fieldset name="details">
+	
+		<field name="order_id" type="displayastext" label="PAGO_ORDER_ID" description="" required="true"/>	
+		<field name="order_status" type="statuslist" label="PAGO_ORDER_STATUS" description="" />
+		<field name="user_id" type="sql" default="" label="PAGO_USER_NAME" description="PAGO_ORDER_CURRENCY" 
+		query="SELECT id AS value, username AS user_id FROM #__users ORDER BY username" />
+		
+		<field name="cdate" type="displayastext" label="PAGO_ORDER_CREATION_DATE" description="" required="true"/>	
+		<field name="mdate" type="displayastext" label="PAGO_ORDER_MODIFICATION_DATE" description="" />
+		<field name="ip_address" type="displayastext" label="PAGO_IP_ADDRESS" description="" />
+	</fieldset>
+	
+	<fieldset name="grouplist">
+		<field name="groups" multiple="true" remote_url="index.php?option=com_pago&amp;view=group&amp;format=memberslist" 
+		style="width:400px;height:300px" type="multiselectgroups" label="Test_1" description="full_width">
+		  <option value="na">Start Typing Username</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="attributes">
+		<field name="item_attributes" type="itemattributes" label="PAGO_ITEM_ATTRIBUTES"
+			description="full_width" />
+	</fieldset>
+	
+	<fieldset name="invoice">
+		
+		<field name="order_currency" type="sql" default="USD" label="PAGO_ORDER_CURRENCY" description="PAGO_ORDER_CURRENCY" query="SELECT code AS value, name AS order_currency FROM #__pago_currency" />
+		<field name="order_shipping" type="displayastext" label="PAGO_ORDER_SHIPPING" description="" required="true"/>
+		<field name="order_tax" type="displayastext" label="PAGO_ORDER_TAX" description="" />
+		<field name="order_discount" type="text" label="PAGO_ORDER_DISCOUNT" description="" />
+		<field name="coupon_code" type="text" label="PAGO_COUPON_CODE" description="" />		
+		<field name="coupon_discount" type="displayastext" label="PAGO_COUPON_DISCOUNT" description="" />		
+		
+		<field name="order_subtotal" type="displayastext" label="PAGO_ORDER_SUB_TOTAL" description="" />	
+		<field name="order_total" type="displayastext" label="PAGO_ORDER_TOTAL" description="" />	
+		<field name="order_tax_details" type="displayastext" label="PAGO_ORDER_TAX_DETAILS" description="" />
+	</fieldset>
+	
+	<fieldset name="customer_note">
+		<field name="customer_note" type="textarea" cols="50" rows="10" label="PAGO_CUSTOMER_NOTE" description="full_width" />	
+	</fieldset>
+	
+	<fieldset name="shipping">
+		<field name="ship_method_id" type="shippers" label="PAGO_SHIP_METHOD_ID" description="full_width" />	
+	</fieldset>
+	
+	<fieldset name="payment_gateways">
+		<field name="payment_gateway" type="gateways" label="PAGO_SHIP_METHOD_ID" description="full_width" />	
+	</fieldset>
+	
+	<fieldset name="discounts">
+		
+		
+	</fieldset>
+	
+	<fieldset name="items">
+		<field name="itemslist" callback='injectitems' type="itemslist" label="PAGO_ITEMS" description="" />
+		
+	</fieldset>
+	
+	<fieldset name="address_billing">		
+		<field name="company" type="text" label="PAGO_USER_COMPANY" description="" />
+		<field name="title" type="text" label="PAGO_USER_TITLE" description="" />
+		<field name="first_name" type="text" label="PAGO_USER_FIRST_NAME" description="" />
+		<field name="middle_name" type="text" label="PAGO_USER_MIDDLE_NAME" description="" />
+		<field name="last_name" type="text" label="PAGO_USER_LAST_NAME" description="" />
+		<field name="address_1" type="text" label="PAGO_USER_ADDRESS1" description="" />	
+		<field name="address_2" type="text" label="PAGO_USER_ADDRESS2" description="" />
+		<field name="city" type="text" label="PAGO_USER_CITY" description="" />	
+		<field name="state" type="stateslist" label="PAGO_USER_STATE" description="" />	
+		<field name="country" type="countrieslist" label="PAGO_USER_COUNTRY" description="" />	
+		<field name="zip" type="text" label="PAGO_USER_ZIP" description="" />					
+		<field name="user_email" type="text" label="PAGO_USER_EMAIL" description="" />	
+		<field name="phone_1" type="text" label="PAGO_USER_PHONE1" description="" />
+		<field name="phone_2" type="text" label="PAGO_USER_PHONE2" description="" />	
+		<field name="fax" type="text" label="PAGO_USER_FAX" description="" />					
+	</fieldset>
+	
+	<fieldset name="address_shipping">		
+		<field name="company" type="text" label="PAGO_USER_COMPANY" description="" />
+		<field name="title" type="text" label="PAGO_USER_TITLE" description="" />
+		<field name="first_name" type="text" label="PAGO_USER_FIRST_NAME" description="" />
+		<field name="middle_name" type="text" label="PAGO_USER_MIDDLE_NAME" description="" />
+		<field name="last_name" type="text" label="PAGO_USER_LAST_NAME" description="" />
+		<field name="address_1" type="text" label="PAGO_USER_ADDRESS1" description="" />	
+		<field name="address_2" type="text" label="PAGO_USER_ADDRESS2" description="" />
+		<field name="city" type="text" label="PAGO_USER_CITY" description="" />	
+		<field name="state" type="stateslist" label="PAGO_USER_STATE" description="" />	
+		<field name="country" type="countrieslist" label="PAGO_USER_COUNTRY" description="" />
+		<field name="zip" type="text" label="PAGO_USER_ZIP" description="" />					
+		<field name="user_email" type="text" label="PAGO_USER_EMAIL" description="" />	
+		<field name="phone_1" type="text" label="PAGO_USER_PHONE1" description="" />
+		<field name="phone_2" type="text" label="PAGO_USER_PHONE2" description="" />	
+		<field name="fax" type="text" label="PAGO_USER_FAX" description="" />					
+	</fieldset>
+	
+	
+	
+	<fieldset name="hidden">			
+		<field name="id" type="hidden" />
+		<field name="user_id" type="hidden" />
+		<field name="address_type" value="b" type="hidden" />				
+	</fieldset>
+	
+	
+</form>

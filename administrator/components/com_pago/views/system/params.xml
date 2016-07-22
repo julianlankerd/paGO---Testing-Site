@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="pago_api">
+	<fieldset name="pago_api_fieldset">
+		<field name="endpoint"
+		   	   type="text"
+		   	   default="https://api.pagocommerce.com"
+			   label="PAGO_API_ENDPOINT"
+			   description="PAGO_API_ENDPOINT_DESC"/>
+		
+		<field name="version"
+		   	   type="text"
+		   	   default="v1"
+			   label="PAGO_API_VERSION"
+			   description="PAGO_API_VERSION_DESC"/>
+		<!--	   
+		<field name="testmode"
+			   type="radio"
+			   default="0"
+			   label="PAGO_API_TESTMODE"
+			   description="PAGO_API_TESTMODE_DESC">
+		  	<option value="1">Yes</option>
+		  	<option value="0">No</option>
+		</field>
+		-->
+	</fieldset>
+</fields>
+</form>

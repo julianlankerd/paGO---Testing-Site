@@ -1,0 +1,4 @@
+username,password,address_type,address_type_name,company,title,last_name,first_name,middle_name,phone_1,phone_2,fax,address_1,address_2,city,state,country,zip,user_email,perms
+username1,password1,s,Shipping,'corePHP',,Shah,Johney,,2699795582,,,12 Test address,,Battle Creek,Michigan,US,49017,test1@gmail.com,shopper
+username2,password2,b,Billing,test comp,,Expert,Jessica,,555 555 5555,,,123 test Street,test address21,Battle Greek,Michigan,US,49001,test2@gmail.com,shopper
+username3,password3,b,Shipping,'corePHP',,Shah,John,,2699795582,,,12 Test addressE,,Battle Creek,Michigan,US,49017,test3@gmail.com,shopper

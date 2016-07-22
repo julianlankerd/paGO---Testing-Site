@@ -1,0 +1,6 @@
+id,parent_category,name,alias,description,item_count,created_user_id,modified_user_id,published,featured,access,visibility,images
+,Parent category,categoryAAA,cata,<p>test description</p>,15,64,64,1,0,1,1,lighthouse.jpg
+,Parent category,categoryBBB,,<p>test description</p>,9,64,64,1,0,1,1,jellyfish.jpg
+,Parent category,categoryCCC,,<p>test description</p>,6,64,64,1,0,1,1,jellyfish.jpg|lighthouse.jpg
+,categoryAAA,categoryA111,,<p>test description</p>,7,64,64,1,0,1,1,
+,categoryBBB,categoryB111,,<p>test description</p>,10,64,64,1,0,1,1,

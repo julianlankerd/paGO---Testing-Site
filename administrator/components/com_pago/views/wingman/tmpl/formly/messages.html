@@ -1,0 +1,15 @@
+<div class="{{ to.size }}">
+	<formly-transclude></formly-transclude>
+	<div data-ng-messages="fc.$error" data-ng-show="showError">
+		<div data-ng-message="required">Required field</div>
+		<div data-ng-message="email">Please provide a valid email</div>
+		<div data-ng-message="minlength">Too short</div>
+		<div data-ng-message="maxlength">Too long</div>
+		<div data-ng-message="number">Only numbers allowed</div>
+		<div data-ng-message="full-name">Please input your full name</div>
+		<div data-ng-message="cc-number">Your credit card number is not valid</div>
+		<div data-ng-message="cc-cvc">Your CVC is not valid</div>
+		<div data-ng-message="cc-expiry-month">Your credit card expiration date is not valid</div>
+		<div data-ng-message="cc-expiry-year">Your credit card expiration date is not valid</div>
+	</div>
+</div>

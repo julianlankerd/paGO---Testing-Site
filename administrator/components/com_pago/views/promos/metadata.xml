@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<params group="base">
+		<param name="id" type="hidden" />
+		<param name="name" size="50" type="text" label="SALES_NAME" description="SALES_NAME_DESC" />
+		<param name="published" type="radio" default="0" label="SALES_PUBLISH"
+			description="SALES_PUBLISH_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="sale_start" type="calendar" label="SALES_START"
+			description="SALES_START_DESC" />
+		<param name="sale_end"  type="calendar" label="SALES_END" description="SALES_END_DESC"/>
+		<param name="value" type="list" label="SALES_VALUE" description="SALES_VALUE_DESC" >
+			<option>Total</option>
+			<option>Percent</option>
+		</param>
+		<param name="amount" type="text" label="ITEM_DISC_AMOUNT"
+			description="ITEM_DISC_AMOUNT_DESC" />
+	</params>
+	<params group="condition">
+		<param name="cond_price" type="radio" label="SALES_COND_PRICE"
+			description="SALES_COND_PRICE_DESC" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cond_price_min" type="text" size="20" label="SALES_COND_PRICE_MIN"
+			description="SALES_COND_PRICE_MIN_DESC" />
+		<param name="cond_price_max" type="text" size="20" label="SALES_COND_PRICE_MAX"
+			description="SALES_COND_PRICE_MAX_DESC" />
+		<param name="cond_qty" type="radio" label="SALES_COND_QTY"
+			description="SALES_COND_QTY_DESC" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cond_qty_min" type="text" size="20" label="SALES_COND_QTY_MIN"
+			description="SALES_COND_QTY_MIN_DESC" />
+		<param name="cond_qty_max" type="text" size="20" label="SALES_COND_QTY_MAX"
+			description="SALES_COND_QTY_MAX_DESC" />
+	</params>
+	<params group="products">
+		<param name="categories" style="width:100%" size="12" type="categorylist" multiple="multiple" label="SALES_CATS" description="SALES_CATS_DESC" />
+	</params>
+</metadata>

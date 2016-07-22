@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	
+	<fieldset name="subscription_price">
+		
+		<field
+			name="subscr_price"
+			type="text"
+			default="100.00"
+			label="PAGO_ITEM_SUBSCR_TRIAL_PRICE"
+			description="PAGO_ITEM_SUBSCR_TRIAL_PRICE_DESC"
+			column="begin"
+			width_class="pg-col-6"
+			class="no-margin"
+		/>
+		
+		<field
+			name="subscr_installments"
+			type="text"
+			default="0"
+			label="PAGO_ITEM_SUBSCR_INSTALLMENTS"
+			description="PAGO_ITEM_SUBSCR_INSTALLMENTS_DESC"
+			class="no-margin"
+			width_class="pg-col-6"
+			column="end"
+		/>
+	
+	</fieldset>
+	
+	<fieldset name="subscription_interval" addpath="/administrator/components/com_pago/elements">
+		
+		<field
+			name="sub_recur"
+			type="radio"
+			default="month"
+			label="PAGO_ITEM_SUBSCR_INTERVAL"
+			description="PAGO_ITEM_SUBSCR_INTERVAL_DESC"
+			class="no-margin"
+			>
+			<option value="Day">PAGO_ITEM_SUBSCR_DAY</option>
+			<option value="Week">PAGO_ITEM_SUBSCR_WEEK</option>
+			<option value="Month">PAGO_ITEM_SUBSCR_MONTH</option>
+			<option value="Year">PAGO_ITEM_SUBSCR_YEAR</option>
+		</field>
+		
+		<field 
+			name="subscr_startdate" 
+			type="pgcalendar" 
+			default="NOW" 
+			label="PAGO_ITEM_SUBSCR_STARTDATE" 
+			description="PAGO_ITEM_SUBSCR_STARTDATE_DESC"
+			format="yy-mm-dd" 
+			column="begin"
+			width_class="pg-col-6"
+			class="no-margin"
+			readonly="true"
+		/>
+		
+		<field 
+			name="subscr_enddate" 
+			type="pgcalendar" 
+			default="NOW" 
+			label="PAGO_ITEM_SUBSCR_ENDDATE" 
+			description="PAGO_ITEM_SUBSCR_ENDDATE_DESC"
+			format="yy-mm-dd" 
+			width_class="pg-col-6"
+			column="end"
+			class="no-margin"
+			readonly="true"
+		/>
+		
+	</fieldset>
+	
+	<fieldset name="subscription_trial" addpath="/administrator/components/com_pago/elements">
+		
+		<field
+			name="subscr_start_type"
+			type="radio"
+			default="months"
+			label="PAGO_ITEM_SUBSCR_TRIAL_TYPE"
+			description="PAGO_ITEM_SUBSCR_TRIAL_TYPE_DESC"
+			class="no-margin"
+			>
+			<option value="days">PAGO_DAYS</option>
+			<option value="weeks">PAGO_WEEKS</option>
+			<option value="months">PAGO_MONTHS</option>
+			<option value="years">PAGO_YEARS</option>
+		</field>
+		
+		<field
+			name="subscr_start_num"
+			type="text"
+			default="1"
+			label="PAGO_ITEM_SUBSCR_TRIAL_TIME"
+			description="PAGO_ITEM_SUBSCR_TRIAL_TIME_DESC"
+			class="no-margin"
+		/>
+	
+	</fieldset>
+	
+	<fieldset name="base">
+		<field
+			name="name"
+			size="50"
+			type="text"
+			label="PAGO_ITEM_TITLE"
+			description="PAGO_ITEM_TITLE_DESC"
+			width_class="pg-col-6"
+			column="begin"
+		/>
+		
+			<field
+			name="sku"
+			size="12"
+			type="text"
+			label="PAGO_ITEM_SKU"
+			description="PAGO_ITEM_SKU_DESC"
+			width_class="pg-col-6"
+			
+		/>
+		
+		<field
+			name="alias"
+			size="50"
+			type="text"
+			label="PAGO_ITEM_ALIAS"
+			description="PAGO_ITEM_ALIAS_DESC"
+			width_class="pg-col-6"
+		
+		/>
+
+		<field
+			name="price"
+			size="12"
+			type="text"
+			label="PAGO_ITEM_PRICE"
+			description="PAGO_ITEM_PRICE_DESC"
+			width_class="pg-col-6"
+			
+		/>
+		
+		<field
+			name="qty"
+			size="12"
+			default="0"
+			type="text"
+			class="to-hide numeric"
+			label="PAGO_ITEM_QTY"
+			description="PAGO_ITEM_QTY_DESC"
+			width_class="pg-col-6"
+			
+		/>
+		
+		<field
+			name="price_type"
+			size="12"
+			type="pricetypes"
+			label="PAGO_ITEM_PRICE_TYPE"
+			description="PAGO_ITEM_PRICE_TYPE_DESC"
+			width_class="pg-col-6"
+			column="end"
+		/>
+		
+		<field
+			name="qty_limit"
+			type="list"
+			default="1"
+			class="hiddener"
+			label="PAGO_ITEM_QTY_LIMIT"
+			description="PAGO_ITEM_QTY_LIMIT_DESC"
+			width_class="pg-col-6"
+			column="begin"
+			>
+			<option value="1">PAGO_UNLIMITED</option>
+			<option value="0">PAGO_LIMITED</option>
+		</field>
+
+		<field
+			name="access"
+			type="list"
+			default="1"
+			label="PAGO_ITEM_ACCESS"
+			description="PAGO_ITEM_ACCESS_DESC"
+			width_class="pg-col-6"
+			>
+			<option value="1">PAGO_ITEM_ACCESS_PUBLIC</option>
+			<option value="2">PAGO_ITEM_ACCESS_REGISTRED</option>
+			<option value="3">PAGO_ITEM_ACCESS_SPECIAL</option>
+		</field>
+
+		<field
+			name="availibility_options"
+			type="list"
+			default="1"
+			label="PAGO_ITEM_AVA_OPTIONS"
+			description="PAGO_ITEM_AVA_OPTIONS_DESC"
+			width_class="pg-col-6"
+			>
+			<option value="0">PAGO_ITEM_ALWAYS_AVAILABLE</option>
+			<option value="1">PAGO_ITEM_NOT_AVAILABLE</option>
+			<option value="2">PAGO_ITEM_CONTACT_FOR_INFO</option>
+			<option value="3">PAGO_ITEM_DATE_AVAILABLE</option>
+			<option value="4">PAGO_ITEM_DO_NOT_DISPLAY</option>
+		</field>
+
+		<field
+			name="published"
+			type="list"
+			default="1"
+			label="PAGO_ITEM_PUBLISH"
+			description="PAGO_ITEM_PUBLISH_DESC"
+			width_class="pg-col-6"
+			
+			class="no-margin">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+
+		<field
+			name="availibility_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_AVAILABILITY_DATE"
+			description="SELECT_PAGO_AVAILABILITY_DATE"
+			format="yy-mm-dd"
+			width_class="pg-col-6"
+			column="end"
+			class="no-margin"
+		/>
+
+		<field
+			name="jump_to_checkout"
+			type="flipswitch"
+			default="0"
+			label="PAGO_ITEM_JUMP_TO_CHECKOUT"
+			description="PAGO_ITEM_JUMP_TO_CHECKOUT_DESC"
+			column="begin"
+			width_class="pg-col-6"
+			class="no-margin">
+			<option value="1">PAGO_YES</option>
+			<option value="0">PAGO_NO</option>
+		</field>
+
+		<field
+			name="id"
+			type="hidden"
+			column="end"
+		/>
+	</fieldset>
+	
+	
+	
+	<fieldset name="category">
+		<field
+			name="category"
+			type="categorylist"
+			multiple="true"
+			new="true"
+			label=""
+			description=""
+		/>
+	</fieldset>
+
+	<fieldset name="badges">
+		<field
+			name="featured"
+			type="radioborder"
+			default="0"
+			label="PAGO_ITEM_FEATURED"
+			description="PAGO_ITEM_FEATURED_DESC">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="featured_start_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_FEATURED_START_DATE"
+			description="PAGO_FEATURED_START_DATE_DESC"
+			format="yy-mm-dd"
+			width_class="pg-col-6"
+			column="begin"
+		/>
+
+		<field
+			name="featured_end_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_FEATURED_END_DATE"
+			description="PAGO_FEATURED_END_DATE_DESC"
+			format="yy-mm-dd"
+			width_class="pg-col-6"
+		/>
+
+		<field
+			name="show_new"
+			type="radioborder"
+			default="0"
+			label="PAGO_ITEM_NEW"
+			width_class="pg-col-6"
+			description="PAGO_ITEM_NEW_DESC"
+			class="no-margin">
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+
+		<field
+			name="until_new_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_NEW_UNTIL"
+			description="PAGO_NEW_UNTIL_DESC"
+			format="yy-mm-dd"
+			width_class="pg-col-6"
+			class="no-margin"
+			column="end"
+		/>
+	</fieldset>
+
+	<fieldset name="tax">
+		<!-- <field
+			name="price_type"
+			size="12"
+			type="pricetypes"
+			label="PAGO_ITEM_PRICE_TYPE"
+			description="PAGO_ITEM_PRICE_TYPE_DESC"
+			width_class="pg-col3"
+		/> -->
+		<field
+			name="tax_exempt"
+			type="list"
+			default="0"
+			label="PAGO_ITEM_TAX_EXEMPT"
+			description="PAGO_ITEM_TAX_EXEMPT_DESC"
+
+			>
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+
+		<field name="pgtax_class_id" type="taxclasslist"
+			style="width:100%"
+			default="0"
+			label="PAGO_ITEM_DEFAULT_TAX_CLASS"
+			description="PAGO_ITEM_DEFAULT_TAX_CLASS_DESC"
+			class="no-margin"
+			>
+		</field>
+	</fieldset>
+
+	<fieldset name="images">
+		<field
+			name="images"
+			type="medialist"
+			callback="images"
+			size="30"
+			default=""
+			label=""
+			description="full_width"
+		/>
+	</fieldset>
+
+	<fieldset name="short-description">
+		<field
+			name="description"
+			type="htmlarea"
+			label="PAGO_ITEM_DESC"
+			description="PAGO_ITEM_DESC_DESC"
+		/>
+	</fieldset>
+
+	<fieldset name="long-description">
+		<field
+			name="content"
+			type="htmlarea"
+			label="PAGO_ITEM_CONTENT_FIELD"
+			description="PAGO_ITEM_CONTENT_FIELD_DESC"
+		/>
+	</fieldset>
+
+	<fieldset name="shipping">
+		<field
+			name="free_shipping"
+			column="begin"
+			type="list"
+			default="0"
+			label="PAGO_ITEM_FREE_SHIPPING"
+			description="PAGO_ITEM_FREE_SHIPPING_DESC"
+			width_class="pg-col-6"
+			class="no-margin">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="shipping_methods"
+			column="end"
+			style="width:100%"
+			size="12"
+			type="shippinglist"
+			default="0"
+			multiple="multiple"
+			label="PAGO_SHIPPING_METHOD"
+			description="PAGO_SHIPPING_METHOD_DESC"
+			width_class="pg-col-6"
+			class="no-margin"
+		/>
+
+	</fieldset>
+
+	<fieldset name="copy">
+		<field
+			name="published"
+			type="list"
+			default="0"
+			label="PAGO_ITEM_PUBLISH"
+			description="PAGO_ITEM_PUBLISH_DESC">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="primary_category"
+			style="width:100%"
+			type="categorylist"
+			label="PAGO_ITEM_PRIMARY_CAT"
+			description="PAGO_ITEM_PRIMARY_CAT_DESC"
+		/>
+		<field
+			name="secondary_category"
+			style="width:100%"
+			size="12"
+			type="categorylist"
+			multiple="multiple"
+			label="PAGO_ITEM_SEC_CAT"
+			description="PAGO_ITEM_SEC_CAT_DESC"
+		/>
+	</fieldset>
+
+	<fieldset
+		name="discounts"
+		padding="none">
+
+		<field
+			name="disc_start_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_ITEM_DISC_START_DATE"
+			description="PAGO_ITEM_DISC_START_DATE_DESC"
+			format="yy-mm-dd"
+			width_class="pg-col-4"
+			column="begin"
+			column_parent="pg-col-8"
+		/>
+
+		<field
+			name="disc_end_date"
+			type="pgcalendar"
+			default="NOW"
+			label="PAGO_ITEM_DISC_END_DATE"
+			description="PAGO_ITEM_DISC_END_DATE_DESC"
+			format="yy-mm-dd"
+			width_class="pg-col-4"
+		/>
+
+		<field
+			name="discount_amount"
+			type="text"
+			label="PAGO_ITEM_DISCOUNT_AMOUNT"
+			description="PAGO_ITEM_DISCOUNT_AMOUNT_DESC"
+			width_class="pg-col-4"
+			column="end"
+			column_parent="end"
+		/>
+
+		<field
+			name="discount_type"
+			column_parent="pg-col-4 right-column"
+			column="begin"
+			type="list"
+			default="price"
+			label="PAGO_ITEM_DISC_TYPE"
+			description="PAGO_ITEM_DISC_TYPE_DESC"
+			width_class="pg-col-6">
+			<option value="0">PAGO_DISC_PRICE</option>
+			<option value="1">PAGO_DISC_PERCENTAGE</option>
+		</field>
+		<field
+			name="apply_discount"
+			column="end"
+			column_parent="end"
+			type="list"
+			default="0"
+			label="PAGO_ITEM_APPLY_DISCOUNT"
+			description="PAGO_ITEM_APPLY_DISCOUNT_DESC"
+			width_class="pg-col-6">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="dimensions">
+		<field
+			name="length"
+			column="begin"
+			size="6"
+			type="text"
+			label="PAGO_ITEM_LENGTH"
+			description="PAGO_ITEM_LENGTH_DESC"
+			width_class="pg-col-6"
+		/>
+		<field
+			name="width"
+			column="end"
+			size="6"
+			type="text"
+			label="PAGO_ITEM_WIDTH"
+			description="PAGO_ITEM_WIDTH_DESC"
+			width_class="pg-col-6"
+		/>
+		<field
+			name="height"
+			column="begin"
+			size="6"
+			type="text"
+			label="PAGO_ITEM_HEIGHT"
+			description="PAGO_ITEM_HEIGHT_DESC"
+			width_class="pg-col-6"
+			class="no-margin"
+		/>
+		<field
+			name="weight"
+			column="end"
+			size="6"
+			type="text"
+			label="PAGO_ITEM_WEIGHT"
+			description="PAGO_ITEM_WEIGHT_DESC"
+			width_class="pg-col-6"
+			class="no-margin"
+		/>
+	</fieldset>
+
+	<fieldset name="files">
+		<field
+			name="files"
+			type="files"
+			callback="files"
+			size="30"
+			default=""
+			label="files"
+			description="full_width"
+		/>
+	</fieldset>
+
+	<fieldset name="related_item">
+		<field
+			name="related_items"
+			type="relateditems"
+			label="PAGO_ITEM_RELATED"
+			description="PAGO_ITEM_RELATED_DESC"
+			/>
+	</fieldset>
+	<fieldset name="related_category">
+		<field
+			name="related_category"
+			type="relatedcategory"
+			label="PAGO_CATEGORY_RELATED"
+			description="PAGO_CATEGORY_RELATED_DESC"
+			/>
+	</fieldset>
+
+	<fieldset name="meta" addpath="/administrator/components/com_pago/elements">
+		<field
+			name="item_metadata"
+			type="metadata"
+			label="PAGO_ITEM_META"
+			description="PAGO_ITEM_META"
+			meta="item"
+		/>
+	</fieldset>
+	<fieldset name="downloadable">
+		<field
+			name="downloadable"
+			type="downloadable"
+			callback="download"
+			size="30"
+			default=""
+			label=""
+			description="full_width"
+		/>
+	</fieldset>
+
+
+	<fieldset name="custom_attribute_params">
+		<field
+			name="custom_attribute"
+			type="customattribute"
+			label=""
+			description=""
+			class=""
+			callback="attribute value"
+			/>
+	</fieldset>
+	<fieldset name="view_settings">
+		<field
+			name="item_custom_layout_inherit"
+			type="radioborder"
+			default="2"
+			label="PAGO_ITEM_ITEM_CUSTOM_LAYOUT_INHERIT"
+			description="PAGO_ITEM_ITEM_CUSTOM_LAYOUT_INHERIT_DESC"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="1">PAGO_CUSTOM</option>
+		</field>
+		<field
+			name="item_custom_layout"
+			type="itemlayoutlist"
+			label="PAGO_ITEM_ITEM_CUSTOM_LAYOUT"
+			description="PAGO_ITEM_ITEM_CUSTOM_LAYOUT_DESC"
+			width_class="pg-col-4"
+			column="end"
+		/>
+		<field
+			name="view_settings_product_title"
+			type="list"
+			default="2"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_TITLE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_TITLE_DESC"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_title_limit_inherit"
+			type="radioborder"
+			default="0"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_TITLE_LIMIT_INHERIT"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_TITLE_LIMIT_INHERIT_DESC"
+			width_class="pg-col-4">
+			<option value="0">PAGO_INHERIT</option>
+			<option value="1">PAGO_CUSTOM</option>
+		</field>
+		<field
+			name="view_settings_title_limit"
+			type="text"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_TITLE_LIMIT"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_TITLE_LIMIT_DESC"
+			width_class="pg-col-4"
+			column="end"
+			class="pg-product-view-title-limit pg-col4">
+		</field>
+		<field
+			name="view_settings_product_image"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-12"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_IMAGE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PRODUCT_IMAGE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_product_image_zoom"
+			type="list"
+			default="0"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_PRODUCT_IMAGE_ZOOM"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_PRODUCT_IMAGE_ZOOM">
+			<option value="0">PAGO_INHERIT</option>
+			<option value="1">PAGO_INSIDE</option>
+			<option value="2">PAGO_OUTSIDE</option>
+			<option value="3">PAGO_OFF</option>
+		</field>
+		<field
+			name="view_settings_featured_badge"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_FEATURED_BADGE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_FEATURED_BADGE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_quantity_in_stock"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			column="end"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_QUANTITY_IN_STOCK"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_QUANTITY_IN_STOCK_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_short_desc"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHORT_DESC"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHORT_DESC_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_short_desc_limit"
+			type="text"
+			width_class="pg-col-4"
+			column="end"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHORT_LIMIT_DESC"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHORT_LIMIT_DESC_DESC"
+			class="pg-product-view-short-desc-limit pg-col4">
+		</field>
+		<field
+			name="view_settings_desc"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_DESC"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHORT_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_desc_limit"
+			type="text"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_LIMIT_DESC"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_LIMIT_DESC_DESC"
+			column="end"
+			width_class="pg-col-4"
+			class="pg-product-view-desc-limit">
+		</field>
+		<field
+			name="view_settings_sku"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SKU"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SKU_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_price"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_PRICE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_PRICE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_discounted_price"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_DISCOUNTED_PRICE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_DISCOUNTED_PRICE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_attribute"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_ATTRIBUTE"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_ATTRIBUTE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_media"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_MEDIA"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_MEDIA_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_downloads"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_DOWNLOADS"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_DOWNLOADS_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_rating"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_RATING"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_RATING_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_category"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_CATEGORY"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_CATEGORY_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_add_to_cart"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_ADD_TO_CART"
+			description="PAGO_PRODUCT_VIEW_ADD_TO_CART_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_add_to_cart_qty"
+			type="radioborder"
+			default="2"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_ADD_TO_CART_QTY"
+			description="PAGO_PRODUCT_VIEW_ADD_TO_CART_QTY_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_product_review"
+			type="radioborder"
+			default="2"
+			column="end"
+			width_class="pg-col-4 cl-b"
+			label="PAGO_PRODUCT_VIEW_PRODUCT_REVIEW"
+			description="PAGO_PRODUCT_VIEW_PRODUCT_REVIEW_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_related_products"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4"
+			label="PAGO_PRODUCT_VIEW_RELATED_PRODUCTS"
+			description="PAGO_PRODUCT_VIEW_RELATED_PRODUCTS_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_related_num_of_products"
+			type="text"
+			default="2"
+			column="end"
+			width_class="pg-col-4"
+			class="item_related_products_sub"
+			label="PAGO_PRODUCT_VIEW_RELATED_NUM_OF_PRODUCTS"
+			description="PAGO_PRODUCT_VIEW_RELATED_NUM_OF_PRODUCTS_DESC">
+		</field>
+		<!-- <field
+			name="view_settings_related_title"
+			type="radioborder"
+			default="2"
+			class="related_products_sub"
+			label="PAGO_PRODUCT_VIEW_RELATED_TITLE"
+			description="PAGO_PRODUCT_VIEW_RELATED_TITLE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_related_category"
+			type="radioborder"
+			default="2"
+			class="related_products_sub"
+			label="PAGO_PRODUCT_VIEW_RELATED_CATEGORY"
+			description="PAGO_PRODUCT_VIEW_RELATED_CATEGORY_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_related_image"
+			type="radioborder"
+			default="2"
+			class="related_products_sub"
+			label="PAGO_PRODUCT_VIEW_RELATED_IMAGE"
+			description="PAGO_PRODUCT_VIEW_RELATED_IMAGE_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_related_short_text"
+			type="radioborder"
+			default="2"
+			class="related_products_sub"
+			label="PAGO_PRODUCT_VIEW_RELATED_SHORT_TEXT"
+			description="PAGO_PRODUCT_VIEW_RELATED_SHORT_TEXT_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field> -->
+		<field
+			name="view_settings_image_settings_show"
+			type="radioborder"
+			default="2"
+			column="begin"
+			column_class="pg-col12 clear"
+			width_class="pg-col-4"
+			label="PAGO_PRODUCT_VIEW_IMAGE_SETTINGS_SHOW"
+			description="PAGO_PRODUCT_VIEW_IMAGE_SETTINGS_SHOW_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="1">PAGO_CUSTOM</option>
+		</field>
+		<field
+			name="view_settings_image_settings"
+			type="tumblayout"
+			default='{"padding_left":"0","border_left":"1","margin_left":"0","margin_top":"0","border_top":"1","padding_top":"0","image_size":"3","padding_bottom":"0","padding_right":"0","border_right":"1","margin_right":"0","border_bottom":"1","margin_bottom":"20"}'
+			column="end"
+			width_class="pg-col-4"
+			label="PAGO_PRODUCT_VIEW_IMAGE_SETTINGS"
+			description="PAGO_PRODUCT_VIEW_IMAGE_SETTINGS_DESC">
+		</field>
+	</fieldset>
+	<fieldset name="view_settings_sharings">
+		<field
+			name="view_settings_fb"
+			type="radioborder"
+			default="2"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_FB"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_FB_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_tw"
+			type="radioborder"
+			default="2"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_TW"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_TW_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_pinterest"
+			type="radioborder"
+			default="2"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PINTEREST"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_PINTEREST_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+		<field
+			name="view_settings_google_plus"
+			type="radioborder"
+			default="2"
+			label="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_GOOGLE_PLUS"
+			description="PAGO_PRODUCT_VIEW_SETTINGS_SHOW_GOOGLE_PLUS_DESC">
+			<option value="2">PAGO_INHERIT</option>
+			<option value="0">PAGO_HIDE</option>
+			<option value="1">PAGO_SHOW</option>
+		</field>
+	</fieldset>
+	<fieldset name="variation">
+		<field
+			name="images_v"
+			type="medialist"
+			callback="images"
+			size="30"
+			default=""
+			label=""
+			description="full_width"
+		/>
+	</fieldset>
+</form>

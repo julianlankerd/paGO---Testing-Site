@@ -1,0 +1,8 @@
+<div class="pg-text">
+	<span class="field-heading">
+		<label for="{{ id }}" class="hasTooltip" title="{{ to.tooltip }}">{{ to.label }} <sup data-ng-show="{{ to.required }}">*</sup></label>
+	</span>
+	<div>
+		<textarea name="{{ options.key }}" id="{{ id }}" data-ng-model="model[options.key]" rows="{{ to.rows }}" ng-required="to.required"></textarea>
+	</div>
+</div>

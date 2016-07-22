@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="base" >
+		<field
+			name="pgtemplate_name"
+			size="50"
+			type="text"
+			label="PAGO_TEMPLATE_TEMPLATE_TITLE"
+			description="PAGO_TEMPLATE_TEMPLATE_TITLE_DESC"
+			width_class="pg-col3"
+		/>
+
+		
+		<field
+			name="pgtemplate_enable"
+			type="radio"
+			default="0"
+			label="PAGO_TEMPLATE_PUBLISH"
+			description="PAGO_TEMPLATE_PUBLISH_DESC" width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="pgtemplate_parent_section"
+			type="list"
+			default="1"
+			label="PAGO_PARENT_SECTION_ACCESS"
+			description="PAGO_PARENT_SECTION_ACCESS_DESC"
+			width_class="pg-col3">
+			<option value="order">PAGO_ITEM_SECTION_ORDER</option>
+			<option value="item">PAGO_ITEM_SECTION_ITEM</option>
+			<option value="category">PAGO_ITEM_SECTION_CATEGORY</option>
+		</field>
+		<field
+			name="pgtemplate_type"
+			type="templatelist"
+			label="PAGO_TEMPLATE_TYPE"
+			description="PAGO_TEMPLATE_TYPE_DESC"
+			width_class="pg-col3"
+		/>
+		
+		<field name="pgtemplate_body" label="PAGO_TEMPLATE_BODY" height="400" width="700" size="50" type="editor" default="" description="PAGOTEMPLATESBODY_DESC" width_class="pg-col8" />
+		<field
+			name="pgtemplate_id"
+			type="hidden"
+		/>
+		
+	</fieldset>
+</form>

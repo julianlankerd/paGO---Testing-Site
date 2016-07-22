@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="PAGO_ACCOUNT_PRODUCTS_PURCHASED_LAYOUT_TITLE">
+		<message>
+			<![CDATA[PAGO_ACCOUNT_PRODUCTS_PURCHASED_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="request">
+	</fields>
+	<fields name="params">
+	</fields>
+</metadata>

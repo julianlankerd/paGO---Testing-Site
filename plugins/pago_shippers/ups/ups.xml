@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_shippers" method="upgrade">
+	<name>PLG_PAGO_SHIPPERS_UPS</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_SHIPPERS_UPS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="ups">ups.php</filename>
+		<filename>index.html</filename>	
+		<filename>ups.class.php</filename>	
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_ups.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_ups.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="testmode"
+					   type="radio"
+					   default="1"
+					   label="PLG_PAGO_SHIPPER_UPS_TESTMODE_LABEL"
+					   description="PLG_PAGO_SHIPPER_UPS_TESTMODE_DESC">
+				  	<option value="0">No</option>
+				  	<option value="1">Yes</option>
+				</field>
+				<field name="AccessLicenseNumber" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_ACCESSLICENCENUMBER_LABEL" description="PLG_PAGO_SHIPPER_UPS_ACCESSLICENCENUMBER_DESC" />
+				<field name="UserId" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_USERID_LABEL" description="PLG_PAGO_SHIPPER_UPS_USERID_DESC" />
+				<field name="Password" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_PASSWORD_LABEL" description="PLG_PAGO_SHIPPER_UPS_PASSWORD_DESC" />
+				<field type="spacer"/>
+
+				<field name="pickup_method" type="list" default="01"  label="PLG_PAGO_SHIPPER_UPS_PICKUP_METHOD_LABEL" description="PLG_PAGO_SHIPPER_UPS_PICKUP_METHOD_DESC" >
+					<option value="01">Daily Pickup</option>
+					<option value="03">Customer Counter</option>
+					<option value="06">One Time Pickup</option>
+					<option value="07">On Call Air Pickup</option>
+					<option value="19">Letter Center</option>
+					<option value="20">Air Service Center</option>
+				</field>
+
+				<field name="packaging" type="list" default="01"  label="PLG_PAGO_SHIPPER_UPS_PACKAGING_LABEL" description="PLG_PAGO_SHIPPER_UPS_PACKAGING_DESC" >
+					<option value="00">Unknown</option>
+					<option value="01">UPS letter</option>
+					<option value="02" selected="selected">Package</option>
+					<option value="03">UPS Tube</option>
+					<option value="04">UPS Pak</option>
+					<option value="21">UPS Express Box</option>
+					<option value="24">UPS 25Kg Box</option>
+					<option value="25">UPS 10Kg Box</option>
+				</field>
+
+				<!-- field name="residential_delivery" type="list" size="30" default="" label="residential_delivery" description="residential_delivery_desc">
+				<option value="yes">Residential (RES)</option>
+					<option value="no">Commercial Delivery (COM)</option>
+					</field -->
+
+				<field name="handling_fee" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_HANDLING_FEE_LABEL" description="PLG_PAGO_SHIPPER_UPS_HANDLING_FEE_DESC" />
+				<field name="tax_class" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_TAX_CLASS_LABEL" description="PLG_PAGO_SHIPPER_UPS_TAX_CLASS_DESC" />
+				<field type="spacer"/>
+
+				<field name="PostalCode" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_UPS_POSTAL_CODE_LABEL" description="PLG_PAGO_SHIPPER_UPS_POSTAL_CODE_DESC" />
+				<field name="CountryCode" type="sql"  default="US" label="PLG_PAGO_SHIPPER_UPS_COUNTRY_LABEL" description="PLG_PAGO_SHIPPER_UPS_COUNTRY_DESC" query="SELECT country_2_code, country_name FROM #__pago_country" key_field="country_2_code" value_field="country_name"/>
+				<field type="spacer"/>
+
+				<field name="shippingType" type="list" multiple="true" label="PLG_PAGO_SHIPPER_UPS_SHIPPING_TYPES_LABEL" description="PLG_PAGO_SHIPPER_UPS_SHIPPING_TYPES_DESC">
+					<option value="14">Next Day Air® Early A.M. SM</option>
+					<option value="01">Next Day Air®</option>
+					<option value="65">Saver</option>
+					<option value="59">Second Day Air A.M.®</option>
+					<option value="02">Second Day Air®</option>
+					<option value="12">Three-Day Select®</option>
+					<option value="13">Next Day Air Saver®</option>
+					<option value="03">Ground</option>
+					<option value="07">Worldwide ExpressSM</option>
+					<option value="08">Worldwide ExpeditedSM</option>
+					<option value="11">Standard</option>
+					<option value="54">Worldwide Express PlusSM</option>
+				</field>
+
+				<field name="show_delivery_eta_quote" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_UPS_SHOWDELQUOTE_LABEL" description="PLG_PAGO_SHIPPER_UPS_SHOWDELQUOTE_DESC" >
+				 <option value="1">Yes</option>
+					<option value="0">No</option>
+				 </field>
+
+				<field name="show_delivery_warning" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_UPS_SHOWDELWARNING_LABEL" description="PLG_PAGO_SHIPPER_UPS_SHOWDELWARNING_DESC" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+				<field name="cache" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_UPS_CACHE_OUTPUT_LABEL" description="PLG_PAGO_SHIPPER_UPS_CACHE_OUTPUT_DESC" >
+				 	<option value="1">Yes</option>
+				 	<option value="0">No</option>
+				 </field>
+
+				 <field name="cache_lifetime" type="text" size="30" default="30" label="PLG_PAGO_SHIPPER_UPS_CACHE_LIFETIME_LABEL" description="PLG_PAGO_SHIPPER_UPS_CACHE_LIFETIME_DESC" />	
+			</fieldset>
+		</fields>
+	</config>
+</extension>

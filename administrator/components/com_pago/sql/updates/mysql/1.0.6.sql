@@ -1,0 +1,1 @@
+ALTER TABLE `#__pago_attr` ADD `required` INT NOT NULL ;

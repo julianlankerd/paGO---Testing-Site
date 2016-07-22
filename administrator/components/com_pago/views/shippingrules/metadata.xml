@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="base">
+		<field
+			name="rule_name"
+			size="50"
+			type="text"
+			label="PAGO_CUSTOM_SHIPPING_RULE_TITLE"
+			description="PAGO_CUSTOM_SHIPPING_RULE_TITLE_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="published"
+			type="radioborder"
+			default="1"
+			label="PAGO_CUSTOM_SHIPPING_RULE_PUBLISH"
+			description="PAGO_CUSTOM_SHIPPING_RULE_PUBLISH_DESC"
+			class="no-margin"
+			width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="category">
+		<field
+			name="category"
+			size="12"
+			type="categorylist"
+			multiple="true"
+			label="PAGO_SHIIPING_RULE_SEL_CAT"
+			description="PAGO_SHIIPING_RULE_SEL_CAT_DESC"
+			column="begin"
+		/>
+		<field
+			name="items"
+			size="12"
+			type="itemlist"
+			multiple="true"
+			label="PAGO_SHIIPING_RULE_SEL_ITEM"
+			description="PAGO_SHIIPING_RULE_SEL_ITEM_DESC"
+			column="end"
+			class="no-margin"
+		/>
+	</fieldset>
+	<fieldset name="order">
+		<field
+			name="order_total_start"
+			size="12"
+			type="text"
+			label="PAGO_SHIIPING_RULE_ORDER_TOTAL_START"
+			description="PAGO_SHIIPING_RULE_ORDER_TOTAL_START_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="order_total_end"
+			size="12"
+			type="text"
+			label="PAGO_SHIIPING_RULE_ORDER_TOTAL_END"
+			description="PAGO_SHIIPING_RULE_ORDER_TOTAL_END_DESC"
+			width_class="pg-col3"
+			class="no-margin"
+		/>
+	</fieldset>
+	<fieldset name="weight">
+		<field
+			name="weight_start"
+			size="12"
+			type="text"
+			label="PAGO_SHIIPING_RULE_WEIGHT_START"
+			description="PAGO_SHIIPING_RULE_WEIGHT_START_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="weight_end"
+			size="12"
+			type="text"
+			label="PAGO_SHIIPING_RULE_WEIGHT_END"
+			description="PAGO_SHIIPING_RULE_WEIGHT_END_DESC"
+			width_class="pg-col3"
+			class="no-margin"
+		/>
+	</fieldset>
+	<fieldset name="address">
+		<field
+			name="country"
+			size="12"
+			type="countrieslist"
+			multiple="true"
+			label="PAGO_SHIIPING_RULE_COUNTRY"
+			description="PAGO_SHIIPING_RULE_COUNTRY_DESC"
+			column="begin"
+		/>
+		<field
+			name="state"
+			size="12"
+			type="stateslist"
+			multiple="true"
+			label="PAGO_SHIIPING_RULE_STATE"
+			description="PAGO_SHIIPING_RULE_STATE_DESC"
+			column="end"
+		/>
+		<field
+			name="zipcode"
+			size="50"
+			type="text"
+			label="PAGO_CUSTOM_SHIPPING_RULE_ZIPCODE"
+			description="PAGO_CUSTOM_SHIPPING_RULE_ZIPCODE_DESC"
+			width_class="pg-col3"
+			class="no-margin"
+		/>
+	</fieldset>
+	<fieldset name="pricing">
+		<field
+			name="shipping_price"
+			size="12"
+			type="text"
+			label="PAGO_ITEM_PRICE"
+			description="PAGO_ITEM_PRICE_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="priority"
+			size="50"
+			type="text"
+			label="PAGO_CUSTOM_SHIPPING_RULE_PRIORITY"
+			description="PAGO_CUSTOM_SHIPPING_RULE_PRIORITY_DESC"
+			width_class="pg-col3"
+			class="no-margin"
+		/>
+		<field	name="rule_id" type="hidden"/>
+	</fieldset>
+</form>

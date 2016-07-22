@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_pago</name>
+	<version>2.1.1</version>
+	<uaid>UA-59288345-1</uaid>
+	<creationDate>2014</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>support@corephp.com</authorEmail>
+	<authorUrl>www.corephp.com</authorUrl>
+	<copyright>'corePHP' LLC, All rights reserved.</copyright>
+	<license>GNU/GPL version 2 License</license>
+	<description><![CDATA[
+		<div class="wrap" style="margin: 0 auto; min-width:800px; max-width:1010px; margin-bottom:10px;">
+			<div class="topBlock" style="text-align: center;">
+				<h2 style="margin: 0; padding: 15px 0; display: inline-block; clear: both;"><div style="display: block; margin-bottom: 2px; width: 91px; height: 40px; background-image:url('components/com_pago/css/images/logo.png'); background-size: 100%; background-repeat:no-repeat;"></a></h2>
+				<h3 style="color: #017625; font-size: 23px; width: 206px; padding-left: 28px; margin: 0 auto; background-image: url('components/com_pago/css/images/ok.png'); background-repeat: no-repeat; background-position: 10px 2px;">Congratulations!</h3>
+				<span style="color: #464646; font-size: 14px; display: block; padding: 15px 0; font-weight: bold;">You have successfully installed paGO COMMERCE</span>
+				<p style="color: #494646; font-size: 11px; margin: 0;">With paGO Commerce you will be able to have the most robust and powerful e-commerce system for Joomla!<br>
+					Don’t worry if you are just new or an advanced user. paGO is easy to use and comes with many powerful features</p>
+					<a href="index.php?option=com_pago" class="greenBtn" style="display: inline-block; margin: 24px 0; line-height: 1; padding: 10px 30px; background: #017625; text-transform: uppercase; text-decoration: none; color: #fff; font-size: 12px;">Lets get started!</a>
+			</div>
+			<div class="midBlock" style="padding: 30px 0; border-top: solid 1px #a3a19c;">
+				<p class="top" style="color: #494646; font-size: 12px; padding-bottom: 15px; margin: 0; ">If you need additional services for your organization ’corePHP’ is happy to assist you in the following areas:</p>
+				<a href="https://support.corephp.com" target="_blank" class="btns" style="display: inline-block; border: solid 1px #a3a19c; line-height: 1; padding: 4px 10px 3px; color: #393939; text-decoration: none;	font-size: 11px; margin-right: 24px;">Support</a>
+				<a href="https://www.corephp.com/services/e-commerce-development" target="_blank" class="btns" style="display: inline-block; border: solid 1px #a3a19c; line-height: 1; padding: 4px 10px 3px; color: #393939; text-decoration: none;	font-size: 11px; margin-right: 24px;">Hire Us</a>
+				<!-- <a href="#" class="btns" style="display: inline-block; border: solid 1px #a3a19c; line-height: 1; padding: 4px 10px 3px; color: #393939; text-decoration: none;	font-size: 11px; margin-right: 24px;">Training</a> -->
+				<a href="https://www.corephp.com/services/joomla-development" target="_blank" class="btns" style="display: inline-block; border: solid 1px #a3a19c; line-height: 1; padding: 4px 10px 3px; color: #393939; text-decoration: none;	font-size: 11px; margin-right: 24px;">Consulting</a>
+				<a href="https://www.corephp.com/support/community-forum/default-forum/15-pago-commerce" target="_blank" class="btns" style="display: inline-block; border: solid 1px #a3a19c; line-height: 1; padding: 4px 10px 3px; color: #393939; text-decoration: none;	font-size: 11px; margin-right: 24px;">Community Forum</a>
+				<p class="bott" style="color: #494646; font-size: 12px; padding-top: 15px; margin: 0;">See something that is missing and you would like it feel free to put in a feature request </p>
+			</div>
+		</div><script>jQuery(document).ready(function(){ jQuery('.adminform').width('100%') })</script>
+]]></description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+	</update>
+
+    <files folder="component">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>pago.php</filename>
+        <filename>router.php</filename>
+        <filename>cacert.crt</filename>
+        <folder>api</folder>
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>helpers</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>models</folder>
+		<folder>templates</folder>
+        <folder>views</folder>
+    </files>
+
+	<media folder="media/pago/" destination="pago">
+		<folder>category</folder>
+		<folder>default</folder>
+		<folder>items</folder>
+		<folder>product_varation</folder>
+		<folder>root</folder>
+		<filename>index.html</filename>
+	</media>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.com_pago.ini</language>
+    </languages>
+
+	<positions>
+         <position>pago_dashboard_right</position>
+         <position>pago_dashboard_left_tab</position>
+         <position>pago_dashboard_graph</position>
+         <position>pago_dashboard_recent_comments</position>
+         <position>pago_dashboard_orders</position>
+	</positions>
+
+	<modules>
+		<module position="position-7" title="paGO Search" module="mod_pago_search" client='0' />
+		<module position="position-7" title="paGO Login" module="mod_pago_login" client='0' />
+		<module position="position-7" title="paGO Cart" module="mod_pago_cart" client='0' />
+		<module position="position-7" title="paGO Category Menu" module="mod_pago_categories" client='0' />
+		<module position="pago_checkout_login" title="paGO Checkout Login" module="mod_pago_login" client='0' />
+
+		<module position="pago_dashboard_right" title="paGO Dashboard Best Selling"  client="1" module="mod_pago_dashboard_bestselling" />
+		<module position="pago_dashboard_orders" title="paGO Dashboard Orders"  client="1" module="mod_pago_dashboard_orders" />
+		<module position="pago_dashboard_graph" title="paGO Dashboard Overview"  client="1" module="mod_pago_dashboard_overview" />
+		<module position="pago_dashboard_left_tab" title="paGO Dashboard Totals And Averages"  client="1" module="mod_pago_dashboard_totals_averages" />
+		<module position="pago_dashboard_recent_comments" title="paGO Dashboard Recent Comments"  client="1" module="mod_pago_dashboard_recent_comments" />
+	</modules>
+
+	 <administration>
+		<menu link="option=com_pago" view="main">COM_PAGO_ADMIN_MENU</menu>
+
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>pago.php</filename>
+
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>elements</folder>
+			<folder>helpers</folder>
+			<folder>instances</folder>
+			<folder>javascript</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_pago.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_pago.sys.ini</language>
+		    <language tag="it-IT">it-IT/it-IT.com_pago.ini</language>
+    		<language tag="it-IT">it-IT/it-IT.com_pago.sys.ini</language>
+		</languages>
+    </administration>
+    <updateservers>
+		<!-- <server type="collection">http://http://54.232.83.11/updater/pago_list.xml</server> -->
+		<server type="extension" priority="1" name="Pago Updates">http://update.pagocommerce.com/pago.xml</server>
+	</updateservers>
+</extension>

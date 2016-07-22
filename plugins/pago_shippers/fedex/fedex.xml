@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_shippers" method="upgrade">
+	<name>PLG_PAGO_SHIPPERS_FEDEX</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_SHIPPERS_FEDEX_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="fedex">fedex.php</filename>
+		<filename>index.html</filename>	
+		<filename>fedex.class.php</filename>
+		<folder>wsdl</folder>	
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_fedex.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_fedex.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="Key" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_FEDEX_KEY_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_KEY_DESC" />
+				<field name="Password" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_FEDEX_PASSWORD_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_PASSWORD_DESC" />
+				<field name="AccountNumber" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_FEDEX_ACC_NUMBER_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_ACC_NUMBER_DESC" />
+				<field name="MeterNumber" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_FEDEX_METER_NUMBER_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_METER_NUMBER_DESC" />
+				<field type="spacer"/>
+
+				<field name="PostalCode" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_FEDEX_POSTAL_CODE_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_POSTAL_CODE_DESC" />
+				<field name="CountryCode" type="text" size="30" default="US" label="PLG_PAGO_SHIPPER_FEDEX_COUNTRY_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_COUNTRY_DESC" />
+				<field type="spacer"/>
+
+				<field name="shippingType" type="list" multiple="true" label="PLG_PAGO_SHIPPER_FEDEX_SHIPPING_TYPES_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_SHIPPING_TYPES_DESC.">
+					<option value="FEDEX_GROUND">Ground</option>
+					<!-- option value="FEDEX_1_DAY_FREIGHT">FEDEX_1_DAY_FREIGHT</option -->
+					<option value="FEDEX_2_DAY">2Day®</option>
+					<!-- option value="FEDEX_2_DAY_FREIGHT">FEDEX_2_DAY_FREIGHT</option -->
+					<!-- option value="FEDEX_3_DAY_FREIGHT">FEDEX_3_DAY_FREIGHT</option -->
+					<option value="FEDEX_EXPRESS_SAVER">Express Saver®</option>
+					<!-- option value="FEDEX_FREIGHT">FEDEX_FREIGHT</option -->
+					<!-- option value="FEDEX_NATIONAL_FREIGHT">FEDEX_NATIONAL_FREIGHT</option -->
+					<option value="FIRST_OVERNIGHT">First Overnight®</option>
+					<option value="GROUND_HOME_DELIVERY">Home Delivery®</option>
+					<option value="INTERNATIONAL_ECONOMY">International Economy®</option>
+					<!-- option value="INTERNATIONAL_ECONOMY_FREIGHT">INTERNATIONAL_ECONOMY_FREIGHT</option -->
+					<option value="INTERNATIONAL_FIRST">International First</option>
+					<option value="INTERNATIONAL_GROUND">International Ground</option>
+					<option value="INTERNATIONAL_PRIORITY">International Priority</option>
+					<!-- option value="INTERNATIONAL_PRIORITY_FREIGHT">INTERNATIONAL_PRIORITY_FREIGHT</option -->
+					<option value="PRIORITY_OVERNIGHT">Priority Overnight®</option>
+					<option value="SMART_POST">SmartPost®</option>
+					<option value="STANDARD_OVERNIGHT">Standard Overnight®</option>
+				</field>
+				<field type="spacer"/>
+				<field name="test_mode" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_FEDEX_TEST_MODE_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_TEST_MODE_DESC" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			 	</field>
+				<field type="spacer"/>
+					<field name="cache" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_FEDEX_CACHE_OUTPUT_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_CACHE_OUTPUT_DESC" >
+				 	<option value="1">Yes</option>
+				 	<option value="0">No</option>
+				 </field>
+
+				 <field name="cache_lifetime" type="text" size="30" default="30" label="PLG_PAGO_SHIPPER_FEDEX_CACHE_LIFETIME_LABEL" description="PLG_PAGO_SHIPPER_FEDEX_CACHE_LIFETIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

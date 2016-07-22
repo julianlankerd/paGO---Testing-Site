@@ -1,0 +1,1 @@
+ALTER TABLE  `#__pago_items` ADD  `jump_to_checkout` TINYINT( 1 ) NOT NULL DEFAULT  '0' AFTER  `featured_end_date` ;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base">
+		<field
+			name="pgtax_rate_name"
+			size="50"
+			type="text"
+			label="PAGO_TAX_RATE_NAME"
+			description="PAGO_TAX_RATE_NAME_DESC"
+			width_class="pg-col3"
+		/>
+		<field name="pgtax_class_id" type="sql"
+			query="SELECT pgtax_class_id AS class_id_value, pgtax_class_name AS class_id_title FROM #__pago_tax_class"
+			key_field="class_id_value" value_field="class_id_title" default="0"
+			label="PAGO_TAX_CLASS"
+			description="PAGO_TAX_CLASS_DESC">
+		</field>
+		<field
+			name="pgtax_country"
+			type="countrieslist"
+			label="PAGO_TAX_COUNTRY"
+			description="PAGO_TAX_COUNTRY_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="pgtax_state"
+			type="taxstateslist"
+			label="PAGO_TAX_STATE"
+			description="PAGO_TAX_STATE_DESC" width_class="pg-col3">
+		</field>
+		<field
+			name="pgzip_from"
+			size="50"
+			type="text"
+			label="PAGO_TAX_ZIP_FROM"
+			description="PAGO_TAX_ZIP_FROM_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="pgzip_to"
+			size="50"
+			type="text"
+			label="PAGO_TAX_ZIP_TO"
+			description="PAGO_TAX_ZIP_TO_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="pgtax_rate"
+			size="50"
+			type="text"
+			label="PAGO_TAX_RATE"
+			description="PAGO_TAX_RATE_DESC"
+			width_class="pg-col3"
+		/>
+		<!--<field
+			name="pgtax_apply_on_shipping"
+			type="list"
+			default="0"
+			label="PAGO_TAX_APPLY_ON_SHIPPING"
+			description="PAGO_TAX_APPLY_ON_SHIPPING_DESC" width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>-->
+		<field
+			name="priority"
+			size="50"
+			type="text"
+			label="PAGO_TAX_RATE_PRIORITY"
+			description="PAGO_TAX_RATE_PRIORITY_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="pgtax_enable"
+			type="list"
+			default="0"
+			label="PAGO_TAX_PUBLISH"
+			description="PAGO_TAX_PUBLISH_DESC"
+			class="no-margin" 
+			width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field	name="pgtax_id" type="hidden"/>
+	</fieldset>
+</form>

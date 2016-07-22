@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_shippers" method="upgrade">
+	<name>PLG_PAGO_SHIPPERS_USPS</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_SHIPPERS_USPS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="usps">usps.php</filename>
+		<filename>index.html</filename>	
+		<filename>usps.class.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_usps.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_usps.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="userId" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_USPS_USERID_LABEL" description="PLG_PAGO_SHIPPER_USPS_USERID_DESC" />
+
+				<field type="spacer"/>
+
+				<field name="PostalCode" type="text" size="30" default="" label="PLG_PAGO_SHIPPER_USPS_POSTAL_CODE_LABEL" description="PLG_PAGO_SHIPPER_USPS_POSTAL_CODE_DESC" />
+
+				<field name="CountryCode" type="hidden" size="30" value="US"/>
+
+				<field type="spacer"/>
+				<field name="machinable" type="radio" size="30" default="0" label="Machinable packages"   
+					   description="Is this package able to be handled by a machine." >
+				 	<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field type="spacer"/>
+				<field name="shippingType" type="list" multiple="true" label="PLG_PAGO_SHIPPER_USPS_SHIPPING_TYPES_LABEL" description="PLG_PAGO_SHIPPER_USPS_SHIPPING_TYPES_DESC">
+					<option value="Priority Mail Express Hold For Pickup">Priority Mail Express Hold For Pickup</option>
+					<option value="Priority Mail Express">Priority Mail Express</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery">Priority Mail Express Sunday/Holiday Delivery</option>
+					<option value="Priority Mail Express Flat Rate Boxes">Priority Mail Express Flat Rate Boxes</option>
+					<option value="Priority Mail Express Flat Rate Boxes Hold For Pickup">Priority Mail Express Flat Rate Boxes Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes">Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes</option>
+					<option value="Priority Mail Express Flat Rate Envelope">Priority Mail Express Flat Rate Envelope</option>
+					<option value="Priority Mail Express Flat Rate Envelope Hold For Pickup">Priority Mail Express Flat Rate Envelope Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope</option>
+					<option value="Priority Mail Express Legal Flat Rate Envelope">Priority Mail Express Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Express Legal Flat Rate Envelope Hold For Pickup">Priority Mail Express Legal Flat Rate Envelope Hold For Pickup</option>
+					<option value="Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope">Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope</option>
+					<option value="Priority Mail">Priority Mail</option>
+					<option value="Priority Mail Large Flat Rate Box">Priority Mail Large Flat Rate Box</option>
+					<option value="Priority Mail Medium Flat Rate Box">Priority Mail Medium Flat Rate Box</option>
+					<option value="Priority Mail Small Flat Rate Box">Priority Mail Small Flat Rate Box</option>
+					<option value="Priority Mail Flat Rate Envelope">Priority Mail Flat Rate Envelope</option>
+					<option value="Priority Mail Legal Flat Rate Envelope">Priority Mail Legal Flat Rate Envelope</option>
+					<option value="Priority Mail Padded Flat Rate Envelope">Priority Mail Padded Flat Rate Envelope</option>
+					<option value="Priority Mail Gift Card Flat Rate Envelope">Priority Mail Gift Card Flat Rate Envelope</option>
+					<option value="Priority Mail Small Flat Rate Envelope">Priority Mail Small Flat Rate Envelope</option>
+					<option value="Priority Mail Window Flat Rate Envelope">Priority Mail Window Flat Rate Envelope</option>
+					<option value="First-Class Mail Parcel">First-Class Mail Parcel</option>
+					<option value="First-Class Mail Letter">First-Class Mail Letter</option>
+					<option value="First-Class Mail Postcards">First-Class Mail Postcards</option>
+					<option value="First-Class Mail Large Postcards">First-Class Mail Large Postcards</option>
+					<option value="First-Class Mail Large Envelope">First-Class Mail Large Envelope</option>
+					<option value="Standard Post">Standard Post</option>
+					<option value="Media Mail">Media Mail</option>
+					<option value="Library Mail">Library Mail</option>
+				</field>
+				<field name="intShippingType" type="list" multiple="true" label="PLG_PAGO_SHIPPER_USPS_INT_SHIPPING_TYPES_LABEL" description="PLG_PAGO_SHIPPER_USPS_INT_SHIPPING_TYPES_DESC">
+					<option value="Global Express Guaranteed (GXG)**">Global Express Guaranteed (GXG)**</option>
+					<option value="Global Express Guaranteed Non-Document Rectangular">Global Express Guaranteed Non-Document Rectangular</option>
+					<option value="Global Express Guaranteed Non-Document Non-Rectangular">Global Express Guaranteed Non-Document Non-Rectangular</option>
+					<option value="USPS GXG Envelopes**">USPS GXG Envelopes**</option>
+					<option value="Priority Mail Express International">Priority Mail Express International</option>
+					<option value="Priority Mail Express International Flat Rate Boxes">Priority Mail Express International Flat Rate Boxes</option>
+					<option value="Priority Mail Express International Flat Rate Envelope">Priority Mail Express International Flat Rate Envelope</option>
+					<option value="Priority Mail International">Priority Mail International</option>
+					<option value="Priority Mail International Large Flat Rate Box">Priority Mail International Large Flat Rate Box</option>
+					<option value="Priority Mail International Medium Flat Rate Box">Priority Mail International Medium Flat Rate Box</option>
+					<option value="Priority Mail International Small Flat Rate Box**">Priority Mail International Small Flat Rate Box**</option>
+					<option value="Priority Mail International DVD Flat Rate priced box**">Priority Mail International DVD Flat Rate priced box**</option>
+					<option value="Priority Mail International Large Video Flat Rate priced box**">Priority Mail International Large Video Flat Rate priced box**</option>
+					<option value="Priority Mail International Flat Rate Envelope**">Priority Mail International Flat Rate Envelope**</option>
+					<option value="Priority Mail International Legal Flat Rate Envelope**">Priority Mail International Legal Flat Rate Envelope**</option>
+					<option value="Priority Mail International Padded Flat Rate Envelope**">Priority Mail International Padded Flat Rate Envelope**</option>
+					<option value="Priority Mail International Gift Card Flat Rate Envelope**">Priority Mail International Gift Card Flat Rate Envelope**</option>
+					<option value="Priority Mail International Small Flat Rate Envelope**">Priority Mail International Small Flat Rate Envelope**</option>
+					<option value="Priority Mail International Window Flat Rate Envelope**">Priority Mail International Window Flat Rate Envelope**</option>
+					<option value="First-Class Package International Service**">First-Class Package International Service**</option>
+					<option value="First-Class Mail International Large Envelope**">First-Class Mail International Large Envelope**</option>
+				</field>
+				<field name="cache" type="radio" size="30" default="0" label="PLG_PAGO_SHIPPER_USPS_CACHE_OUTPUT_LABEL" description="PLG_PAGO_SHIPPER_USPS_CACHE_OUTPUT_DESC" >
+				 	<option value="1">Yes</option>
+				 	<option value="0">No</option>
+				 </field>
+
+				 <field name="cache_lifetime" type="text" size="30" default="30" label="PLG_PAGO_SHIPPER_USPS_CACHE_LIFETIME_LABEL" description="PLG_PAGO_SHIPPER_USPS_CACHE_LIFETIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

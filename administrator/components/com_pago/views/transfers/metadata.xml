@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base" >
+		<field
+			name="pgemail_name"
+			size="50"
+			type="text"
+			label="PAGO_EMAIL_TEMPLATE_TITLE"
+			description="PAGO_EMAIL_TEMPLATE_TITLE_DESC"
+			width_class="pg-col3"
+			column="begin"
+		/>
+		<field
+			name="pgemail_enable"
+			type="radioborder"
+			default="0"
+			label="PAGO_EMAIL_PUBLISH"
+			description="PAGO_EMAIL_PUBLISH_DESC" width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="template_for"
+			type="list"
+			default="admin"
+			label="PAGO_EMAIL_TEMPLATE_FOR"
+			description="PAGO_EMAIL_TEMPLATE_FOR_DESC" width_class="pg-col3">
+			<option value="admin">PAGO_ADMIN</option>
+			<option value="site">PAGO_END_USER</option>
+		</field>
+		<field
+			name="pgemail_type"
+			type="emaillist"
+			label="PAGO_EMAIL_TYPE"
+			description="PAGO_EMAIL_TYPE_DESC"
+			width_class="pg-col3"
+			column="end"
+		/>
+		<field name="pgemail_body" label="PAGO_EMAIL_BODY" height="400" width="700" size="50" type="editor" default="" description="PAGOEMAILSBODY_DESC" width_class="pg-col8" />
+		<field
+			column="begin end"
+			name="pgemail_id"
+			type="hidden"
+		/>
+	</fieldset>
+</form>

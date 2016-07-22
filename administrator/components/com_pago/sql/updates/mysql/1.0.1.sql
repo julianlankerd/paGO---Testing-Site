@@ -1,0 +1,1 @@
+ALTER TABLE `#__pago_attr_opts` ADD  `preselected` INT NOT NULL DEFAULT  '100' AFTER  `for_item`;

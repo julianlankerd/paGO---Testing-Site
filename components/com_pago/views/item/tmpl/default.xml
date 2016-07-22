@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="PAGO_ITEM_DEFAULT_LAYOUT_TITLE">
+		<message>
+			<![CDATA[PAGO_ITEM_DEFAULT_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_pago/elements/menu/">
+			<field name="id" type="modalitems"
+				label="PAGO_ITEM_MENU_LABEL"
+				description="PAGO_ITEM_MENU_DESC"
+				required="true"
+				/>
+		</fieldset>
+	</fields>
+	<fields name="params">
+	</fields>
+</metadata>

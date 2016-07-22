@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>MOD_PAGO_CATEGORIES</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>MOD_PAGO_CATEGORIES_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_pago_categories">mod_pago_categories.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+        <folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_pago_categories.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_pago_categories.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix" />
+				<field 
+					name="depth" 
+					type="list" 
+					default="1" 
+					label="MOD_PAGO_CATEGORIES_CATEGORY_DEPTH" 
+					description="MOD_PAGO_CATEGORIES_CATEGORY_DEPTH_DESC" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="999">MOD_PAGO_CATEGORIES_MAX</option>
+				</field>
+				<field
+					name="start_level"
+					style="width:100%"
+					type="categorylist"
+					default="1"
+					label="MOD_PAGO_CATEGORIES_CATEGORY_START"
+					description="MOD_PAGO_CATEGORIES_CATEGORY_STARTDESC"
+					module="true"
+					addfieldpath="/administrator/components/com_pago/elements"
+				/>
+				<field
+					name="exclude_categories"
+					style="width:100%"
+					type="categorylist"
+					default="1"
+					multiple="true"
+					label="MOD_PAGO_CATEGORIES_EXCLUDE_CATEGORY"
+					description="MOD_PAGO_CATEGORIES_EXCLUDE_CATEGORYDESC"
+					module="true"
+					addfieldpath="/administrator/components/com_pago/elements"
+				/>
+				<field
+					name="show_item_count"
+					type="radio"
+					default="0"
+					column="begin"
+					label="MOD_PAGO_SHOW_ITEM_COUNT"
+					description="MOD_PAGO_SHOW_ITEM_COUNT_DESC">
+					<option value="1">PAGO_ON</option>
+					<option value="0">PAGO_OFF</option>
+				</field>
+			</fieldset>
+			<fieldset name="external_files" label="MOD_PAGO_EXTERNAL_FILES">
+				<field
+					name="use_default_css"
+					type="radio"
+					default="1"
+					column="begin"
+					label="MOD_PAGO_USE_DEFAULT_CSS"
+					description="MOD_PAGO_USE_DEFAULT_CSS_DESC">
+					<option value="1">PAGO_ON</option>
+					<option value="0">PAGO_OFF</option>
+				</field>
+				<field
+					name="use_default_jquery"
+					type="radio"
+					default="1"
+					column="begin"
+					label="MOD_PAGO_USE_DEFAULT_JQUERY"
+					description="MOD_PAGO_USE_DEFAULT_JQUERY_DESC">
+					<option value="1">PAGO_ON</option>
+					<option value="0">PAGO_OFF</option>
+				</field>	
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

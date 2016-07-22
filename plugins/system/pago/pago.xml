@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_PAGO</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_SYSTEM_PAGO_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="pago">pago.php</filename>
+		<filename>default-filters.php</filename>
+		<filename>index.html</filename>	
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_pago.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_pago.sys.ini</language>
+	</languages>
+</extension>

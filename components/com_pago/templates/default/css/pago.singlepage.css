@@ -1,0 +1,183 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+pago-users,
+pago-addresses,
+pago-shipping,
+pago-paygate,
+pago-order {
+    display: block;
+}
+
+.row-fluid [class*="span"] {
+    min-height: 0px !important;
+}
+
+.row {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+
+.modal {
+    bottom: auto;
+}
+
+#pago .modal-body {
+    overflow: auto;
+    width: 100%;
+    padding: 15px;
+}
+
+
+.checkout-form {
+    
+}
+
+#pago .checkout-form legend {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#pago .checkout-form label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.checkout-form label span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#pago .checkout-form label.radio {
+    font-weight: normal;
+}
+
+#pago .checkout-form .radio label:not([class^="col-"]) {
+    padding-left: 0;
+}
+
+#pago .checkout-form .radio label[class^="col-"] {
+    padding-left: 15px;
+}
+
+#pago .checkout-form input[type="text"],
+#pago .checkout-form input[type="password"],
+#pago .checkout-form input[type="email"],
+#pago .checkout-form select {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 6px 10px;
+    border: 1px solid #a3a19c;
+    outline: none;
+    font-weight: normal;
+}
+
+#pago .checkout-form .pg-btn,
+#pago .checkout-form button {
+    border: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px;
+    background-color: #494646;
+    /*margin-top: 23px;*/
+    margin-bottom: 10px;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+#pago .checkout-form .pg-btn,
+#pago .checkout-form button:hover {
+    background-color: #666;
+    text-decoration: none;
+}
+
+#pago .checkout-form .pg-btn-bordered {
+    border: 2px solid #494646;
+    color: #494646;
+    background-color: transparent;
+    line-height: 14px;
+}
+
+#pago .checkout-form .pg-btn-bordered:hover {
+    border-color: #888;
+    color: #888;
+}
+
+#pago .checkout-form button[type="submit"] {
+    background: #218634;
+    font-size: 18px;
+    padding: 10px 40px;
+}
+
+#pago .checkout-form button[type="submit"]:hover {
+    background-color: #30A045;
+}
+
+#pago .checkout-form button[type="submit"][disabled] {
+    opacity: .5;
+}
+
+.checkout-form pago-addresses button {
+    margin-top: 0;
+}
+
+.checkout-form input.ng-touched.ng-invalid,
+.checkout-form select.ng-touched.ng-invalid,
+.checkout-form .ng-touched input.ng-invalid,
+.checkout-form .ng-touched select.ng-invalid,
+/*
+.checkout-form.ng-submitted input.ng-invalid,
+.checkout-form.ng-submitted select.ng-invalid,
+*/
+.checkout-form .ng-submitted input.ng-invalid,
+.checkout-form .ng-submitted select.ng-invalid {
+    border-color: red;
+    background-color: #fffcfc;
+}
+
+.checkout-form input.ng-touched.ng-invalid + span,
+.checkout-form .ng-touched input.ng-invalid + span,
+/*
+.checkout-form.ng-submitted input.ng-invalid + span,
+*/
+.checkout-form .ng-submitted input.ng-invalid + span {
+    color: red;
+}
+
+
+.review-table {
+    
+}
+
+.review-table td + td:last-child,
+.review-table td + td:last-child,
+.review-table td.text-right {
+    text-align: right;
+}
+
+#pago .review-table th,
+#pago .review-table td {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#pago .review-table thead th {
+    padding-top: 0 !important;
+}

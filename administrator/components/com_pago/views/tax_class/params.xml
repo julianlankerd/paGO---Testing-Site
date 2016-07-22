@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base">
+		<field
+			name="pgtax_class_name"
+			size="50"
+			type="text"
+			label="PAGO_TAX_CLASS_NAME"
+			description="PAGO_TAX_CLASS_NAME_DESC"
+			width_class="pg-col3"
+		/>
+		<field
+			name="pgtax_class_enable"
+			type="list"
+			default="0"
+			label="PAGO_TAX_CLASS_PUBLISH"
+			description="PAGO_TAX_CLASS_PUBLISH_DESC"
+			class="no-margin"
+			width_class="pg-col3">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field	name="pgtax_class_id" type="hidden"/>
+	</fieldset>
+</form>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base">
+
+		<field name="name" size="30" type="text" label="GROUP NAME" description="PAGO_GROUP_NAME_DESC" column="begin" class="pg-group-name" column_class="pg-col4" />
+		<field name="group_id" size="12" type="displayastext" label="PAGO_GROUP_ID" description="PAGO_GROUP_ID_DESC" class="pg-group-id" />
+		<field name="created" size="12" type="displayastext" label="PAGO_CREATED" description="PAGO_CREATED_DESC" />
+		<field name="modified" size="12" type="displayastext" label="PAGO_MODIFIED" description="PAGO_MODIFIED_DATE_DESC" column="end" />
+
+		<field name="description" size="12" type="htmlarea" label="PAGO_GROUP_DESCRIPTION" description="PAGO_GROUP_DESCRIPTION DESC" column="begin end" class="pg-group-description" column_class="pg-col8" />
+	</fieldset>
+	<fieldset name="custom">
+		<field name="test1" size="30" type="text" label="Test 1" description="GROUP ID DESC" />
+		<field name="test2" size="30" type="text" label="Test 2" description="GROUP ID DESC" />
+	</fieldset>
+	<fieldset name="memberlist">
+		<!--<field name="members" sql="SELECT * FROM #__users" key_field="id" value_field="name"
+		size="30" type="multiselect" label="Test 1" description="full_width" />-->
+		<field name="members" multiple="true" remote_url="index.php?option=com_pago&amp;view=groups&amp;task=memberslist&amp;tmpl=component"
+		style="width:400px;height:300px" type="multiselect" label="Test 1" description="full_width">
+		  <option value="na">Start Typing Username</option>
+		</field>
+	</fieldset>
+</form>

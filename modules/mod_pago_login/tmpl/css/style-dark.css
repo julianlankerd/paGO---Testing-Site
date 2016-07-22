@@ -1,0 +1,157 @@
+#pg-login *,
+#pg-login *:after,
+#pg-login *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#pg-login{
+	background: #0c0c0c;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	-moz-box-shadow:    0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	box-shadow:         0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	padding: 15px 20px;
+  	line-height: 0;
+}
+
+#pg-login .pg-login-header{
+	color: #8a8a8a;
+	font-size: 14px;
+}
+
+#pg-login-form #pg-form-login-username,
+#pg-login-form #pg-form-login-password,
+#pg-login-form #pg-form-login-remember{
+	margin: 0 0 10px;
+}
+
+#pg-login-form fieldset{
+	margin: 0 0 20px;
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #a3a19c;
+}
+
+#pg-login-form fieldset label{
+	display: inline-block;
+	font-size: 12px;
+	color: #b6b9b9;
+	font-weight: bold;
+}
+
+#pg-login-form fieldset input[type='text'],
+#pg-login-form fieldset input[type='password']{
+	width: 100%;
+	height: 32px;
+	border: 1px solid #a3a19c;
+	outline: none;
+	padding: 0 10px;
+	background: transparent;
+	color: #b6b9b9;
+}
+
+#pg-login-form fieldset input[type='submit']{
+	height: 36px;
+	line-height: 36px;
+	color: #fff !important;
+	font-size: 18px;
+	border: 0;
+	padding: 0 20px;
+	background: #494646;
+	outline: none;
+	cursor: pointer;
+}
+
+#pg-login-form ul.pg-login-links{
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative;
+	text-align: left;
+	list-style-type: none;
+}
+
+#pg-login-form ul.pg-login-links li{
+	padding-left: 20px;
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#pg-login-form ul.pg-login-links li a{
+	color: #b6b9b9;
+	background: none;
+	text-decoration: none;
+	font-weight: normal !important;
+	text-transform: none !important;
+	padding: 0 !important;
+}
+
+#pg-login-form ul.pg-login-links li:before{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background: #b6b9b9;
+	left: 0;
+	top: 5px;
+}
+
+#pg-login form{
+	display: inline-block;
+	width: 100%;
+	margin: 0 !important;
+}
+
+#pg-login input[type="checkbox"] {
+    display:none;
+}
+
+#pg-login input[type="checkbox"] + label  {
+    display:inline-block;
+    position: relative;
+    padding-left: 22px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+#pg-login input[type="checkbox"] + label:before{
+	content: '';
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #a3a19c;
+	left: 0;
+	top: 0;
+}
+
+#pg-login input[type="checkbox"]:checked + label:after{
+	content: "\f00c";
+	position: absolute;
+	font-family: 'FontAwesome';
+	font-size: 14px;
+	left: 1px;
+	top: -2px;
+}
+
+#pg-login .pg-login-greeting{
+	font-size: 16px;
+	display: block;
+	float: left;
+	line-height: 28px;
+	font-weight: bold;
+	color: #b6b9b9;
+}
+
+#pg-login button.pg-logout{
+	line-height: 28px;
+	padding: 0 15px;
+	background: #494646;
+	box-shadow: none;
+	border: 0;
+	color: #fff;
+	font-size: 14px;
+	float: right;
+	outline: none;
+	cursor: pointer;
+}

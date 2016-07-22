@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="details">
+		<field name="user_id" type="sql" default="" label="PAGO USER NAME" description="PAGO USERNAME"
+		query="SELECT id AS value, username AS user_id FROM #__users ORDER BY username" />
+	</fieldset>
+
+	<fieldset name="grouplist">
+		<field name="groups" multiple="true" remote_url="index.php?option=com_pago&amp;view=group&amp;format=memberslist" type="multiselectgroups" label="Test 1" description="full_width">
+			<option value="na">Start Typing Username</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="address_billing">
+		<field name="id" type="hidden" label="" description="" />
+		<field name="user_id" type="hidden" label="" description="" />
+		<field name="company" type="text" label="PAGO USER COMPANY" description="" width_class="pg-col6" />
+		<field name="title" type="text" label="PAGO USER TITLE" description="" width_class="pg-col6" />
+		<field name="first_name" type="text" label="PAGO USER FIRST NAME" description="" width_class="pg-col4" />
+		<field name="middle_name" type="text" label="PAGO USER MIDDLE NAME" description="" width_class="pg-col4" />
+		<field name="last_name" type="text" label="PAGO USER LAST NAME" description="" width_class="pg-col4" />
+		<field name="address_1" type="text" label="PAGO USER ADDRESS1" description="" width_class="pg-col6" />
+		<field name="address_2" type="text" label="PAGO USER ADDRESS2" description="" width_class="pg-col6" />
+		<field name="city" type="text" label="PAGO USER CITY" description="" width_class="pg-col3" />
+		<field name="state" type="stateslist" label="PAGO USER STATE" description="" width_class="pg-col3" />
+		<field name="country" type="countrieslist" label="PAGO USER COUNTRY" description="" width_class="pg-col3" />
+		<field name="zip" type="text" label="PAGO USER ZIP" description="" width_class="pg-col3" />
+		<field name="user_email" type="text" label="PAGO USER EMAIL" description="" width_class="pg-col3" />
+		<field name="phone_1" type="text" label="PAGO USER PHONE1" description="" width_class="pg-col3" />
+		<field name="phone_2" type="text" label="PAGO USER PHONE2" description="" width_class="pg-col3" />
+		<field name="fax" type="text" label="PAGO USER FAX" description="" width_class="pg-col3" />
+	</fieldset>
+
+	<fieldset name="address_shipping">
+		<field name="id" type="hidden" label="" description="" />
+		<field name="user_id" type="hidden" label="" description="" />
+		<field name="company" type="text" label="PAGO USER COMPANY" description="" />
+		<field name="title" type="text" label="PAGO USER TITLE" description="" />
+		<field name="first_name" type="text" label="PAGO USER FIRST NAME" description="" />
+		<field name="middle_name" type="text" label="PAGO USER MIDDLE NAME" description="" />
+		<field name="last_name" type="text" label="PAGO USER LAST NAME" description="" />
+		<field name="address_1" type="text" label="PAGO USER ADDRESS1" description="" />
+		<field name="address_2" type="text" label="PAGO USER ADDRESS2" description="" />
+		<field name="city" type="text" label="PAGO USER CITY" description="" />
+		<field name="state" type="stateslist" label="PAGO USER STATE" description="" />
+		<field name="country" type="countrieslist" label="PAGO USER COUNTRY" description="" />
+		<field name="zip" type="text" label="PAGO USER ZIP" description="" />
+		<field name="user_email" type="text" label="PAGO USER EMAIL" description="" />
+		<field name="phone_1" type="text" label="PAGO USER PHONE1" description="" />
+		<field name="phone_2" type="text" label="PAGO USER PHONE2" description="" />
+		<field name="fax" type="text" label="PAGO USER FAX" description="" />
+	</fieldset>
+
+</form>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="information">
+		<field name="order_id" type="displayastext" label="PAGO_ORDER_ID" description="" width_class="pg-col-auto" />
+		<field name="order_status" type="displayastext" label="PAGO_ORDER_STATUS" description="" width_class="pg-col-auto" />
+		<field name="customer_name" type="displayastext" default="" label="PAGO_ORDER_CUSTOMER_NAME" description="" width_class="pg-col-auto" />
+		<field name="order_date" type="displayastext" label="PAGO_ORDER_CREATION_DATE" description="" width_class="pg-col-auto" />
+		<field name="ip_address" type="displayastext" label="PAGO_CUSTOMER_IP_ADDRESS" description="" width_class="pg-col-auto" />
+	</fieldset>
+
+	<fieldset name="shipping_details">
+		<field name="carrier" type="displayastext" label="PAGO_ORDER_SHIPPER" description="" width_class="pg-col-auto" />
+		<field name="method" type="displayastext" label="PAGO_ORDER_SHIPPER_METHOD" description="" width_class="pg-col-auto" />
+		<field name="shipping_total" type="displayastext" label="PAGO_ORDER_SHIPMENT_TOTAL" description="" width_class="pg-col-auto" />
+	</fieldset>
+
+	<fieldset name="address_billing">
+		<field name="company" type="text" label="PAGO_ORDER_USER_COMPANY" description="" width_class="pg-col6" />
+		<field name="title" type="text" label="PAGO_ORDER_USER_TITLE" description="" width_class="pg-col6" />
+		<field name="first_name" type="text" label="PAGO_ORDER_USER_FIRST_NAME" description="" width_class="pg-col4" />
+		<field name="middle_name" type="text" label="PAGO_ORDER_USER_MIDDLE_NAME" description="" width_class="pg-col4" />
+		<field name="last_name" type="text" label="PAGO_ORDER_USER_LAST_NAME" description="" width_class="pg-col4" />
+		<field name="address_1" type="text" label="PAGO_ORDER_USER_ADDRESS1" description="" width_class="pg-col6" />
+		<field name="address_2" type="text" label="PAGO_ORDER_USER_ADDRESS2" description="" width_class="pg-col6" />
+		<field name="city" type="text" label="PAGO_ORDER_USER_CITY" description="" width_class="pg-col3" />
+		<field name="country" type="countrieslist" label="PAGO_ORDER_USER_COUNTRY" description="" width_class="pg-col3" />
+		<field name="region" type="stateslist" label="PAGO_ORDER_USER_STATE" description="" width_class="pg-col3" />
+		<field name="zip" type="text" label="PAGO_ORDER_USER_ZIP" description="" width_class="pg-col3" />
+		<field name="user_email" type="text" label="PAGO_ORDER_USER_EMAIL" description="" width_class="pg-col3" />
+		<field name="phone_1" type="text" label="PAGO_ORDER_USER_PHONE1" description="" width_class="pg-col3" />
+		<field name="phone_2" type="text" label="PAGO_ORDER_USER_PHONE2" description="" width_class="pg-col3" />
+		<field name="fax" type="text" label="PAGO_ORDER_USER_FAX" description="" width_class="pg-col3" />
+	</fieldset>
+
+	<fieldset name="address_shipping">
+		<field name="company" type="text" label="PAGO_ORDER_USER_COMPANY" description="" />
+		<field name="title" type="text" label="PAGO_ORDER_USER_TITLE" description="" />
+		<field name="first_name" type="text" label="PAGO_ORDER_USER_FIRST_NAME" description="" />
+		<field name="middle_name" type="text" label="PAGO_ORDER_USER_MIDDLE_NAME" description="" />
+		<field name="last_name" type="text" label="PAGO_ORDER_USER_LAST_NAME" description="" />
+		<field name="address_1" type="text" label="PAGO_ORDER_USER_ADDRESS1" description="" />
+		<field name="address_2" type="text" label="PAGO_ORDER_USER_ADDRESS2" description="" />
+		<field name="city" type="text" label="PAGO_ORDER_USER_CITY" description="" />
+		<field name="country" type="countrieslist" label="PAGO_ORDER_USER_COUNTRY" description="" />
+		<field name="region" type="stateslist" label="PAGO_ORDER_USER_STATE" description="" />
+		<field name="zip" type="text" label="PAGO_ORDER_USER_ZIP" description="" />
+		<field name="user_email" type="text" label="PAGO_ORDER_USER_EMAIL" description="" />
+		<field name="phone_1" type="text" label="PAGO_ORDER_USER_PHONE1" description="" />
+		<field name="phone_2" type="text" label="PAGO_ORDER_USER_PHONE2" description="" />
+		<field name="fax" type="text" label="PAGO_ORDER_USER_FAX" description="" />
+	</fieldset>
+
+	<fieldset name="params">
+		<field name="country_id" label="PAGO_ORDER_COUTRNY_NAME" dbkey="country_id" type="countrieslist" />
+		<field name="state_id" type="hidden" />
+		<field name="state_name" type="text" label="PAGO_ORDER_STATE_NAME" description="" />
+		<field name="state_3_code" type="text" label="PAGO_ORDER_STATE_CODE_3" description="" />
+		<field name="state_2_code" type="text" label="PAGO_ORDER_STATE_CODE_2" description="" />
+		<field name="publish" type="list" default="1" label="PAGO_PUBLISHED" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="custom">
+		<field name="test" type="text" label="test" description="" />
+		<field name="test2" type="text" label="test2" description="" />
+	</fieldset>
+</form>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>Pago Dashboard Best Selling</name>
+	<author>'corePHP' LLC</author>
+	<creationDate>2013</creationDate>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<version>1.0</version>
+	<description>Pago Dashboard Best Selling</description>
+	<files>
+		<filename module="mod_pago_dashboard_bestselling">mod_pago_dashboard_bestselling.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>ajax</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_pago_dashboard_bestselling.ini</language>
+		<language tag="en-GB">language/en-GB.mod_pago_dashboard_bestselling.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MOD_PAGO_DASHBOARD_BESTSELLING" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_PAGO_BESTSELL_MODULECLASS_SFX_LABEL"
+					description="MOD_PAGO_BESTSELL_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

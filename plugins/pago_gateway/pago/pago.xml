@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_gateway" method="upgrade">
+	<name>PLG_PAGO_GATEWAY_PAGO</name>
+	<version>1.0.0.0</version>
+	<creationDate>2015</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_GATEWAY_PAGO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="pago">pago.php</filename>
+		<filename plugin="pago">icon.jpg</filename>
+		<filename plugin="pago">script.js</filename>
+		<folder>fields</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_gateway_pago.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_gateway_pago.sys.ini</language>
+	</languages>
+ 	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/pago_gateway/pago/fields">
+				
+				<field name="payment_gateway_name"
+				   	   type="text"
+				   	   default="Instant Pay"
+					   label="PLG_PAGO_GATEWA_PAYMENT_GATEWAY_NAME_LABEL"
+					   description="PLG_PAGO_GATEWAY_PAYMENT_GATEWAY_NAME_DESC"/>
+				
+			</fieldset>
+			<fieldset  name="advanced">
+				<field name="creditcard" type="hidden" default="1" value="1" />
+			</fieldset>
+		</fields>
+    </config>
+</extension>
+

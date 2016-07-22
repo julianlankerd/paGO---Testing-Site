@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="base">
+		<field
+			name="name"
+			type="text"
+			column="begin"
+			column_class="no-margin"
+			width_class="pg-col-6"
+			required="true"
+			label="PAGO_CUSTOMER_NAME"
+			description="PAGO_CUSTOMER_NAME"/>
+		<field
+			name="email"
+			type="text"
+			column="end"
+			width_class="pg-col-6"
+			required="true"
+			label="PAGO_USER_EMAIL"
+			description="PAGO_USER_EMAIL"/>
+	</fieldset>
+	
+	<fieldset name="address">
+		<!--<field name="id" type="hidden" label="" description="" />-->
+		<!--<field name="user_id" type="hidden" label="" description="" />-->
+		<!--<field name="company" type="text" label="PAGO USER COMPANY" description="" width_class="pg-col6" />-->
+		<!--<field name="title" type="text" label="PAGO USER TITLE" description="" width_class="pg-col6" />-->
+		<!--<field name="first_name" type="text" label="PAGO USER FIRST NAME" description="" width_class="pg-col4" />-->
+		<!--<field name="middle_name" type="text" label="PAGO USER MIDDLE NAME" description="" width_class="pg-col4" />-->
+		<!--<field name="last_name" type="text" label="PAGO USER LAST NAME" description="" width_class="pg-col4" />-->
+		<field 
+			name="address_1" 
+			type="text" 
+			label="PAGO_USER_ADDRESS1" 
+			description=""  />
+		<field 
+			name="address_2" 
+			type="text" 
+			label="PAGO_USER_ADDRESS2" 
+			description=""  />
+		<field 
+			name="city" 
+			type="text" 
+			label="PAGO_USER_CITY" 
+			description="" 
+			column="begin"
+			width_class="pg-col-6" />
+		<field 
+			name="zip" 
+			type="text" 
+			label="PAGO_USER_ZIP" 
+			description="" 
+			column="end"
+			width_class="pg-col-6"/>
+		<field 
+			name="state" 
+			type="stateslist" 
+			label="PAGO_USER_STATE" 
+			description="" 
+			column="begin"
+			column_class="no-margin"
+			width_class="pg-col-6" />
+		<field 
+			name="country" 
+			type="countrieslist" 
+			label="PAGO_USER_COUNTRY" 
+			description="" 
+			column="end"
+			width_class="pg-col-6" />
+		<!--<field name="user_email" type="text" label="PAGO USER EMAIL" description="" width_class="pg-col3" />-->
+		<!--<field name="phone_1" type="text" label="PAGO USER PHONE1" description="" width_class="pg-col3" />-->
+		<!--<field name="phone_2" type="text" label="PAGO USER PHONE2" description="" width_class="pg-col3" />-->
+		<!--<field name="fax" type="text" label="PAGO USER FAX" description="" width_class="pg-col3" />-->
+	</fieldset>
+
+	<fieldset name="cc">
+		<field
+			name="number"
+			type="text"
+			column="begin"
+			width_class="pg-col-9"
+			required="true"
+			label="PAGO_WINGMAN_CC_NUMBER"
+			description="PAGO_WINGMAN_CC_NUMBER"/>
+		<field
+			name="cvv"
+			type="text"
+			column="end"
+			width_class="pg-col-3"
+			required="true"
+			label="PAGO_WINGMAN_CC_CVV"
+			description="PAGO_WINGMAN_CC_CVV"/>
+		<field
+			name="month"
+			type="text"
+			column="begin"
+			column_class="no-margin"
+			width_class="pg-col-6"
+			required="true"
+			label="PAGO_WINGMAN_CC_MONTH"
+			description="PAGO_WINGMAN_CC_MONTH"/>
+		<field
+			name="year"
+			type="text"
+			column="end"
+			width_class="pg-col-6"
+			required="true"
+			label="PAGO_WINGMAN_CC_YEAR"
+			description="PAGO_WINGMAN_CC_YEAR"/>
+	</fieldset>
+	
+	<fieldset name="terms">
+		<field
+			name="terms"
+			type="pgcheckbox"
+			required="true"
+			label="PAGO_WINGMAN_TERMS"
+			description="PAGO_WINGMAN_TERMS"/>
+	</fieldset>
+</form>

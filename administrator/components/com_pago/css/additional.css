@@ -1,0 +1,15 @@
+html body .ui-multiselect,
+html body .ui-multiselect:hover,
+html body .ui-multiselect:active,
+html body .ui-multiselect:focus {
+	border: 1px solid #bbb;
+	padding: 2px 10px;
+}
+
+html body .editor .mce-btn-small .ui-multiselect,
+html body .editor .mce-btn-small .ui-multiselect:hover,
+html body .editor .mce-btn-small .ui-multiselect:active,
+html body .editor .mce-btn-small .ui-multiselect:focus {
+	border: 0;
+	padding: 1px 5px;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">  
+		<field name="country_id" label="PAGO_COUNTRY_NAME" dbkey="country_id"
+			type="countrieslist" width_class="pg-col2" />
+		<field name="state_id" type="hidden" />         
+		<field name="state_name" type="text" label="PAGO_STATE_NAME" description="" width_class="pg-col2" />
+		<field name="state_3_code" type="text" label="PAGO_STATE_3_CODE" description="" width_class="pg-col2" /> 
+		<field name="state_2_code" type="text" label="PAGO_STATE_2_CODE" description="" width_class="pg-col2" /> 
+		<field name="publish" type="list" default="1" label="PAGO_PUBLISHED" description="" width_class="pg-col2 no-margin">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+	</fieldset>
+</form>

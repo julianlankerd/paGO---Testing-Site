@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<form>	
+		<fieldset name="base">		
+			<field
+				name="id"
+				type="hidden"/>
+	
+			<field
+				name="rule_name"
+				type="text"
+				column="begin"
+				width_class="pg-col-6"
+				required="true"
+				label="PAGO_DISCOUNT_NAME"
+				description="PAGO_DISCOUNT_NAME_DESC"/>
+			<field
+				name="discount_message"
+				type="text"
+				column="end"
+				width_class="pg-col-6"
+				label="PAGO_DISCOUNT_MESSAGE"
+				description="PAGO_DISCOUNT_MESSAGE_DESC"/>
+			<field
+				name="start_date"
+				type="pgcalendar" 
+				default="NOW" 
+				column="begin"
+				width_class="pg-col-3"
+				format="yy-mm-dd" 
+			
+				label="PAGO_DISCOUNT_START_DATE"
+				description="PAGO_DISCOUNT_START_DATE_DESC"/>
+	
+			<field
+				name="end_date"
+				type="pgcalendar" 
+				default="NOW" 
+				column="end"
+				width_class="pg-col-3"
+				format="yy-mm-dd" 
+				label="PAGO_DISCOUNT_END_DATE"
+				description="PAGO_DISCOUNT_END_DATE_DESC"/>
+	
+			
+			<field
+				name="priority"
+				type="text"
+				column="begin"
+				width_class="pg-col-3"
+				label="PAGO_DISCOUNT_PRIORITY"
+				description="PAGO_DISCOUNT_PRIORITY_DESC"/>		
+	
+			<field
+				name="published"
+				type="radio"
+				column="end"
+				default="1"
+				label="PAGO_PUBLISH"
+				width_class="pg-col-3"
+				description="PAGO_DISCOUNT_PUBLISH_DESC"> 
+			  <option value="0">No</option> 
+			  <option value="1">Yes</option> 
+			</field> 
+			
+		</fieldset>
+	
+		<fieldset name="rules">
+			
+			<field
+				name="discount_type"
+				type="list"
+				column="begin"
+				default="1"
+				width_class="pg-col-3"
+				label="PAGO_DISCOUNT_TYPE"
+				class="no-margin"
+				description="PAGO_DISCOUNT_TYPE_DESC"> 
+			  <option value="0">Fix amount</option> 
+			  <option value="1">Percent</option> 
+			</field> 
+			
+			<field
+				name="discount_amount"
+				type="text"
+				column="end"
+				required="true"
+				width_class="pg-col-3"
+				class="no-margin"
+				label="PAGO_DISCOUNT_AMOUNT"
+				description="PAGO_DISCOUNT_AMOUNT_DESC"/>
+		
+		</fieldset>
+	
+		<fieldset name="events">
+			<field 
+				name="events"
+				type="discountevents"
+				label="PAGO_DISCOUNT_EVENTS"
+				description="PAGO_DISCOUNT_EVENTS_DESC"/>
+		</fieldset>
+		
+	</form>

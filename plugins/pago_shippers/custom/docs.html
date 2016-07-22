@@ -1,0 +1,40 @@
+<div style="padding:10px;">
+    <h1>Custom Shipping Rules</h1>
+    <p>The custom shipper plugin allows you to set your own shipping rules which can be based on weight 
+    if required. Consider the following scenario, you want to charge $2.33 for items weighing under 10kg, 
+    $5.87 for items over 10kg and under 20kg and a set price of $10.76 for the rest, ie items over 20kg. 
+    You would thus create 3 rules with the same name:</p>
+    <table class="adminlist">
+        <thead>
+            <tr>                
+                <th style="width:33%">Name</th>
+                <th style="width:33%">Weight Rule</th>
+                <th style="width:34%">Price</th>                
+            </tr>
+        </thead>
+        <tbody>
+         <tr class="row0" style="cursor: move;">
+            <td>Ground</td>
+            <td>&lt;10</td>
+            <td>2.33</td>
+          </tr>
+           <tr class="row0" style="cursor: move;">
+            <td>Ground</td>
+            <td>&gt;=10 &amp;&amp; &lt;=20</td>
+            <td>5.87</td>
+          </tr>
+           <tr class="row0" style="cursor: move;">
+            <td>Ground</td>
+            <td></td>
+            <td>10.76</td>
+          </tr>
+         
+        </tbody>
+    </table>
+    
+ 
+<p>It should be noted that order is important in the above. The system will check each rule from the top down and when it finds a match that 
+rule will be used and no other rule WITH THE SAME NAME will be considered. It should also be noted that a rule with a blank weight rule parameter 
+will be accepted automatically so these can be used as a "catch all" type parameter and should be added at the bottom of the list for a group of 
+rules with the same name.</p>
+       </div>

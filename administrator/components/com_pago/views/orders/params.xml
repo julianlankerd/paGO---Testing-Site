@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>	
+	
+	<params group="billing_address">					
+		<param name="address_1" type="text" label="PAGO USER ADDRESS1" description="" required="true"/>	
+		<param name="address_2" type="text" label="PAGO USER ADDRESS2" description="" />
+		<param name="city" type="text" label="PAGO USER CITY" description="" />	
+		<param name="state" type="text" label="PAGO USER STATE" description="" />	
+		<param name="country" type="text" label="PAGO USER COUNTRY" description="" />	
+		<param name="zip" type="text" label="PAGO USER ZIP" description="" />					
+	</params>
+	
+	<params group="contact">					
+		<param name="user_email" type="text" label="PAGO USER EMAIL" description="" />	
+		<param name="phone_1" type="text" label="PAGO USER PHONE1" description="" />
+		<param name="phone_2" type="text" label="PAGO USER PHONE2" description="" />	
+		<param name="fax" type="text" label="PAGO USER FAX" description="" />					
+	</params>
+	
+	<params group="details">			
+		<param name="username" type="text" label="PAGO USER NAME" description="" />
+		<param name="company" type="text" label="PAGO USER COMPANY" description="" />
+		<param name="title" type="text" label="PAGO USER TITLE" description="" />
+		<param name="first_name" type="text" label="PAGO USER FIRST NAME" description="" />
+		<param name="middle_name" type="text" label="PAGO USER MIDDLE NAME" description="" />
+		<param name="last_name" type="text" label="PAGO USER LAST NAME" description="" />					
+	</params>
+	
+	<params group="shipping_address">					
+		<param name="m_address_1" type="text" label="PAGO USER ADDRESS1" description="" />	
+		<param name="m_address_2" type="text" label="PAGO USER ADDRESS2" description="" />
+		<param name="m_city" type="text" label="PAGO USER CITY" description="" />	
+		<param name="m_state" type="text" label="PAGO USER STATE" description="" />	
+		<param name="m_country" type="text" label="PAGO USER COUNTRY" description="" />	
+		<param name="m_zip" type="text" label="PAGO USER ZIP" description="" />					
+	</params>
+	
+	<params group="shipping_contact">					
+		<param name="m_user_email" type="text" label="PAGO USER EMAIL" description="" />	
+		<param name="m_phone_1" type="text" label="PAGO USER PHONE1" description="" />
+		<param name="m_phone_2" type="text" label="PAGO USER PHONE2" description="" />	
+		<param name="m_fax" type="text" label="PAGO USER FAX" description="" />					
+	</params>
+	
+	<params group="shipping_details">			
+		<param name="m_company" type="text" label="PAGO USER COMPANY" description="" />
+		<param name="m_title" type="text" label="PAGO USER TITLE" description="" />
+		<param name="m_first_name" type="text" label="PAGO USER FIRST NAME" description="" />
+		<param name="m_middle_name" type="text" label="PAGO USER MIDDLE NAME" description="" />
+		<param name="m_last_name" type="text" label="PAGO USER LAST NAME" description="" />					
+	</params>
+	
+	<params group="hidden">			
+		<param name="id" type="hidden" />
+		<param name="user_id" type="hidden" />
+		<param name="address_type" value="b" type="hidden" />				
+	</params>
+	
+	
+</metadata>

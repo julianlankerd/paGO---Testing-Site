@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="PAGO_CATEGORY_DEFAULT_LAYOUT_TITLE">
+		<message>
+			<![CDATA[PAGO_CATEGORY_DEFAULT_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="params" addfieldpath="/administrator/components/com_pago/elements/menu">
+		<fieldset name="Basic">
+			<field name="cid" type="categorylistmenu"
+				label="PAGO_CATEGORY_MENU_LABEL"
+				description="PAGO_CATEGORY_MENU_DESC"
+				module="true"
+				multiple="true"
+				/>
+			<field
+				name="category_block"
+				type="radio"
+				default="0"
+				label="PAGO_MENU_CATEGORY_SHOW_CATEGORY_BLOCK"
+				description="PAGO_MENU_CATEGORY_SHOW_CATEGORY_BLOCK_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="show_subcats"
+				type="radio"
+				default="0"
+				label="PAGO_MENU_CATEGORY_SHOW_SUBCATEGORY"
+				description="PAGO_MENU_CATEGORY_SHOW_SUBCATEGORY_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="category_view"
+				type="radio"
+				default="1"
+				label="PAGO_MENU_CATEGORY_SHOW_CATEGORY_VIEW"
+				description="PAGO_MENU_CATEGORY_SHOW_CATEGORY_VIEW_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+			
+			<field type="spacer" label="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_SETTINGS" />
+			
+			<field
+				name="category_image"
+				type="radio"
+				default="1"
+				label="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_IMAGE"
+				description="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_IMAGE_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="category_title"
+				type="radio"
+				default="1"
+				label="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_TITLE"
+				description="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_TITLE_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="category_item_count"
+				type="radio"
+				default="1"
+				label="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ITEM_COUNT"
+				description="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ITEM_COUNT_DESC">
+					<option value="0">PAGO_HIDE</option>
+					<option value="1">PAGO_SHOW</option>
+			</field>
+
+			<field 
+				name="block_order_by" 
+				type="list" 
+				default="latest" 
+				label="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY" 
+				description="PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_DESC">
+					<option value="latest">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_MOST_RECENT</option>
+					<option value="oldest">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_MOST_RECENT_LAST</option>
+					<option value="name">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_NAME</option>
+					<option value="random">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_BY_RANDOM</option>
+					<option value="ordering">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_BY_ORDERING</option>
+			</field>
+			
+			<field 
+				name="display_items" 
+				type="list" 
+				default="0" 
+				label="PAGO_MENU_CATEGORY_DISPLAY_ITEMS" 
+				description="PAGO_MENU_CATEGORY_DISPLAY_ITEMS_DESC">
+					<option value="0">COM_PAGO_SELECT</option>
+					<option value="1">COM_PAGO_ONLY_FEATURED</option>
+					<option value="2">COM_PAGO_ON_SALE</option>	
+			</field>
+			
+			<field type="spacer" label="PAGO_MENU_CATEGORY_CATEGORY_VIEW_SETTINGS" />
+			
+			<field name="inherit_category" type="categorylistnoparent"
+				label="PAGO_CATEGORY_MENU_INHERIT_LABEL"
+				description="PAGO_CATEGORY_MENU_INHERIT_DESC"
+				/>
+				<field 
+				name="view_order_by" 
+				type="list" 
+				default="latest" 
+				label="PAGO_MENU_CATEGORY_CATEGORY_VIEW_ORDER_BY" 
+				description="PAGO_MENU_CATEGORY_CATEGORY_VIEW_ORDER_BY_DESC">
+					<option value="latest">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_MOST_RECENT</option>
+					<option value="priceasc">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_PRICE_ASC</option>
+					<option value="pricedesc">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_PRICE_DESC</option>
+					<option value="name">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_NAME</option>
+					<option value="random">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_BY_RANDOM</option>
+					<option value="ordering">PAGO_MENU_CATEGORY_CATEGORY_BLOCK_ORDER_BY_BY_ORDERING</option>
+			</field>
+			<field addfieldpath="/administrator/components/com_pago/elements" type="divheight" height="120">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="3.0" type="plugin" group="pago_export" method="upgrade">
+
+	<name>Pago Export Orders CSV</name>
+
+	<version>1.0</version>
+
+	<creationDate>2015</creationDate>
+
+	<author>'corePHP' LLC</author>
+
+	<authorEmail>support@corephp.com</authorEmail>
+
+	<authorUrl>corephp.com</authorUrl>
+
+	<copyright>'corePHP' LLC</copyright>
+
+	<license>GPL</license>
+
+	<description>You can export orders using this plugin.</description>
+
+	<files>
+
+		<filename plugin="order_export_csv">order_export_csv.php</filename>
+
+		<filename>index.html</filename>
+
+	</files>
+
+	<config>
+
+	</config>
+
+</extension>
+
+
+

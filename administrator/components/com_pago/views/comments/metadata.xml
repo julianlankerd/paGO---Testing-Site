@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="base">
+		<field
+			name="published"
+			type="list"
+			default="1"
+			label="PAGO_ITEM_PUBLISH"
+			description="PAGO_ITEM_PUBLISH_DESC"
+			width_class="pg-col2">
+			<option value="0">PAGO_NO</option>
+			<option value="1">PAGO_YES</option>
+		</field>
+		<field
+			name="text"
+			size="12"
+			type="htmlarea"
+			label="PAGO_ITEM_DESC"
+			description="PAGO_ITEM_DESC_DESC"
+			column="begin"
+			column_class="pg-col8"
+		/>
+	</fieldset>
+</form>

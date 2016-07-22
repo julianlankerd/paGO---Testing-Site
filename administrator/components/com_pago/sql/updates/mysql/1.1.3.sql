@@ -1,0 +1,1 @@
+ALTER TABLE `#__pago_items` CHANGE COLUMN `price` `price` DECIMAL(19,4) NOT NULL ;

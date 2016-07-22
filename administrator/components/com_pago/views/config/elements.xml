@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="general">
+		<fieldset
+			name="generalbasic"
+			label="PAGO_CONFIG_GENERAL_BASIC">
+			<field
+				name="pago_store_name"
+				default="paGO Commerce"
+				size="100%"
+				type="text"
+				label="PAGO_CONFIG_LABEL_STORE_NAME"
+				description="PAGO_CONFIG_LABEL_STORE_NAME_DESC"
+				column_class="pg-col4"
+			/>
+
+			<field
+				name="pago_store_slogan"
+				default="Commerce Evolved"
+				size="100%"
+				type="text"
+				label="PAGO_CONFIG_LABEL_STORE_SLOGAN"
+				description="PAGO_CONFIG_LABEL_STORE_SLOGAN_DESC"
+			/>
+
+			<field
+				name="pago_capture_app_data"
+				type="radioborder"
+				size="100%"
+				default="1"
+				label="PAGO_CONFIG_LABEL_CAPTURE_APP_DATA"
+				description="PAGO_CONFIG_LABEL_CAPTURE_APP_DATA_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+
+			<field
+				name="show_store_title"
+				type="radioborder"
+				size="100%"
+				default="0"
+				label="PAGO_CONFIG_LABEL_SHOW_STORE_TITLE"
+				description="PAGO_CONFIG_LABEL_SHOW_STORE_TITLE_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="store_email"
+				size="100%"
+				type="text"
+				label="PAGO_CONFIG_LABEL_STORE_EMAIL"
+				description="PAGO_CONFIG_LABEL_STORE_EMAIL_DESC"
+			/>
+			<field
+				name="remove_pending_orders"
+				type="radioborder"
+				size="100%"
+				default="1"
+				label="PAGO_CONFIG_LABEL_REMOVE_PENDING_ORDERS"
+				description="PAGO_CONFIG_LABEL_REMOVE_PENDING_ORDERS_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="keep_drop_db_tables"
+				label="PAGO_CONFIG_LABEL_KEEP_DROP_DB_TABLES"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_KEEP_DROP_DB_TABLES_DESC">
+					<option value="1">PAGO_KEEP_DB_TABLES_ON_UNINSTALL</option>
+					<option value="0">PAGO_DROP_DB_TABLES_ON_UNINSTALL</option>
+			</field>
+			<field
+				name="currency_symbol_display"
+				label="PAGO_CONFIG_LABEL_CURRENCY_SYMBOL"
+				type="list"
+				default="1"
+				description="PAGO_CONFIG_LABEL_KEEP_CURRENCY_SYMBOL_DESC">
+					<option value="1">PAGO_KEEP_CURRENCY_SYMBOL_BEFORE</option>
+					<option value="0">PAGO_KEEP_CURRENCY_SYMBOL_AFTER</option>
+			</field>
+			<field
+				name="price_seperator"
+				size="100%"
+				type="text"
+				label="PAGO_CONFIG_LABEL_PRICE_SEPERATOR"
+				description="PAGO_CONFIG_LABEL_PRICE_SEPERATOR_DESC"
+			/>
+			<field
+				name="decimal_places"
+				default="2"
+				size="100%"
+				type="text"
+				class="numeric"
+				label="PAGO_CONFIG_LABEL_DECIMAL_PLACES"
+				description="PAGO_CONFIG_LABEL_DECIMAL_PLACES_DESC"
+				width_class="pg-col4"
+
+			/>
+			<field
+				name="online"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_LABEL_STORE_ONLINE"
+				description="PAGO_CONFIG_LABEL_STORE_ONLINE_DESC"
+				class="pg-store-online">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="description"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="PAGO_CONFIG_LABEL_STORE_DESCRIPTION"
+				description="PAGO_CONFIG_LABEL_STORE_DESCRIPTION_DESC"
+				class="pg-store-description"
+				column_class="pg-col8"
+			/>
+		</fieldset>
+		<fieldset
+			name="address"
+			label="PAGO_CONFIG_GENERAL_ADDRESS">
+			<field
+				size="100%"
+				name="first_name"
+				type="text"
+				label="PAGO_CONFIG_LABEL_FIRST_NAME"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="middle_name"
+				type="text"
+				label="PAGO_CONFIG_LABEL_MIDDLE_NAME"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="last_name"
+				type="text"
+				label="PAGO_CONFIG_LABEL_LAST_NAME"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="address_1"
+				type="text"
+				label="PAGO_CONFIG_LABEL_ADDRESS1"
+				description=""
+				width_class="pg-col6"
+			/>
+			<field
+				size="100%"
+				name="address_2"
+				type="text"
+				label="PAGO_CONFIG_LABEL_ADDRESS2"
+				description=""
+				width_class="pg-col6"
+			/>
+			<field
+				size="100%"
+				name="city"
+				type="text"
+				label="PAGO_CONFIG_LABEL_CITY"
+				description=""
+				width_class="pg-col3"
+			/>
+			<field
+				name="country"
+				type="countrieslist"
+				label="PAGO_CONFIG_LABEL_COUNTRY"
+				description=""
+				width_class="pg-col3"
+			/>
+			<field
+				name="state"
+				type="stateslist"
+				label="PAGO_CONFIG_LABEL_STATE"
+				description=""
+				width_class="pg-col3"
+			/>
+			<field
+				size="100%"
+				name="zip"
+				type="text"
+				label="PAGO_CONFIG_LABEL_ZIP"
+				description=""
+				width_class="pg-col3"
+			/>
+			<field
+				size="100%"
+				name="phone_1"
+				type="text"
+				label="PAGO_CONFIG_LABEL_PHONE1"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="phone_2"
+				type="text"
+				label="PAGO_CONFIG_LABEL_PHONE2"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="fax"
+				type="text"
+				label="PAGO_CONFIG_LABEL_FAX"
+				description=""
+				width_class="pg-col4"
+			/>
+			<field
+				size="100%"
+				name="company"
+				type="text"
+				label="PAGO_CONFIG_LABEL_COMPANY"
+				escription=""
+				width_class="pg-col6"
+			/>
+			<field
+				size="100%"
+				name="title"
+				type="text"
+				label="PAGO_CONFIG_LABEL_TITLE"
+				description=""
+				width_class="pg-col6"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="account">
+		<fieldset
+			name="PAGO_CONFIG_ACCOUNT_OPTIONS"
+			label="PAGO_CONFIG_ACCOUNT_OPTIONS">
+
+			<field
+				name="account_custom_layout"
+				type="categorylayoutlist"
+				label="PAGO_CONFIG_LABEL_ACCOUNT_CUSTOM_LAYOUT"
+				description="PAGO_CONFIG_LABEL_ACCOUNT_CUSTOM_LAYOUT_DESC"
+				column="begin"
+				column_class="pg-col4"
+			/>
+			<field
+				name="register_custom_layout"
+				type="categorylayoutlist"
+				label="PAGO_CONFIG_LABEL_REGISTER_CUSTOM_LAYOUT"
+				description="PAGO_CONFIG_LABEL_REGISTER_CUSTOM_LAYOUT_DESC"
+				column="end"
+				column_class="pg-col4"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="checkout">
+		<fieldset
+			name="options"
+			label="PAGO_CONFIG_CHECKOUT_OPTIONS">
+			<!--
+			<field
+				name="force_checkout_register"
+				type="list"
+				default="0"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_FORCE_REGISTER"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_FORCE_REGISTER_DESC"
+				class="pg-checkout-force-register"
+				column_class="pg-col4">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			-->
+			<field
+				name="checkout_welcome_message"
+				type="text"
+				default=""
+				label="Checkout Welcome Message"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_WELCOME_MESSAGE_DESC"
+				class=""
+				column_class="pg-col4"/>
+				
+			<field
+				name="checkout_continue_shopping_link"
+				type="text"
+				default=""
+				label="Continue Shopping"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_CONT_SHOPPING_DESC"
+				class=""
+				column_class="pg-col4"/>
+				
+			<field
+				name="force_checkout_register"
+				type="list"
+				default="0"
+				label="Checkout Registration Policy"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_FORCE_REGISTER_DESC"
+				class="pg-checkout-force-register"
+				column_class="pg-col4">
+				<option value="0">Register and Guest</option>
+				<option value="1">Register Only</option>
+				<option value="2">Guest Only</option>
+			</field>
+			<field
+				name="checkout_register_security"
+				type="list"
+				default="3"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_REGISTER_SECURITY"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_REGISTER_SECURITY_DESC"
+				class="pg-checkout-register-security"
+				column_class="pg-col4">
+				<option value="0">PAGO_CONFIG_CHECKOUT_REGISTER_SECURITY_NONE</option>
+				<option value="1">PAGO_CONFIG_CHECKOUT_REGISTER_SECURITY_CAPTCHA</option>
+				<option value="2">PAGO_CONFIG_CHECKOUT_REGISTER_SECURITY_AKISMET</option>
+				<option value="3">PAGO_CONFIG_CHECKOUT_REGISTER_SECURITY_EMAIL</option>
+			</field>
+			<field
+				name="checkout_custom_layout"
+				type="template"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_CUSTOM_LAYOUT"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_CUSTOM_LAYOUT_DESC"
+				column="begin"
+				column_class="pg-col3"
+			/>
+			<!-- <field
+				name="ajax_checkout"
+				type="list"
+				default="0"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_AJAX"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_AJAX_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field> -->
+			<field
+				name="skip_shipping"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_SKIP_SHIPPING"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_SKIP_SHIPPING_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="shipping_type"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_SHIPPING_TYPE"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_SHIPPING_TYPE_DESC">
+					<option value="0">PAGO_ORDER_BASED_SHIPPING</option>
+					<!--<option value="1">PAGO_PRODUCT_BASED_SHIPPING</option>-->
+			</field>
+			<field name="default_tax_class" type="sql"
+					query="SELECT pgtax_class_id AS class_id_value, pgtax_class_name AS class_id_title FROM #__pago_tax_class"
+					key_field="class_id_value" value_field="class_id_title" default="1"
+					label="PAGO_CONFIG_LABEL_CHECKOUT_DEFAULT_TAX_CLASS"
+					description="PAGO_CONFIG_LABEL_CHECKOUT_DEFAULT_TAX_CLASS_DESC">
+			</field>
+			<field
+				name="display_price_with_tax"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_DISPLAY_PRICE_WITH_TAX"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_DISPLAY_PRICE_WITH_TAX_DESC">
+					<option value="0">PAGO_NO</option>
+					<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="default_tax_address"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_DEFAULT_TAX_ADDRESS"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_DEFAULT_TAX_ADDRESS_DESC">
+					<option value="0">PAGO_NO_ADDRESS</option>
+					<option value="1">PAGO_SHOP_ADDRESS</option>
+			</field>
+			<field
+				name="calculate_tax_address"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_CALCULATE_TAX_ADDRESS"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_CALCULATE_TAX_ADDRESS_DESC">
+					<option value="shipping">PAGO_CUSTOMER_SHIPPING_ADDRESS</option>
+					<option value="billing">PAGO_CUSTOMER_BILLING_ADDRESS</option>
+					<option value="shop">PAGO_SHOP_ADDRESS</option>
+			</field>
+			<field
+				name="combine_coupon_discount"
+				label="PAGO_CONFIG_LABEL_CHECKOUT_COUPON_DISCOUNT"
+				type="list"
+				default="0"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_COUPON_DISCOUNT_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="pago_cart_itemid"
+				default=""
+				size="100%"
+				type="text"
+				label="PAGO_CONFIG_LABEL_CART_ITEMID"
+				description="PAGO_CONFIG_LABEL_CART_ITEMID_DESC"
+				column="end"
+				column_class="pg-col3"
+			/>
+			<field
+				name="skip_cart_page"
+				type="radioborder"
+				default="0"
+				label="PAGO_CHECKOUT_SKIP_CART_PAGE"
+				description="PAGO_CHECKOUT_SKIP_CART_PAGE_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field>
+			<field
+				name="terms_services"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="PAGO_CONFIG_LABEL_CHECKOUT_TERMS_SERVICES"
+				description="PAGO_CONFIG_LABEL_CHECKOUT_TERMS_SERVICES_DESC"
+				class="pg-checkout-terms-of-service"
+				column="begin"
+				column_class="pg-col8"
+			/>
+			<field
+				name="order_complete"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="PAGO_CONFIG_LABEL_ORDER_COMPLETE"
+				description="PAGO_CONFIG_LABEL_ORDER_COMPLETE_DESC"
+				column="end"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="template">
+		<fieldset
+			name="theme"
+			addpath="/administrator/components/com_pago/elements"
+			label="PAGO_CONFIG_TEMPLATE">
+			<field
+				name="pago_theme"
+				type="template"
+				default="default"
+				label="PAGO_CONFIG_LABEL_TEMPLATE"
+				description="PAGO_CONFIG_LABEL_TEMPLATE_DESC"
+				width_class="pg-col3"
+			/>
+			<field
+				name="pago_theme_style"
+				type="list"
+				default="0"
+				label="PAGO_CONFIG_LABEL_TEMPLATE_STYLE"
+				description="PAGO_CONFIG_LABEL_TEMPLATE_STYLE_DESC"
+				width_class="pg-col3">
+				<option value="0">PAGO_CONFIG_LABEL_TEMPLATE_STYLE_NORMAL</option>
+				<!--<option value="1">PAGO_CONFIG_LABEL_TEMPLATE_STYLE_DARK</option>-->
+			</field>
+			<field
+				name="pago_fonts"
+				type="list"
+				default="0"
+				label="PAGO_CONFIG_LABEL_FONT"
+				description="PAGO_CONFIG_LABEL_FONT_DESC"
+				width_class="pg-col3">
+				<option value="0">PAGO_CONFIG_THEME_FONT</option>
+				<option value="PTsanse">PT sanse</option>
+			</field>
+			<!-- <field
+				name="pago_config_load_bootstrap"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_LOAD_BOOTSTRAP"
+				description="PAGO_CONFIG_LOAD_BOOTSTRAP_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field>
+			<field
+				name="pago_config_load_use_font_awesome"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_LOAD_FONT_AWESOME"
+				description="PAGO_CONFIG_LOAD_FONT_AWESOME_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field> -->
+		</fieldset>
+	</fields>
+
+	<fields name="media">
+		<fieldset
+			name="imagebasic"
+			label="PAGO_CONFIG_IMAGE_BASIC">
+			<field
+				name="img_thumb_amount_item"
+				type="text"
+				default="7"
+				label="PAGO_NUMB_IMGTHUMB_ITEM"
+				description="PAGO_NUMB_IMGTHUMB_ITEM_DESC"
+				class="pg-configuration-image-options"
+				width_class="pg-col4"
+			/>
+			<field
+				name="images_file_path"
+				type="text"
+				default="media/pago/"
+				label="PAGO_IMAGES_FILE_PATH"
+				description="PAGO_IMAGES_FILE_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<field
+				name="images_url_path"
+				type="text"
+				default="media/pago/"
+				label="PAGO_IMAGES_URL_PATH"
+				description="PAGO_IMAGES_URL_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<field
+				name="images_auto_publish"
+				type="radioborder"
+				default="1"
+				label="PAGO_IMAGES_AUTO_PUBLISH"
+				description="PAGO_IMAGES_AUTO_PUBLISH_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field>
+			<field
+				name="allow_user_uploaded"
+				type="radioborder"
+				default="1"
+				label="PAGO_ALLOW_USER_UPLOADED"
+				description="PAGO_ALLOW_USER_UPLOADED_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field>
+			<field
+				name="images_default_access"
+				type="list"
+				default="0"
+				label="PAGO_IMAGES_ACCESS_LEVEL"
+				description="PAGO_IMAGES_ACCESS_LEVEL_DESC"
+				class="pg-image-access-level"
+				width_class="pg-col4">
+				<option value="0">PAGO_PUBLIC</option>
+				<option value="1">PAGO_REGISTERED</option>
+				<option value="2">PAGO_SPECIAL</option>
+			</field>
+			<field
+				name="user_file_path"
+				type="text"
+				default="media/pago/" label="PAGO_USER_FILE_PATH"
+				description="PAGO_USER_FILE_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<field
+				name="user_url_path"
+				type="text"
+				default="media/pago/"
+				label="PAGO_USER_URL_PATH"
+				description="PAGO_USER_URL_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<field
+				name="category_file_path"
+				type="text"
+				default="media/pago/"
+				label="PAGO_CATEGORY_FILE_PATH"
+				description="PAGO_CATEGORY_FILE_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<field
+				name="category_url_path"
+				type="text"
+				default="media/pago/"
+				label="PAGO_CATEGORY_URL_PATH"
+				description="PAGO_CATEGORY_URL_PATH_DESC"
+				width_class="pg-col4"
+			/>
+			<!-- <field
+				name="store_default_image"
+				type="imagedefault"
+				size="30"
+				default=""
+				label="PAGO_IMAGES_DEFAULT"
+				description="PAGO_IMAGES_DEFAULT_DESC"
+				class="pg-file-upload"
+				width_class="pg-col4"
+			/> -->
+			<field
+				name="allowed_download_extension"
+				type="text"
+				default="zip,doc,docx,rar,gzip"
+				label="PAGO_CONFIG_ALLOWED_DOWNLOAD_EXTENSION"
+				description="PAGO_CONFIG_ALLOWED_DOWNLOAD_EXTENSION_DESC"
+				width_class="pg-col4"
+			   />
+   			<field
+				name="images_use_unique_name"
+				type="radioborder"
+				default="1"
+				label="PAGO_IMAGES_USE_UNIQUE_NAME"
+				description="PAGO_IMAGES_USE_UNIQUE_NAME_DESC"
+				class="pg-radio-yes-no"
+				row="end"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+		</field>
+   		<field
+				name="images_add_suffix_image"
+				type="radioborder"
+				default="1"
+				label="PAGO_IMAGES_ADD_SUFFIX_TO_IMAGES"
+				description="PAGO_IMAGES_ADD_SUFFIX_TO_IMAGES_DESC"
+				class="pg-radio-yes-no"
+				width_class="pg-col4">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+   		</field>
+			<field
+				name="image_sizes"
+				type="imagesizes"
+				size="30"
+				default=""
+				label="PAGO_IMAGES_SIZES"
+				description="PAGO_IMAGES_SIZES_DESC"
+				subhead="yes"
+				subhead_label="PAGO_IMAGES_SIZES"
+				class="pg-configuration-image-sizes"
+				show_checkbox="0"
+			/>
+		</fieldset>
+		<fieldset name="files" label="PAGO_FILES_CONFIG">
+			<field
+				name="files_file_path"
+				type="text"
+				default="media/pago/files"
+				label="PAGO_FILES_FILE_PATH"
+				description="PAGO_FILES_FILE_PATH_DESC"
+			/>
+			<!-- <field
+				name="files_meta"
+				type="filesmeta"
+				size="30"
+				default=""
+				label="PAGO_FILES_METADATA"
+				description="PAGO_FILES_METADATA_DESC"
+				class="pg-files-meta-data"
+			/> -->
+		</fieldset>
+	</fields>
+
+	<fields name="cart">
+		<fieldset
+			name="PAGO_CONFIG_CART_OPTIONS"
+			label="PAGO_CONFIG_CART_OPTIONS">
+			<field
+				name="cart_image_size"
+				type="selectimagesize"
+				default="1"
+				column="begin"
+				label="PAGO_CART_IMAGE_SIZE"
+				description="PAGO_CART_IMAGE_SIZE"
+			/>
+			<field
+				name="mini_cart_image_size"
+				type="selectimagesize"
+				default="1"
+				label="PAGO_MINI_CART_IMAGE_SIZE"
+				description="PAGO_MINI_CART_IMAGE_SIZE_DESC"
+			/>
+			<field
+				name="cart_custom_layout"
+				type="template"
+				label="PAGO_CONFIG_LABEL_CART_CUSTOM_LAYOUT"
+				description="PAGO_CONFIG_LABEL_CART_CUSTOM_LAYOUT_DESC"
+				column="end"
+				column_class="pg-col4"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="comments">
+		<fieldset
+			name="PAGO_CONFIG_COMMENTS_OPTIONS"
+			label="PAGO_CONFIG_COMMENTS_OPTIONS">
+			<field
+				name="show_comments"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_SHOW_COMMENTS"
+				description="PAGO_CONFIG_SHOW_COMMENTS_DESC">
+				<option value="0">PAGO_DISABLE</option>
+				<option value="1">PAGO_ENABLE</option>
+			</field>
+			<field
+				name="comment_moderation"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_COMMENTS_MODERATION"
+				description="PAGO_CONFIG_COMMENTS_MODERATION_DESC">
+				<option value="0">PAGO_DISABLE</option>
+				<option value="1">PAGO_ENABLE</option>
+			</field>
+			<field
+				name="comment_guest_submition"
+				type="radioborder"
+				default="0"
+				label="PAGO_CONFIG_COMMENTS_GUEST_SUBMISSION"
+				description="PAGO_CONFIG_COMMENTS_GUEST_SUBMISSION_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field
+				name="comment_replay"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_COMMENTS_REPLAY"
+				description="PAGO_CONFIG_COMMENTS_REPLAY">
+				<option value="1">PAGO_ON</option>
+				<option value="0">PAGO_OFF</option>
+			</field>
+			<field
+				name="comment_replay_notification"
+				type="radioborder"
+				default="1"
+				label="PAGO_CONFIG_COMMENTS_SEND_EMAIL_DESC"
+				description="PAGO_CONFIG_COMMENTS_SEND_EMAIL_DESC">
+				<option value="1">PAGO_ON</option>
+				<option value="0">PAGO_OFF</option>
+			</field>
+		</fieldset>
+	</fields>
+
+	<fields name="affiliates">
+		<fieldset
+			name="affiliatesbasic"
+			label="PAGO_CONFIG_AFFILIATES">
+			<field
+				name="affiliate_active"
+				type="radioborder"
+				default="1"
+				label="PAGOAFFILIATEACTIVE"
+				description="PAGOAFFILIATEACTIVE_DESC"
+				class="pg-radio-yes-no">
+				<option value="1">PAGO_YES</option>
+				<option value="0">PAGO_NO</option>
+			</field>
+			<field
+				name="affiliate_email_address"
+				size="40px"
+				type="text"
+				label="PAGOAFFILIATEMAILADDRESS"
+				description="PAGOAFFILIATEMAILADDRESS_DESC"
+			/>
+			<field
+				name="affiliate_withdraw_amount"
+				size="20px"
+				type="text"
+				label=""
+				default="0"
+				description=""
+			/>
+			<field
+				name="affiliate_earning_percent"
+				size="20px"
+				type="text"
+				label=""
+				default="20"
+				description=""
+			/>
+			<field
+				name="affiliate_bonus_deposit"
+				size="20px"
+				type="text"
+				label=""
+				default="0"
+				description=""
+			/>
+			<field
+				name="affiliate_payout"
+				size="20px"
+				type="text"
+				label=""
+				default="100"
+				description=""
+			/>
+			<field
+				name="affiliate_links_code"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="PAGOAFFILIATELINKSCODE"
+				description="PAGOAFFILIATELINKSCODE_DESC"
+			/>
+			<field
+				name="affiliate_notification"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="AFFILIATENOTIFICATION"
+				description="AFFILIATENOTIFICATION_DESC"
+			/>
+			<field
+				name="affiliate_email"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default=""
+				label="PAGOAFFILIATEEMAIL"
+				description="PAGOAFFILIATEEMAIL_DESC"
+			/>
+			<field
+				name="transaction_completed"
+				height="400"
+				size="50"
+				type="htmlarea"
+				default="{first_name} {last_name} {receipt}"
+				label="PAGO_CHECKOUT_TRANS_COMPLETED_EMAIL"
+				description="PAGO_CHECKOUT_TRANS_COMPLETED_EMAIL_DESC"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="search_product_settings">
+		<fieldset
+			name="PAGO_CONFIG_SEARCH_VIEW_SETTINGS"
+			label="PAGO_CONFIG_SEARCH_VIEW_SETTINGS">
+			<field
+				name="product_settings_product_title"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_TITLE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_TITLE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="search_custom_layout"
+				type="template"
+				label="PAGO_CONFIG_LABEL_SEARCH_CUSTOM_LAYOUT"
+				description="PAGO_CONFIG_LABEL_SEARCH_CUSTOM_LAYOUT_DESC"
+			/>
+			<field
+				name="search_type"
+				label="PAGO_CONFIG_LABEL_SEARCH_TYPE"
+				type="list"
+				default="1"
+				description="PAGO_CONFIG_LABEL_SEARCH_TYPE_DESC">
+				<option value="1">PAGO_EXACT_WORD</option>
+				<option value="0">PAGO_EACH_WORD</option>
+			</field>
+			<field
+				name="product_settings_product_title_limit"
+				type="text"
+				maxlength="4"
+				class="numeric"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRODUCT_TITLE_LIMIT"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRODUCT_TITLE_LIMIT_DESC">
+			</field>
+			<field
+				name="product_settings_link_to_product"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_TO_PRODUCT"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_TO_PRODUCT_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_product_image"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_IMAGE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PRODUCT_IMAGE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_product_per_page"
+				type="text"
+				default="6"
+				maxlength="4"
+				class="numeric"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PER_PAGE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PER_PAGE_DESC">
+			</field>
+			<field
+				name="product_settings_link_on_product_image"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_ON_IMAGE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_LINK_ON_IMAGE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_featured_badge"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FEATURED_BADGE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FEATURED_BADGE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_quantity_in_stock"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_QUANTITY_IN_STOCK"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_QUANTITY_IN_STOCK_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_short_desc"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_short_desc_limit"
+				type="text"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_LIMIT_DESC"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_LIMIT_DESC_DESC"
+				class="pg-category-short-desc-limit">
+			</field>
+			<field
+				name="product_settings_desc"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DESC"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHORT_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_desc_limit"
+				type="text"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_LIMIT_DESC"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_LIMIT_DESC_DESC"
+				class="pg-category-desc-limit">
+			</field>
+			<field
+				name="product_settings_sku"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SKU"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SKU_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_price"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRICE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_PRICE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_discounted_price"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DISCOUNTED_PRICE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_DISCOUNTED_PRICE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_attribute"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_ATTRIBUTE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_ATTRIBUTE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_media"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_MEDIA"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_MEDIA_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_downloads"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_DOWNLOADS"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_DOWNLOADS_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_rating"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_RATING"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_RATING_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_category"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_CATEGORY"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_CATEGORY_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_read_more"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_READ_MORE"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_READ_MORE_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_add_to_cart"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART"
+				description="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_add_to_cart_qty"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_QTY"
+				description="PAGO_CATEGORIES_PRODUCT_ADD_TO_CART_QTY_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+	<fields name="search_product_social_settings">
+		<fieldset
+			name="PAGO_CONFIG_SEARCH_SOCIAL_SETTINGS"
+			label="PAGO_CONFIG_SEARCH_SOCIAL_SETTINGS">
+			<field
+				name="product_settings_fb"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FB"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_FB_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_tw"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_TW"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_TW_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_pinterest"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PINTEREST"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_PINTEREST_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+			<field
+				name="product_settings_google_plus"
+				type="radioborder"
+				default="0"
+				label="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_GOOGLE_PLUS"
+				description="PAGO_CATEGORIES_PRODUCT_SETTINGS_SHOW_GOOGLE_PLUS_DESC">
+				<option value="0">PAGO_HIDE</option>
+				<option value="1">PAGO_SHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+	<fields name="search_product_grid_settings">
+		<fieldset
+			name="PAGO_CONFIG_SEARCH_GRID_SETTINGS"
+			label="PAGO_CONFIG_SEARCH_GRID_SETTINGS">
+			<field
+				name="product_grid_large"
+				type="radioborder"
+				default="2"
+				label="PAGO_CATEGORIES_PRODUCT_GRID_LARGE"
+				description="PAGO_CATEGORIES_PRODUCT_GRID_LARGE_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+			<field
+				name="product_grid_medium"
+				type="radioborder"
+				default="2"
+				label="PAGO_CATEGORIES_PRODUCT_GRID_MEDIUM"
+				description="PAGO_CATEGORIES_PRODUCT_GRID_MEDIUM_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+			<field
+				name="product_grid_small"
+				type="radioborder"
+				default="2"
+				label="PAGO_CATEGORIES_PRODUCT_GRID_SMALL"
+				description="PAGO_CATEGORIES_PRODUCT_GRID_SMALL_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+			<field
+				name="product_grid_extra_small"
+				type="radioborder"
+				default="1"
+				label="PAGO_CATEGORIES_PRODUCT_GRID_EXTRA_SMALL"
+				description="PAGO_CATEGORIES_PRODUCT_GRID_EXTRA_SMALL_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+
+			<field
+				name="category_settings_product_image_settings"
+				type="tumblayout"
+				default='{"padding_left":"0","border_left":"0","margin_left":"0","margin_top":"0","border_top":"0","padding_top":"0","image_size":"2","padding_bottom":"0","padding_right":"0","border_right":"0","margin_right":"0","border_bottom":"0","margin_bottom":"0"}'
+				label="PAGO_CATEGORIES_PRODUCT_IMAGE_SETTINGS"
+				description="PAGO_CATEGORIES_PRODUCT_IMAGE_SETTINGS_DESC">
+			</field>
+		</fieldset>
+	</fields>
+
+	<fields name="mailchimp" addfieldpath="/administrator/components/com_pago/views/newsletter/assets/elements">
+
+		<fieldset name="basic" label="PAGO_NL_PARAMS_TITLE" description="PAGO_NL_PARAMS_DESC">
+			<field name="MCapi" type="text" default="" label="PAGO_NL_API_KEY" description="PAGO_NL_ENTER_MC_API_KEY" size="45" width_class="pg-col4" />
+			<field name="@title1" type="title" default="" label="PAGO_NL_NO_API_KEY_YET" description="PAGO_NL_API_KEY_LINK" width_class="pg-col-auto" />
+			<!--<field name="showSetupInfo" type="setupinfo" default="" label="PAGO_NL_SHOW_SETUP_INFO" description="PAGO_NL_SHOW_SETUP_INFO_DESC" size="45" />-->
+			<field name="archiveDir" type="text" default="/administrator/components/com_pago/views/newsletter/archive" label="PAGO_NL_ARCHIVE_DIRECTORY" description="PAGO_NL_ARCHIVE_DIRECTORY_DESCRIPTION" size="45" width_class="pg-col4" />
+		</fieldset>
+
+		<fieldset name="google_analytics" label="PAGO_NL_GOOGLE_ANALYTICS_TITLE" description="PAGO_NL_GA_DESCRIPTION">
+			<field name="gusername" type="text" default="" label="PAGO_NL_GA_USERNAME" description="PAGO_NL_GA_USERNAME_DESC" size="45" width_class="pg-col4" />
+			<field name="gpw" type="password" default="" label="PAGO_NL_GA_PASSWORD" description="PAGO_NL_GA_PASSWORD_DESC" size="45" width_class="pg-col4" />
+			<field name="gprofileid" type="text" default="" label="PAGO_NL_GA_PROFILEID" description="PAGO_NL_GA_PROFILEID_DESC" size="45" width_class="pg-col4" />
+		</fieldset>
+
+		<fieldset name="campaign_settings" label="PAGO_NL_CAMPAIGN_SETTINGS_TITLE" description="PAGO_NL_CAMPAIGN_SETTINGS_DESCRIPTION">
+			<field name="from_name" type="text" default="" label="PAGO_NL_FROM_NAME" description="PAGO_NL_FROM_NAME_PARAM_INFO" size="45" width_class="pg-col3" />
+			<field name="from_email" type="text" default="" label="PAGO_NL_FROM_EMAIL" description="PAGO_NL_FROM_EMAIL_PARAM_INFO" size="45" width_class="pg-col3" />
+			<field name="reply_email" type="text" default="" label="PAGO_NL_REPLY_EMAIL" description="PAGO_NL_REPLY_EMAIL_PARAM_INFO" size="45" width_class="pg-col3" />
+			<field name="confirmation_email" type="text" default="" label="PAGO_NL_CONFIRMATION_EMAIL" description="PAGO_NL_CONFIRMATION_EMAIL_PARAM_INFO" size="45" width_class="pg-col3" />
+			<field name="twitter_name" type="text" default="" label="PAGO_NL_TWITTER_USERNAME" description="PAGO_NL_TWITTER_INFO" size="45" width_class="pg-col4" />
+			<field name="facebook_link" type="text" default="" label="PAGO_NL_FACEBOOK_LINK" description="PAGO_NL_FACEBOOK_INFO" size="45" width_class="pg-col4" />
+			<field name="myspace_name" type="text" default="" label="PAGO_NL_MYSPACE_USERNAME" description="PAGO_NL_MYSPACE_INFO" size="45" width_class="pg-col4" />
+		</fieldset>
+
+    </fields>
+
+	<fields name="other">
+		<fieldset name="extra" label="PAGO_CONFIG_OTHER"></fieldset>
+	</fields>
+</form>

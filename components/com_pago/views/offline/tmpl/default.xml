@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="PAGO_SEARCH_DEFAULT_LAYOUT_TITLE">
+		<message>
+			<![CDATA[PAGO_SEARCH_DEFAULT_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="params">
+	</fields>
+</metadata>

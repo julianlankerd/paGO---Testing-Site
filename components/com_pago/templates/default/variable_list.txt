@@ -1,0 +1,63 @@
+All variables you can pass through the template are the following:
+
+General:
+$show_account = Show My Account link
+$show_sign_in = Sign Sign In/Register link
+
+Categories:
+if( !empty($this->categories->tree ) ) = If categories are not empty
+$this->category->name = Name of category
+$this->category->id = Category ID
+$this->category->n_order = Category level (depth)
+$this->category->created = Date category was created
+$this->category->modified = Date category was modified
+$this->category->published = ?
+$this->category->description = Category description
+
+Items:
+!empty( $this->items ) = Items are in cart
+
+Cart:
+$item_count = Number of items in cart
+$show_mini_cart = Display Cart Overview (mini cart)
+
+template_functions::load_template('(folder)', '(prefix)', '(name)'); = Calling in mini-templates within templates. Example: template_functions::load_template('common', 'tmpl', 'options_menu') loads the tmpl_options_menu inside the common folder. All mini templates are located in the common folder.
+
+Invoice = $this->invoice
+
+To add javascript use PagoHtml::add_js( $_root . '/components/com_pago/templates/default/javascript/script_name.js' );
+
+<?php
+foreach ( $this->attributes as $k => $attr) {
+	echo $k . "<br />";
+	?>
+	<div class="row pg-attribute-choices">
+		<label class="label-attributes" for="sel_<?php echo $k ?>"><?php echo $k ?></label>
+		<select id="sel_<?php echo $k ?>" name="sel_<?php echo $k ?>">
+		<?php
+		if ( isset( $attr['options'] ) && is_array( $attr['options'] ) ){
+			foreach ( $attr['options'] as $opt ) {
+				echo "<option value=" . $opt['name'] . ">" . $opt['name'] . " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+				if ($attr['pricing']) {
+					echo '+' . $opt['price'];
+				}
+				echo "</option>";
+			}
+		}
+		?>
+		</select>
+	</div>
+<?php } ?>
+
+$_root = JURI::root(  );
+PagoHtml::add_js( $_root . 'components/com_pago/templates/default/javascript/equalcolumns.js' );
+
+$this->document->addScriptDeclaration( "
+	jQuery(document).ready(function($) {
+		CPP.addLoadEvent(function() {
+			/* Front-page first row */
+			equal = new Array('#pg-categories-', '#list-item-');
+			CPP.equalHeight( equal );
+		});
+	});
+" );

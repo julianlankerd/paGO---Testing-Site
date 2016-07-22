@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="options">
+		<!--<fieldset name="share">
+			<field name="show_share_options" size="5" default="1" type="radio" label="PAGOSHOWTAGLINE" description="PAGOSHOWTAGLINE_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="show_share_email" size="5" default="1" type="radio" label="PAGO_SHOW_SHARE_EMAIL" description="">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_share_print" size="5" default="1" type="radio" label="PAGO_SHOW_SHARE_PRINT" description="">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_share_facebook" size="5" default="1" type="radio" label="PAGO_SHOW_SHARE_FACEBOOK" description="">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_share_twitter" size="5" default="1" type="radio" label="PAGO_SHOW_SHARE_TWITTER" description="">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_share_facebook_like" size="5" default="1" type="radio" label="PAGO_SHOW_SHARE_FACEBOOK_LIKE" description="">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+		</fieldset>
+		<fieldset name="view_options" label="PAGO_TEMPLATE_OPTIONS" subheading="PAGO_TEAMPLATE_OPTIONS_DESCRIPTION">
+			<field name="show_store_title" size="5" default="1" type="radio" label="PAGOSHOWSTORETITLE" description="PAGOSHOWSTORETITLE_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_tagline" size="5" default="1" type="radio" label="PAGOSHOWTAGLINE" description="PAGOSHOWTAGLINE_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_store_desc" size="5" default="1" type="radio" label="PAGOSHOWSTOREDESC" description="PAGOSHOWSTOREDESC_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_account" size="5" default="1" type="radio" label="PAGOSHOWACCOUNT" description="PAGOSHOWACCOUNT_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_sign_in" size="5" default="1" type="radio" label="PAGOSHOWSIGNIN" description="PAGOSHOWSIGNIN_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="show_mini_cart" size="5" default="1" type="radio" label="PAGOSHOWMINICART" description="PAGOSHOWMINICART_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+			<field name="cat_per_row" default="4" size="4" type="text" label="PAGOSTORESCATPERROW" description="PAGOSTORECATPERROW_DESC" />
+			<field name="prod_per_row" default="4" size="4" type="text" label="PAGOSTORESCATPERROW" description="PAGOSTORECATPERROW_DESC" />
+			<field name="show_add_to_list" size="5" default="0" type="radio" label="PAGOSHOWADDTOLIST" description="PAGOSHOWADDTOLIST_DESC">
+				<option value="0">PAGO_NO</option>
+				<option value="1">PAGO_YES</option>
+			</field>
+		</fieldset>-->
+	</fields>
+</form>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general"
+		label="COM_PAGO_FIELDSET_CONFIG_CLIENT_OPTIONS_LABEL"
+		description="COM_PAGO_FIELDSET_CONFIG_CLIENT_OPTIONS_DESC">
+		<field name="@spacer" type="spacer" default="General" />
+		<field name="pago_store_name" default="Pago Commerce" size="100%" type="text" label="PAGOSTORENAME" description="PAGOSTORENAME_DESC" />
+		<field name="pago_store_slogan" default="Commerce Evolved" size="100%" type="text" label="PAGOSTORESLOGAN" description="PAGOSTORESLOGAN_DESC" />
+		<field name="cat_per_row" default="4" size="10px" type="text" label="PAGOSTORESCATPERROW" description="PAGOSTORECATPERROW_DESC" />
+
+	</fieldset>
+
+	<fieldset
+		name="store"
+		label="COM_PAGO_FIELDSET_STORE_CLIENT_OPTIONS_LABEL"
+		description="COM_PAGO_FIELDSET_STORE_CLIENT_OPTIONS__DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_banners"
+			section="component" />
+	</fieldset>
+	
+	<fieldset
+		name="email"
+		label="COM_PAGO_FIELDSET_EMAIL_CLIENT_OPTIONS_LABEL"
+		description="COM_PAGO_FIELDSET_EMAIL_CLIENT_OPTIONS__DESC"
+		>
+
+		<field name="transaction_completed" height="400" size="50" type="editor" default="&lt;p&gt;Dear {first_name} {last_name} thank you for your custom.&lt;/p&gt;&lt;p&gt;{receipt}&lt;/p&gt;" label="PAGOTRNSACTIONSUCCESS" description="PAGOTRNSACTIONSUCCESS_DESC" />							
+	</fieldset>
+</form>
+<!--
+<root>
+	<fields group="general">
+		<field name="@spacer" type="spacer" default="General" />
+		<field name="pago_store_name" default="Pago Commerce" size="100%" type="text" label="PAGOSTORENAME" description="PAGOSTORENAME_DESC" />
+		<field name="pago_store_slogan" default="Commerce Evolved" size="100%" type="text" label="PAGOSTORESLOGAN" description="PAGOSTORESLOGAN_DESC" />
+		<field name="cat_per_row" default="4" size="10px" type="text" label="PAGOSTORESCATPERROW" description="PAGOSTORECATPERROW_DESC" />
+		
+		
+	</fields>
+	<fields group="store">		
+  		<field name="@spacer" type="spacer" default="_" />		
+		<field name="online" type="radio" default="1" label="PAGOSTOREONLINE" description="PAGOSTOREONLINE_DESC"> 
+		  <option value="0">No</option> 
+		  <option value="1">Yes</option> 
+		</field> 
+		<field name="title" size="100%" type="text" label="PAGOSTORETITLE" description="PAGOSTORETITLE_DESC" />
+		<field name="slogan" size="100%" type="text" label="PAGOSTORESLOGAN" description="PAGOSTORESLOGAN_DESC" />
+		<field name="store_email" size="100%" type="text" label="PAGOSTOREEMAIL" description="PAGOSTOREEMAIL_DESC" />
+		<field name="description" height="400" size="50" type="htmlarea" default="asdfasf" label="PAGOSTOREDESC" description="PAGOSTOREDESC_DESC" />							
+		<field name="base_ext_tools" type="radio" default="1" label="PAGOBASEEXTTOOLS" description="PAGOBASEEXTTOOLS_DESC"> 
+		  <option value="0">No</option> 
+		  <option value="1">Yes</option> 
+		</field> 
+	</fields>
+	<fields group="email">		
+		
+		<field name="transaction_completed" height="400" size="50" type="htmlarea" default="&lt;p&gt;Dear {first_name} {last_name} thank you for your custom.&lt;/p&gt;&lt;p&gt;{receipt}&lt;/p&gt;" label="PAGOTRNSACTIONSUCCESS" description="PAGOTRNSACTIONSUCCESS_DESC" />							
+	</fields>
+</root>-->

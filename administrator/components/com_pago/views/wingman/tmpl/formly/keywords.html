@@ -1,0 +1,18 @@
+<div class="pg-text">
+	<span class="field-heading">
+		<label for="{{ id }}" class="hasTooltip" title="{{ to.tooltip }}">{{ to.label }} <sup data-ng-show="{{ to.required }}">*</sup></label>
+	</span>
+	<div>
+		<input type="text" name="{{ options.key }}" id="{{ id }}" data-ng-model="kw" ng-keyup="handleInput($event)" placeholder="Type your keyword then press Enter" ng-disabled="full()">
+	</div>
+	<div class="pg-row">
+		<div ng-repeat="keyword in model.keywordsArray track by $index" class="pg-col-6">
+			<span class="wingman-keyword">
+				{{ keyword.keyword }}
+				<button type="button" class="close" ng-click="removeKeyword($index)" ng-if="keyword.temp">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>

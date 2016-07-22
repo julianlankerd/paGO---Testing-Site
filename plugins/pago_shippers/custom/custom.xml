@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="pago_shippers" method="upgrade">
+	<name>PLG_PAGO_SHIPPERS_CUSTOM</name>
+	<version>1.0.0.0</version>
+	<creationDate>2011</creationDate>
+	<author>'corePHP' LLC</author>
+	<authorEmail>info@corephp.com</authorEmail>
+	<authorUrl>corephp.com</authorUrl>
+	<copyright>'corePHP' LLC</copyright>
+	<license>GPL</license>
+	<description>PLG_PAGO_SHIPPERS_CUSTOM_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="custom">custom.php</filename>
+		<filename>index.html</filename>	
+		<filename>javascript.js</filename>
+		<filename>docs.html</filename>
+		<folder>fields</folder>	
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_custom.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pago_shippers_custom.sys.ini</language>
+	</languages>
+
+	<config>
+	</config>
+</extension>

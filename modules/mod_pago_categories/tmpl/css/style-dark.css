@@ -1,0 +1,74 @@
+.pg-mod-categories *,
+.pg-mod-categories *:after,
+.pg-mod-categories *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pg-mod-categories{
+	background: #0c0c0c;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	-moz-box-shadow:    0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	box-shadow:         0px 0px 5px 0px rgba(113, 113, 113, 1);
+  	padding: 20px;
+}
+
+.pg-mod-categories ul{	
+	margin: 0;
+	list-style-type: none;
+}
+
+.pg-mod-categories > ul > li ul li.pg-active-category > ul{
+	margin: 5px 0;
+	padding: 5px 0;
+	border-top: 1px solid #a3a19c; 
+	border-bottom: 1px solid #a3a19c; 
+}
+
+.pg-mod-categories ul li{
+	padding-left: 10px;
+	line-height: 25px;
+	position: relative;
+}
+
+.pg-mod-categories > ul > li > ul > li ul,
+.pg-mod-categories > ul li.unpublished{
+	display: none;
+}
+
+.pg-mod-categories > ul > li > ul li.active > ul{
+	display: block;
+}
+
+.pg-mod-categories ul li a{
+	position: relative;
+	color: #b6b9b9;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.pg-mod-categories ul li a:hover{
+	background: none;
+}
+
+.pg-mod-categories ul li.active > a{
+	font-weight: bold;
+}
+
+.pg-mod-categories > ul > li.active > a:before{
+	content: '';
+	position: absolute;
+	width: 4px;
+	left: -10px;
+	top: 0;
+	bottom: 0;
+	background: #b6b9b9;
+}
+
+.pg-mod-categories ul > li > ul > li > a{
+	font-size: 14px;
+}
+
+.pg-mod-categories ul > li > ul > li ul li a{
+	font-size: 12px;
+}

@@ -1,0 +1,81 @@
+paGO Style Guide:
+
+Wrap page output in
+<div id="pg-page-name">
+
+NO CamelCase!!! Use - for separation
+
+preface classes and IDs with pg- when something must be unique. Always use for simple words that may be in others templates. Example: row, column, etc.
+
+Structure uses a two DIV system. Insert class "outer" on first and "inner" on second DIV. This creates a solid box that is cross-platform/cross-browser. 
+Outer is for width and height. You can also do margins on top and bottom, but left and right can break a layout if it needs to be precise. 
+Inner is for all styling. You can add borders, padding, margins and anything else without breaking the layout in any browser.
+
+If you want multiple columns use the class name of current column - total columns (ie. class="column-1of3")
+We recommend using 2 divs to wrap each column to make it less likely to break in some browsers, plus it will add padding between the columns automatically. Do this using the following:
+<div class="outer column-1of2">
+	<div class="inner-column">
+		Your content
+	</div>
+</div>
+Inner-column was needed so that the padding used for the columns doesn't get inherited to all other items within the column that uses the class 'inner'.
+
+Here is an example of naming structure:
+<div id="pg-categories-parent" class="clearfix"> (This DIV only outputs on homepage)
+	<div id="pg-categories" class="clearfix">
+		<div class="wrap-pg-title">
+			<h2 class="pg-title">
+	  		<div class="wrap-pg-subtitle">
+				<h3 class="pg-subtitle">
+	  		<div class="outer wrap-pg-rows">
+				<ul class="inner pg-rows row-number-1">
+				<li class="outer wrap-pg-category category-id-1">
+					<div class="inner pg-category">
+						<div class="pg-thumb">
+						<p class="pg-name">
+						<p class="pg-amount">
+
+class="pg-title" goes on all header tags so you can do global changes easily. You never should add h1-h6 to the name in CSS in case it ever changes. To choose a unique title use an id or class that wraps it (ie. #pg-categories .pg-title {}).
+
+Definition lists for structured content of Title - Explanation, Title - Explanation (ie. order process) use:
+<dl class="content-definitions">
+
+Forms should usually be in the following format:
+<div class="row pg-blah">
+	<form>
+		<fieldset>
+			<legend>
+			<label>
+			<input>
+
+Always put clearfix class on main div and any other elements that will be floated.
+It's a good idea to put clearfix on both inner and outer divs.
+
+Buttons:
+For submit buttons that are input submits use the following:
+Full-sized button: <span class="pg-button"><input type="submit" value="Remove" /></span>
+Smaller button (ie. buttons in cart): <span class="pg-button-alt"><input type="submit" value="Remove" /></span>
+
+even - odd for rows
+first - last as well
+
+Forms:
+Our starting point of the forms was created at http://accessify.com/tools-and-wizards/accessibility-tools/quick-form-builder/.
+The following changes are needed to the code:
+- If you want your legends to look like an H tag then use class="h1" - "h5" on the legend. Change the CSS to match your H tags.
+- Change requiredRow to required
+- Add an additional class to the row so you can style according to what it is. This is because older IE's can't see [type=...].
+	- class="row pg-text" for text areas
+	- class="row pg-password" for password boxes
+	- class="row pg-selectlist" for select lists
+	- class="row pg-checkbox" for checkboxes
+	- class="row pg-radio" for radio buttons
+	- class="row pg-textarea" for textarea boxes
+	- class="row pg-submit" for submit buttons
+- To force widths of rows to be shorter or longer add one of these classes.
+	- class="row text-short"
+	- class="row text-medium"
+	- class="row text-long"
+- If you want your form output to be in 2 columns then add this to outer div: <div class="outer row-2columns">
+- To make a row clear everything add class "clear" to the row. It adds "width:100%; clear:both;" to the row.
+- If you want to force a new row insert <br class="clear" /> between the rows you want to break.

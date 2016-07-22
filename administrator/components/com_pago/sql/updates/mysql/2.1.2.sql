@@ -1,0 +1,1 @@
+ALTER TABLE `#__pago_categoriesi` ADD `category_view_display_items` TINYINT(1) NOT NULL ;

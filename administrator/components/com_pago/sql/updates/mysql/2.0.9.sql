@@ -1,0 +1,1 @@
+ALTER TABLE  `#__pago_items` ADD  `subscr_startdate` VARCHAR( 20 ) NOT NULL AFTER  `subscr_installments` ;

@@ -1,0 +1,8 @@
+<div class="pg-list">
+	<span class="field-heading">
+		<label for="{{ id }}" class="hasTooltip" title="{{ to.tooltip }}">{{ to.label }} <sup data-ng-show="{{ to.required }}">*</sup></label>
+	</span>
+	<select id="{{ id }}" data-ng-model="model[options.key]" data-ng-options="opt.value as opt.label for opt in to.options | orderBy:to.orderBy" chosen>
+		<option value="">Choose</option>
+	</select>
+</div>

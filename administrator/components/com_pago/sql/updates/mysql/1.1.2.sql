@@ -1,0 +1,1 @@
+ALTER TABLE `#__pago_discount_rules` CHANGE `discount_filter_value` `discount_filter_value` TEXT NOT NULL;
